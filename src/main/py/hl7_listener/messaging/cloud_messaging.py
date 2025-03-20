@@ -15,6 +15,11 @@ class CloudMessager(MessagingInterface):
 
     @traced
     async def connect(self) -> bool:
+        """Dont need this method so basically just putting a pass on it since we create client with context manager from cloud lib
+
+        Returns:
+            bool: _description_
+        """
         pass
     
     @traced
