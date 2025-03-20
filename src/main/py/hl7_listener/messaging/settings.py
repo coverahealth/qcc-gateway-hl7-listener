@@ -8,12 +8,13 @@ from hl7_listener.settings import (
     settings as settings_
 )
 
-import hl7_listener.messaging.sqs as _sqs
+import hl7_listener.messaging.cloud_messaging as _cloud_messaging
 import hl7_listener.messaging.nats as _nats
 
 
-class SQSSettings(BaseSettings):
-    SQS_OUTBOUND_QUEUE_URL: AnyUrl
+class CloudMessagingSettings(BaseSettings):
+    OUTBOUND_QUEUE_NAME: str
+    MSG_NAMESPACE:str
 
 
 class NATSSettings(BaseSettings):
@@ -24,7 +25,7 @@ class NATSSettings(BaseSettings):
 
 MESSAGER_CONFIG_MAP = {
     QueueType.NATS: {"settings": NATSSettings, "messager": _nats.NATSMessager},
-    QueueType.SQS: {"settings": SQSSettings, "messager": _sqs.SQSMessager}
+    QueueType.CLOUD: {"settings": CloudMessagingSettings, "messager": _cloud_messaging.CloudMessager}
 }
 
 

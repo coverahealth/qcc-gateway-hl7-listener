@@ -4,7 +4,7 @@ from enum import Enum
 
 class QueueType(str, Enum):
     NATS = "NATS"
-    SQS = "SQS"
+    CLOUD = "CLOUD"
 
 
 class Settings(BaseSettings):

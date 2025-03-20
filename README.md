@@ -1,7 +1,7 @@
 # gateway-hl7-listener
 This is a Python service that does the following:
 * Listen/receive MLLP HL7 messages from the configured port.
-* Publish (NATS Publish-Subscribe mode) the received HL7 messages to either the configured NATS JetStream server "Subject" (e.g., "hl7.<subject-name>") or configured SQS queue.
+* Publish (NATS Publish-Subscribe mode) the received HL7 messages to either the configured NATS JetStream server "Subject" (e.g., "hl7.<subject-name>") or configured Cloud Based queue.
 Note that the "Subject" is associated with a JetStream "Stream" (e.g., "hl7") and the stream's "Consumer" (e.g.,"queue").
 * The published NATS messages are acknowledge by the server. If messages publishes start to fail or acknowledges do not occur, listening for HL7 messages will halt.
 
@@ -21,16 +21,17 @@ poetry build -f wheel # Build the wheel file under dist directory
 ```
 
 ## Env Vars
-To run locally via docker you'll need to set a couple of env variables, be sure to set your dd api key
+To run locally via docker you'll need to set a couple of env variables
 ```shell
-export DD_AGENT_HOST="datadog-agent"
-export DD_TRACE_ENABLED=1
-export DD_ENV=local
-export DD_DOGSTATSD_NON_LOCAL_TRAFFIC=true
-export DD_SITE="datadoghq.com"
-export DD_APM_ENABLED=true
-export DD_APM_NON_LOCAL_TRAFFIC=true
-export DD_API_KEY="your-super-special-key"
+export HL7_MLLP_HOST=<host>
+export HL7_MLLP_PORT=<port>
+export OUTBOUND_QUEUE_TYPE=<NATS or CLOUD>
+#if cloud
+export OUTBOUND_QUEUE_NAME=<queue name>
+export MSG_NAMESPACE=<msg namespace>
+
+#if hl7
+export NATS_SERVER_URL=<server url>
 ```
 
 Update `pyproject.toml` as needed.
@@ -80,9 +81,9 @@ NATS_OUTGOING_SUBJECT = NATS subject to use
 
 NATS_SERVER_URL = NATS Jetstream connection info
 
-OUTBOUND_QUEUE_TYPE = one of: NATS, SQS
+OUTBOUND_QUEUE_TYPE = one of: NATS, CLOUD
 
-SQS_OUTBOUND_QUEUE_URL = URL of SQS queue to send to
+OUTBOUND_QUEUE_NAME = Name of queue to send to
 
 ### Creating the docker image
 
@@ -140,10 +141,10 @@ Confirm the message was processed by the service and sent to hl7.queue consumer 
 nats con info hl7 queue
 ```
 
-### With SQS Config
+### With Queue Config
 
-Make sure your SQS-specific environment vars are set. They are:
-- SQS_OUTBOUND_QUEUE_URL
+Make sure your Cloud-specific environment vars are set. They are:
+- OUTBOUND_QUEUE_NAME
 - OUTBOUND_QUEUE_TYPE
 
 Start the services
@@ -158,4 +159,4 @@ Send a sample HL7 using `HL7 Inspector` tool. Samples are available under `src/t
 Hit the send button and confirm success in the logs:
 ![send confirmation](diagrams/hl7_inspector_send_confirmation.png)
 
-Confirm the message was processed by the service and sent to SQS queue your environment points to.
+Confirm the message was processed by the service and sent to Cloud queue your environment points to.

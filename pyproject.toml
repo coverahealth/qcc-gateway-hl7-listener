@@ -13,20 +13,20 @@ name = "development-pypi"
 url = "https://coverahealth.jfrog.io/artifactory/api/pypi/development-pypi/simple"
 priority = "primary"
 
-
 [[tool.poetry.source]]
-name = "PyPI"
-priority = "primary"
+name = "pypi-public"
+url = "https://pypi.org/simple/"
+priority = "supplemental"
 
 [tool.poetry.dependencies]
 python = "^3.11"
 aiohttp = "^3.8.3"
 hl7 = "^0.4.5"
 pydantic = "^1.10.7"
-aiobotocore = "^2.5.0"
 nats-py = "^2.4.0"
-covera-ddtrace = "^0.1.11"
-covera-logging = "^1.0.8"
+covera-logging = "^1.0.9"
+covera-tracing = "^1.0.1"
+covera-cloud-integration = "^1.0.30"
 
 [tool.poetry.group.test.dependencies]
 pytest = "7.1.2"

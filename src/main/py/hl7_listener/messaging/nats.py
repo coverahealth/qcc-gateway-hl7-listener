@@ -3,7 +3,7 @@ from typing import (
 )
 
 from covera.loglib import configure_get_logger
-from covera_ddtrace import inject_ddtrace
+from covera.tracelib import traced
 from nats.aio.client import Client as NATS
 from nats.aio.errors import ErrNoServers
 
@@ -16,7 +16,7 @@ PILOT_HEADER = {"record_id": "pilot:pilot", "payload_type": "hl7", "trigger": "p
 
 class NATSMessager(MessagingInterface):
 
-    @inject_ddtrace
+    @traced
     async def connect(self) -> bool:
         """Connect to the NATS jetstream server."""
         self.conn = NATS()
@@ -37,7 +37,7 @@ class NATSMessager(MessagingInterface):
             )
             raise exp
 
-    @inject_ddtrace
+    @traced
     async def send_msg(self, msg: Union[str, bytes]) -> None:
         """Synchronously (no callback or async ACK) send the input message to the NATS
         configured Subject.

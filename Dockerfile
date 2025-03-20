@@ -15,5 +15,5 @@ RUN --mount=type=secret,id=ARTIFACTORY_USER,required \
 
 ENV PATH=/home/qcc/${SERVICE_NAME}/venv/bin:$PATH
 
-CMD ["ddtrace-run", "python3", "-m", "hl7_listener.main"]
+CMD ["python3", "-m", "hl7_listener.main"]
 
