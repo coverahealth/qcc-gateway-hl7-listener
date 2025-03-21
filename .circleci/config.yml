@@ -2,7 +2,7 @@ version: 2.1
 
 orbs:
   python: circleci/python@2.1
-  py-project-setup: coverahealth/py-project-config@1.0
+  py-project-setup: coverahealth/py-project-config@1.1
   sonarcloud: sonarsource/sonarcloud@2.0
   docker: circleci/docker@2.4
   jira: circleci/jira@2.1.0

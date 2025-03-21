@@ -13,7 +13,7 @@ import re
 
 import hl7
 
-from covera_ddtrace import inject_ddtrace
+from covera.tracelib import traced,configure_tracing
 from covera.loglib import (
     configure_get_logger,
     logs_inject_correlation_id,
@@ -36,8 +36,8 @@ def exception_formatter(exception_text: str):
     return exception_text
 
 
-@inject_ddtrace
-async def process_received_hl7_messages(hl7_reader, hl7_writer, ddspan=None):
+@traced
+async def process_received_hl7_messages(hl7_reader, hl7_writer):
     """This will be called every time a socket connects to the receiver/listener."""
     peername = hl7_writer.get_extra_info("peername")
     logger.info(
@@ -57,8 +57,7 @@ async def process_received_hl7_messages(hl7_reader, hl7_writer, ddspan=None):
             # was not valid hl7 message.
             _parsed = hl7.parse(str(hl7_message))
             _type, _trigger = _parsed['MSH.F9.R1.1'], _parsed['MSH.F9.R1.2']
-            if ddspan:
-                ddspan.set_tags({"hl7_type": _type, "hl7_trigger": _trigger})
+            
             logger.info(
                 "HL7 Listener received a message",
                 logging_code="HL7LLOG003",
@@ -130,6 +129,7 @@ async def process_received_hl7_messages(hl7_reader, hl7_writer, ddspan=None):
 
 async def hl7_receiver():
     """Receive HL7 MLLP messages on the configured host and port."""
+    logger.info(f"Starting the hl7 server on {settings.HL7_MLLP_HOST}:{settings.HL7_MLLP_PORT}")
     try:
         async with await start_hl7_server(
                 process_received_hl7_messages,  # Callback function.
@@ -158,6 +158,7 @@ async def hl7_receiver():
 
 async def main():
     # Create the logger and add the correlation_id to the logs.
+    configure_tracing()
     logs_inject_correlation_id(logger)
     logger.info(
         "HL7 Listener started",
@@ -166,6 +167,7 @@ async def main():
         messager_settings=messager_settings.dict()
     )
 
+    #In case of cloud connect, the connect method will return empty handed
     await messager.connect()
     asyncio.create_task(hl7_receiver())
     await start_health_check_server()

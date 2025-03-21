@@ -2,11 +2,13 @@
 
 import json
 import os
+from pathlib import Path
 from unittest.mock import (
     AsyncMock,
     Mock
 )
-
+from hl7_listener.messaging.settings import CloudMessagingSettings
+from covera_cloud_integration import CloudMessage
 import pytest
 import structlog
 from covera import loglib
@@ -15,9 +17,9 @@ from nats.aio.errors import ErrNoServers
 
 from hl7_listener import main
 from hl7_listener.messaging.nats import NATSMessager, PILOT_HEADER
+from hl7_listener.settings import settings
 
 package_directory = os.path.dirname(os.path.abspath(__file__))
-print(package_directory)
 root_path = "/../resources"
 config_file = os.path.join(package_directory + root_path, "config.ini")
 _hl7_messages_relative_dir = os.path.join(package_directory + root_path, "hl7_messages")
@@ -53,6 +55,24 @@ async def test_send_msg(mocker):
     mocker.patch.object(mock_.conn, "request", new=my_asyncmock)
     await mock_.send_msg("test message")
     my_asyncmock.assert_awaited()
+
+
+@pytest.mark.asyncio
+async def test_send_msg_cloud_messaging(mocker):
+    
+    from hl7_listener.messaging.cloud_messaging import CloudMessager
+    from hl7_listener.messaging import cloud_messaging
+    cloud_messager = CloudMessager()
+    mock_create_client = mocker.patch.object(cloud_messaging,"create_client")
+    msgr_config_mock = mocker.patch.object(cloud_messaging,"msgr_config")
+    msgr_config_mock.settings=CloudMessagingSettings()
+
+    mock_client = AsyncMock()
+    mock_create_client.return_value.__aenter__.return_value=mock_client
+    mock_client.send_message=AsyncMock()
+    await cloud_messager.send_msg("test message")
+    mock_client.send_message.assert_called_once_with("test-queue",CloudMessage(data="test message",content_type="text/plain"),timeout=5)
+    
 
 
 @pytest.mark.asyncio
