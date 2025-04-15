@@ -879,7 +879,7 @@ optional = false
 python-versions = ">=3.11,<4.0"
 groups = ["main"]
 files = [
-    {file = "covera_tracing-1.0.1-py3-none-any.whl", hash = "sha256:c10b33b4c705812f99314c8f393ecb41327516d78a2818033de04c416c0ba8d1"},
+    {file = "covera_tracing-1.0.1-py3-none-any.whl", hash = "sha256:8d2e253c29e49f0ed397e32622653b1ce5af309bc35ba5bde0342ba3fc63ee50"},
 ]
 
 [package.dependencies]
@@ -888,8 +888,8 @@ covera-logging = ">=1.0.8,<2.0.0"
 
 [package.source]
 type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "azure"
+url = "https://coverahealth.jfrog.io/artifactory/api/pypi/development-pypi/simple"
+reference = "development-pypi"
 
 [[package]]
 name = "coverage"
@@ -2415,7 +2415,7 @@ files = [
 
 [package.extras]
 dev = ["abi3audit", "black", "check-manifest", "coverage", "packaging", "pylint", "pyperf", "pypinfo", "pytest-cov", "requests", "rstcheck", "ruff", "sphinx", "sphinx-rtd-theme", "toml-sort", "twine", "virtualenv", "vulture", "wheel"]
-test = ["enum34", "futures", "ipaddress", "mock (==1.0.1)", "pytest (==4.6.11)", "pytest-xdist", "setuptools", "unittest2"]
+test = ["pytest", "pytest-xdist", "setuptools"]
 
 [package.source]
 type = "legacy"
