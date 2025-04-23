@@ -508,53 +508,6 @@ url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/pyth
 reference = "azure"
 
 [[package]]
-name = "bytecode"
-version = "0.16.1"
-description = "Python module to generate and modify bytecode"
-optional = false
-python-versions = ">=3.8"
-groups = ["main"]
-files = [
-    {file = "bytecode-0.16.1-py3-none-any.whl", hash = "sha256:1d4b61ed6bade4bff44127c8283bef8131a664ce4dbe09d64a88caf329939f35"},
-    {file = "bytecode-0.16.1.tar.gz", hash = "sha256:8fbbb637c880f339e564858bc6c7984ede67ae97bc71343379a535a9a4baf398"},
-]
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "azure"
-
-[[package]]
-name = "cattrs"
-version = "24.1.2"
-description = "Composable complex class support for attrs and dataclasses."
-optional = false
-python-versions = ">=3.8"
-groups = ["main"]
-files = [
-    {file = "cattrs-24.1.2-py3-none-any.whl", hash = "sha256:67c7495b760168d931a10233f979b28dc04daf853b30752246f4f8471c6d68d0"},
-    {file = "cattrs-24.1.2.tar.gz", hash = "sha256:8028cfe1ff5382df59dd36474a86e02d817b06eaf8af84555441bac915d2ef85"},
-]
-
-[package.dependencies]
-attrs = ">=23.1.0"
-
-[package.extras]
-bson = ["pymongo (>=4.4.0)"]
-cbor2 = ["cbor2 (>=5.4.6)"]
-msgpack = ["msgpack (>=1.0.5)"]
-msgspec = ["msgspec (>=0.18.5) ; implementation_name == \"cpython\""]
-orjson = ["orjson (>=3.9.2) ; implementation_name == \"cpython\""]
-pyyaml = ["pyyaml (>=6.0)"]
-tomlkit = ["tomlkit (>=0.11.8)"]
-ujson = ["ujson (>=5.7.0)"]
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "azure"
-
-[[package]]
 name = "certifi"
 version = "2025.1.31"
 description = "Python package for providing Mozilla's CA Bundle."
@@ -802,13 +755,13 @@ reference = "azure"
 
 [[package]]
 name = "covera-cloud-integration"
-version = "1.0.30"
+version = "1.0.35"
 description = "Provides a standard interface to third party cloud platforms."
 optional = false
 python-versions = ">=3.11,<4.0"
 groups = ["main"]
 files = [
-    {file = "covera_cloud_integration-1.0.30-py3-none-any.whl", hash = "sha256:25ff9a6889e64edf1d3b15aab165f4b3596f68b5c683e53d2df116815b5eab00"},
+    {file = "covera_cloud_integration-1.0.35-py3-none-any.whl", hash = "sha256:18e2b7e94a24f787a4566d80ff0252fbf324385e29c1f1711bf9bfd879566bed"},
 ]
 
 [package.dependencies]
@@ -818,52 +771,30 @@ azure-servicebus = ">=7.13.0,<8.0.0"
 azure-storage-blob = ">=12.24.0,<13.0.0"
 azure-storage-queue = ">=12.12.0,<13.0.0"
 boto3 = "1.26.0"
-covera-ddtrace = ">=0.1.11,<0.2.0"
-covera-logging = ">=1.0.8,<2.0.0"
-covera-tracing = ">=1.0.1,<2.0.0"
+covera-logging = ">=2.1.0,<3.0.0"
+covera-tracing = ">=1.0.4,<2.0.0"
 orjson = ">=3.10.15,<4.0.0"
+pydantic = "1.10.21"
 
 [package.source]
 type = "legacy"
-url = "https://coverahealth.jfrog.io/artifactory/api/pypi/development-pypi/simple"
-reference = "development-pypi"
-
-[[package]]
-name = "covera-ddtrace"
-version = "0.1.11"
-description = "Covera internal library for ddtrace injection"
-optional = false
-python-versions = ">=3.8,<4.0"
-groups = ["main"]
-files = [
-    {file = "covera_ddtrace-0.1.11-py3-none-any.whl", hash = "sha256:5b6f86e0e246176da1efab0ce0856bc046ca441ac5088aa4f352e3891f58ecf8"},
-]
-
-[package.dependencies]
-ddtrace = ">=1.18.2,<2.0.0"
-pydantic = ">=1.10.2,<2.0.0"
-PyYAML = ">=6.0,<7.0"
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.jfrog.io/artifactory/api/pypi/development-pypi/simple"
-reference = "development-pypi"
+url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
+reference = "azure"
 
 [[package]]
 name = "covera-logging"
-version = "1.0.9"
+version = "2.1.0"
 description = "Provides a standard logging configuration for QCC Gateway and Cloud services"
 optional = false
 python-versions = ">=3.10,<4.0"
 groups = ["main"]
 files = [
-    {file = "covera_logging-1.0.9-py3-none-any.whl", hash = "sha256:7e4bc9bcf9fd5e147b3076310c16c477f56a1c3a332747e592e95efb4b26805d"},
+    {file = "covera_logging-2.1.0-py3-none-any.whl", hash = "sha256:8a25f9dfedaceb0ba8a6b00b26e566664f4cb660a5002554abaf61ed046d3c41"},
 ]
 
 [package.dependencies]
 azure-monitor-opentelemetry = ">=1.6.5,<2.0.0"
 packaging = ">=23.2,<24.0"
-pydantic = ">=1.10.4,<2.0.0"
 structlog = ">=23.2.0,<24.0.0"
 
 [package.source]
@@ -873,23 +804,24 @@ reference = "azure"
 
 [[package]]
 name = "covera-tracing"
-version = "1.0.1"
+version = "1.0.4"
 description = "A template project to use for creating new covera services"
 optional = false
 python-versions = ">=3.11,<4.0"
 groups = ["main"]
 files = [
-    {file = "covera_tracing-1.0.1-py3-none-any.whl", hash = "sha256:8d2e253c29e49f0ed397e32622653b1ce5af309bc35ba5bde0342ba3fc63ee50"},
+    {file = "covera_tracing-1.0.4-py3-none-any.whl", hash = "sha256:142d8106f93b2550967891e0b4a5d1f5f4726322e39a2420bd8f76cabbbb9abf"},
 ]
 
 [package.dependencies]
-azure-monitor-opentelemetry = ">=1.6.4,<2.0.0"
-covera-logging = ">=1.0.8,<2.0.0"
+azure-monitor-opentelemetry = "1.6.5"
+covera-logging = ">=2.1.0,<3.0.0"
+opentelemetry-sdk = "1.30.0"
 
 [package.source]
 type = "legacy"
-url = "https://coverahealth.jfrog.io/artifactory/api/pypi/development-pypi/simple"
-reference = "development-pypi"
+url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
+reference = "azure"
 
 [[package]]
 name = "coverage"
@@ -1025,128 +957,6 @@ url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/pyth
 reference = "azure"
 
 [[package]]
-name = "ddsketch"
-version = "3.0.1"
-description = "Distributed quantile sketches"
-optional = false
-python-versions = ">=3.7"
-groups = ["main"]
-files = [
-    {file = "ddsketch-3.0.1-py3-none-any.whl", hash = "sha256:6d047b455fe2837c43d366ff1ae6ba0c3166e15499de8688437a75cea914224e"},
-    {file = "ddsketch-3.0.1.tar.gz", hash = "sha256:aa8f20b2965e61731ca4fee2ca9c209f397f5bbb23f9d192ec8bd7a2f5bd9824"},
-]
-
-[package.dependencies]
-six = "*"
-
-[package.extras]
-serialization = ["protobuf (>=3.0.0)"]
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "azure"
-
-[[package]]
-name = "ddtrace"
-version = "1.20.19"
-description = "Datadog APM client library"
-optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
-groups = ["main"]
-files = [
-    {file = "ddtrace-1.20.19-cp27-cp27m-macosx_11_0_x86_64.whl", hash = "sha256:cb66942cf0a2b3b5a466b4e73b58ac0b7bca91778414e85b4dd595838eb6e949"},
-    {file = "ddtrace-1.20.19-cp27-cp27m-manylinux2010_i686.whl", hash = "sha256:4a4ec74c8e7cc1f0980231fcd4c5aa6da6c9acc13e9ff387f0c133659ac2d3ec"},
-    {file = "ddtrace-1.20.19-cp27-cp27m-manylinux2010_x86_64.whl", hash = "sha256:6d363250e7a0eec574864b915c71357f38321ea4054bfbdb8ff9c394c8092918"},
-    {file = "ddtrace-1.20.19-cp27-cp27mu-manylinux2010_i686.whl", hash = "sha256:693df295999ef425c393ce626c50196a26776c3155cc6d1302876e9439783643"},
-    {file = "ddtrace-1.20.19-cp27-cp27mu-manylinux2010_x86_64.whl", hash = "sha256:034cf672d5ad5fe7e91fb933cfebdf202ee4b524f86c83988d252767803fd225"},
-    {file = "ddtrace-1.20.19-cp310-cp310-macosx_11_0_universal2.whl", hash = "sha256:398bb7e616a1ee5e499165d397000dfa1b1c0d9bcacd086732952ef8fdce142d"},
-    {file = "ddtrace-1.20.19-cp310-cp310-macosx_11_0_x86_64.whl", hash = "sha256:98017e5b93bcef837c8bb1f713de2d1fc595c58aee62db83ca049d64b948640f"},
-    {file = "ddtrace-1.20.19-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:1ea9e35d8c77b930c7537d12776ce002b3183f9e4f875ddd6a4dea61125c608a"},
-    {file = "ddtrace-1.20.19-cp310-cp310-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:7fd0c2786ae84af5d02ac212d42e03b5890da58fd37a47ba6b71b35557032cc4"},
-    {file = "ddtrace-1.20.19-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:70bab5fe4722b164500fe0a61df2bb9d30d12850e7d6da2c7e64b613d5d8b000"},
-    {file = "ddtrace-1.20.19-cp310-cp310-musllinux_1_1_aarch64.whl", hash = "sha256:30f1b2388b8a8e1b2bd2c8b36a86a5c2fd4b4846a69832515d6433c1e83f5dea"},
-    {file = "ddtrace-1.20.19-cp310-cp310-musllinux_1_1_i686.whl", hash = "sha256:33ed8f3d9cbd1127bb894ce89f54417c0252d7072e81f614a245735f12a62806"},
-    {file = "ddtrace-1.20.19-cp310-cp310-musllinux_1_1_x86_64.whl", hash = "sha256:7da8798fb7f39db7229a3295e24fc070b3b484fe9e4d0801ec3cb839c9f42cda"},
-    {file = "ddtrace-1.20.19-cp310-cp310-win32.whl", hash = "sha256:037b9feff1f890687907b2e1f3591d2ca6a42bde31b7de307791a4f38c3d3370"},
-    {file = "ddtrace-1.20.19-cp310-cp310-win_amd64.whl", hash = "sha256:ed75e6ac6436bc9f3fbb442e0784562afc89df69e385d5192a1013dfc0e8ac4d"},
-    {file = "ddtrace-1.20.19-cp311-cp311-macosx_11_0_universal2.whl", hash = "sha256:d26623e984975928045f2a0bcd7ba5abdad8c5b0beb9fcd965bf01344de3a60e"},
-    {file = "ddtrace-1.20.19-cp311-cp311-macosx_11_0_x86_64.whl", hash = "sha256:6a27eeebe7cc70cefcae47184652ac2e8412b5b9cef124dcc1d635968c13cde8"},
-    {file = "ddtrace-1.20.19-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:614aa5a87854d6fa67188dbd5bfbbc035d85fdac6af56632e21bd73e68cb11c6"},
-    {file = "ddtrace-1.20.19-cp311-cp311-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:e0a86be475880108078ec79a08f3224be4275775a3b5d38f7474a2e9320b7115"},
-    {file = "ddtrace-1.20.19-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:407d28d15cbb2f3f082ccc76a0590cb184f40629dc555c0cf57596773ab04e6f"},
-    {file = "ddtrace-1.20.19-cp311-cp311-musllinux_1_1_aarch64.whl", hash = "sha256:585c1ea8ce634b8c979c29f0db7306e6f67f5bb16e994c5b3143a87dbd680a12"},
-    {file = "ddtrace-1.20.19-cp311-cp311-musllinux_1_1_i686.whl", hash = "sha256:3b55432bb3d27bcf46a790289fc178b2a5a6031f14166072ca1c9fe73b65bcb6"},
-    {file = "ddtrace-1.20.19-cp311-cp311-musllinux_1_1_x86_64.whl", hash = "sha256:c9aa82c7b2cadda6754948c974f052e7bcea221378d98a2ca6b5672e62aee81e"},
-    {file = "ddtrace-1.20.19-cp311-cp311-win32.whl", hash = "sha256:dde0b0b8fbf9517f4bf498a15a421f591a70bb08d7ab07128caa503c0ef8f521"},
-    {file = "ddtrace-1.20.19-cp311-cp311-win_amd64.whl", hash = "sha256:948680020315b04d749c7bf95a6c468406fe4c2a93ad766d36d95043ea049eb9"},
-    {file = "ddtrace-1.20.19-cp35-cp35m-manylinux2010_i686.whl", hash = "sha256:7169201ae96f991d3ca89f0e12e972aa0c76fce20196fa044e360fb774aa5fac"},
-    {file = "ddtrace-1.20.19-cp35-cp35m-manylinux2010_x86_64.whl", hash = "sha256:fee8064f024f12b53ed402c33149b6ea36d8f98f6743a4ce7bb4d384e8fb033a"},
-    {file = "ddtrace-1.20.19-cp35-cp35m-manylinux2014_aarch64.whl", hash = "sha256:0b21161e0176886c6112bac996770d9b88856dff618f9220720a0d297ba04b4b"},
-    {file = "ddtrace-1.20.19-cp35-cp35m-win32.whl", hash = "sha256:c0609808abd475de9fadd77ae2ab29c0b1db3f72b1724019c798d62781d9b9b1"},
-    {file = "ddtrace-1.20.19-cp35-cp35m-win_amd64.whl", hash = "sha256:f7c81e558dfab8b67317c5472484d4a0131d163627e2cb061ae69a99b8c6a948"},
-    {file = "ddtrace-1.20.19-cp36-cp36m-macosx_11_0_x86_64.whl", hash = "sha256:23e94d0e341db20643c7a3cbab1806809e06201982ed028d875a1900dd35c305"},
-    {file = "ddtrace-1.20.19-cp36-cp36m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:bc61c4b25aee91f316bb9467cbf23051c254c6b34464d026278f0b43a36f6b72"},
-    {file = "ddtrace-1.20.19-cp36-cp36m-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:e229e5f7ae1b2a5f5beb699f799e747d3779d0db74bd3ee76d65360381c1a977"},
-    {file = "ddtrace-1.20.19-cp36-cp36m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:713aaf51182ceecf5bef07e306a123733755633cd018dc4136d8d9f08d4c62e9"},
-    {file = "ddtrace-1.20.19-cp36-cp36m-musllinux_1_1_aarch64.whl", hash = "sha256:1ea3b05616566a332f39407c2f89733a2ec521e8b1e98b30013cfff91d3e2ee3"},
-    {file = "ddtrace-1.20.19-cp36-cp36m-musllinux_1_1_i686.whl", hash = "sha256:8d3781fff66a0bacbb2c4740bda8296697cbaf7887d5c0529b66f4dae126417b"},
-    {file = "ddtrace-1.20.19-cp36-cp36m-musllinux_1_1_x86_64.whl", hash = "sha256:6c1fbaa3cbbd5e56c7a8743c46cebe302ad585a29a4cdbf5947664512ef6e9bb"},
-    {file = "ddtrace-1.20.19-cp36-cp36m-win32.whl", hash = "sha256:c7256ec93e17219baac2f44c787fc08f5a278eab9a9dee0f68d431ec9c93598a"},
-    {file = "ddtrace-1.20.19-cp36-cp36m-win_amd64.whl", hash = "sha256:b3553566e427b1fa01f9882e6883e2fa7a43ad82df99781d40fc023d3b83ebff"},
-    {file = "ddtrace-1.20.19-cp37-cp37m-macosx_11_0_x86_64.whl", hash = "sha256:137a393d5d0fabcf12d2ba61ec2352de6430701798a62661108fbb861536c98c"},
-    {file = "ddtrace-1.20.19-cp37-cp37m-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:a9edc6e0dd643136ee4d8c04449b887666b13d8c7489704c03c263198a06ae3b"},
-    {file = "ddtrace-1.20.19-cp37-cp37m-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:45883c8ca733fd5dfe3f15d2c2ff63bab158df22b2a3bf7566afe58fe4b9f281"},
-    {file = "ddtrace-1.20.19-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:8c76f3969994ebab1aa2f367733885ea2905c1583c9ca4a76314caac740553a0"},
-    {file = "ddtrace-1.20.19-cp37-cp37m-musllinux_1_1_aarch64.whl", hash = "sha256:e4a4bb973fe4cd8b6a76cf31f16011db35e34a7c3b0cfb0499763ab431b617d0"},
-    {file = "ddtrace-1.20.19-cp37-cp37m-musllinux_1_1_i686.whl", hash = "sha256:7a7de40aa899f7c9ce24941009f90bcf787e5936cfa37a1ef263671cafb786af"},
-    {file = "ddtrace-1.20.19-cp37-cp37m-musllinux_1_1_x86_64.whl", hash = "sha256:fbed22f480097409d6279a03e15f112ac4babe6959574942a5036b19f9028b7e"},
-    {file = "ddtrace-1.20.19-cp37-cp37m-win32.whl", hash = "sha256:b77bffae8e9ec6112d2b71c3134e61f1f41376a79488bd8f0a90350932a8cf31"},
-    {file = "ddtrace-1.20.19-cp37-cp37m-win_amd64.whl", hash = "sha256:a520ff2bf40a641816e03b5fd616612ba48e3d997dc21c4275dfe764a83c4b7a"},
-    {file = "ddtrace-1.20.19-cp38-cp38-macosx_11_0_universal2.whl", hash = "sha256:4d73f2d5ac5c4697545d1dc3a3dd955c2f4f495459dc26e4b9d781a931f3dcae"},
-    {file = "ddtrace-1.20.19-cp38-cp38-macosx_11_0_x86_64.whl", hash = "sha256:1f05ef31b06e38ad1799632bc29fbb3a4e1f3b93500c2fc30a12fb505d8acb0f"},
-    {file = "ddtrace-1.20.19-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:a200284b86e325e99fca3b45d81f9bc4540efea7011647b5d0d030e894631fad"},
-    {file = "ddtrace-1.20.19-cp38-cp38-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:e5e1845dc3924902e54d6a69b86ec1e7713a76dc16dc3e1ed4af118327398dbf"},
-    {file = "ddtrace-1.20.19-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:e6d9db88182952506d21b16085f399108f19d88ac376aa1fb859c5f052f34255"},
-    {file = "ddtrace-1.20.19-cp38-cp38-musllinux_1_1_aarch64.whl", hash = "sha256:79278fd9b38714dad7b13fb7a9305584059ef9237717facd13ac03163099ac2b"},
-    {file = "ddtrace-1.20.19-cp38-cp38-musllinux_1_1_i686.whl", hash = "sha256:9a67c2ef24bcba94f268cd1602d2d6473afa8e1597bf8ef82ee4e86e640c9913"},
-    {file = "ddtrace-1.20.19-cp38-cp38-musllinux_1_1_x86_64.whl", hash = "sha256:e1a92db46d47a9fd4c7a3ed497cd4573cba82158540b7b52e8677dc8ca6dfd0a"},
-    {file = "ddtrace-1.20.19-cp38-cp38-win32.whl", hash = "sha256:cb779b01edd389c03cb6c6bb27ea8730e479ec123dbed9a63ade6aab281e6529"},
-    {file = "ddtrace-1.20.19-cp38-cp38-win_amd64.whl", hash = "sha256:84a27f1ccb73d26b4cdfa5b187acae9d631e5efc265042616c46965fde158f0a"},
-    {file = "ddtrace-1.20.19-cp39-cp39-macosx_11_0_universal2.whl", hash = "sha256:d8dc4a5eb6f976020851ad6fdef03ec89bae2382aaded3477553029eea8aa2a0"},
-    {file = "ddtrace-1.20.19-cp39-cp39-macosx_11_0_x86_64.whl", hash = "sha256:8d75b9d3c837a31aaf5ff2feb041629ca324ef7682a0c52c6eaded003583a496"},
-    {file = "ddtrace-1.20.19-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:71fc2a50d66cd65a905cd985479f1d2ec7c290ab9a6f89a488a0dd44b34a12b0"},
-    {file = "ddtrace-1.20.19-cp39-cp39-manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:9044711a0c738ea8db2baac74646b81a069d9b40a14a409b35bb78eb3cf919db"},
-    {file = "ddtrace-1.20.19-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:81258c9df06b71c10fdcfe830f406eb5de15da892a4f4c102ff98a839a1d9d51"},
-    {file = "ddtrace-1.20.19-cp39-cp39-musllinux_1_1_aarch64.whl", hash = "sha256:5864e70a500db1355b39efbe022f7c56aa1ae97958c4f0691ffdb3bee369e54d"},
-    {file = "ddtrace-1.20.19-cp39-cp39-musllinux_1_1_i686.whl", hash = "sha256:a816da928ff1ea52d646a15f59210c26c432b338146b33882ee5d28fdac04ede"},
-    {file = "ddtrace-1.20.19-cp39-cp39-musllinux_1_1_x86_64.whl", hash = "sha256:9ed761fc799344f0de3f4b1f44b29b8c0441e8d229dc9ce514ec47037b750655"},
-    {file = "ddtrace-1.20.19-cp39-cp39-win32.whl", hash = "sha256:a1e288bb7284676888c6489bd796c645c17d0c2bbe170e86e5214f11d357ae84"},
-    {file = "ddtrace-1.20.19-cp39-cp39-win_amd64.whl", hash = "sha256:d8ba693d6dd3beb60174b1a9cea58a63dc537f1f3516fa5241d2a08feb61d2c5"},
-    {file = "ddtrace-1.20.19.tar.gz", hash = "sha256:d4bd8bf9ed4cc3477ac112e6f769076e3fa5cd63f6bf67fed7c5188e744e6eab"},
-]
-
-[package.dependencies]
-attrs = {version = ">=20", markers = "python_version > \"2.7\""}
-bytecode = {version = "*", markers = "python_version >= \"3.8\""}
-cattrs = {version = "*", markers = "python_version >= \"3.7\""}
-ddsketch = ">=2.0.1"
-envier = "*"
-opentelemetry-api = {version = ">=1", markers = "python_version >= \"3.7\""}
-protobuf = {version = ">=3", markers = "python_version >= \"3.7\""}
-six = ">=1.12.0"
-typing-extensions = "*"
-xmltodict = ">=0.12"
-
-[package.extras]
-opentracing = ["opentracing (>=2.0.0)"]
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "azure"
-
-[[package]]
 name = "deprecated"
 version = "1.2.18"
 description = "Python @deprecated decorator to deprecate old python classes, functions or methods."
@@ -1187,26 +997,6 @@ untokenize = ">=0.1.1,<0.2.0"
 
 [package.extras]
 tomli = ["tomli (>=2.0.0,<3.0.0) ; python_version < \"3.11\""]
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "azure"
-
-[[package]]
-name = "envier"
-version = "0.6.1"
-description = "Python application configuration via the environment"
-optional = false
-python-versions = ">=3.7"
-groups = ["main"]
-files = [
-    {file = "envier-0.6.1-py3-none-any.whl", hash = "sha256:73609040a76be48bbcb97074d9969666484aa0de706183a6e9ef773156a8a6a9"},
-    {file = "envier-0.6.1.tar.gz", hash = "sha256:3309a01bb3d8850c9e7a31a5166d5a836846db2faecb79b9cb32654dd50ca9f9"},
-]
-
-[package.extras]
-mypy = ["mypy"]
 
 [package.source]
 type = "legacy"
@@ -1359,14 +1149,14 @@ reference = "azure"
 
 [[package]]
 name = "importlib-metadata"
-version = "8.6.1"
+version = "8.5.0"
 description = "Read metadata from Python packages"
 optional = false
-python-versions = ">=3.9"
+python-versions = ">=3.8"
 groups = ["main"]
 files = [
-    {file = "importlib_metadata-8.6.1-py3-none-any.whl", hash = "sha256:02a89390c1e15fdfdc0d7c6b25cb3e62650d0494005c97d6f148bf5b9787525e"},
-    {file = "importlib_metadata-8.6.1.tar.gz", hash = "sha256:310b41d755445d74569f993ccfc22838295d9fe005425094fad953d7f15c8580"},
+    {file = "importlib_metadata-8.5.0-py3-none-any.whl", hash = "sha256:45e54197d28b7a7f1559e60b95e7c567032b602131fbd588f1497f47880aa68b"},
+    {file = "importlib_metadata-8.5.0.tar.gz", hash = "sha256:71522656f0abace1d072b9e5481a48f07c138e00f079c38c8f883823f9c26bd7"},
 ]
 
 [package.dependencies]
@@ -1378,7 +1168,7 @@ cover = ["pytest-cov"]
 doc = ["furo", "jaraco.packaging (>=9.3)", "jaraco.tidelift (>=1.4)", "rst.linker (>=1.9)", "sphinx (>=3.5)", "sphinx-lint"]
 enabler = ["pytest-enabler (>=2.2)"]
 perf = ["ipython"]
-test = ["flufl.flake8", "importlib_resources (>=1.3) ; python_version < \"3.9\"", "jaraco.test (>=5.4)", "packaging", "pyfakefs", "pytest (>=6,!=8.1.*)", "pytest-perf (>=0.9.2)"]
+test = ["flufl.flake8", "importlib-resources (>=1.3) ; python_version < \"3.9\"", "jaraco.test (>=5.4)", "packaging", "pyfakefs", "pytest (>=6,!=8.1.*)", "pytest-perf (>=0.9.2)"]
 type = ["pytest-mypy"]
 
 [package.source]
@@ -1699,19 +1489,19 @@ reference = "azure"
 
 [[package]]
 name = "opentelemetry-api"
-version = "1.31.0"
+version = "1.30.0"
 description = "OpenTelemetry Python API"
 optional = false
 python-versions = ">=3.8"
 groups = ["main"]
 files = [
-    {file = "opentelemetry_api-1.31.0-py3-none-any.whl", hash = "sha256:145b72c6c16977c005c568ec32f4946054ab793d8474a17fd884b0397582c5f2"},
-    {file = "opentelemetry_api-1.31.0.tar.gz", hash = "sha256:d8da59e83e8e3993b4726e4c1023cd46f57c4d5a73142e239247e7d814309de1"},
+    {file = "opentelemetry_api-1.30.0-py3-none-any.whl", hash = "sha256:d5f5284890d73fdf47f843dda3210edf37a38d66f44f2b5aedc1e89ed455dc09"},
+    {file = "opentelemetry_api-1.30.0.tar.gz", hash = "sha256:375893400c1435bf623f7dfb3bcd44825fe6b56c34d0667c542ea8257b1a1240"},
 ]
 
 [package.dependencies]
 deprecated = ">=1.2.6"
-importlib-metadata = ">=6.0,<8.7.0"
+importlib-metadata = ">=6.0,<=8.5.0"
 
 [package.source]
 type = "legacy"
@@ -1720,19 +1510,19 @@ reference = "azure"
 
 [[package]]
 name = "opentelemetry-instrumentation"
-version = "0.52b0"
+version = "0.51b0"
 description = "Instrumentation Tools & Auto Instrumentation for OpenTelemetry Python"
 optional = false
 python-versions = ">=3.8"
 groups = ["main"]
 files = [
-    {file = "opentelemetry_instrumentation-0.52b0-py3-none-any.whl", hash = "sha256:0c93ca9fa1d438e2b741f21d6aa870c991e0e3b0f1367c8626bb3981b12ad2fe"},
-    {file = "opentelemetry_instrumentation-0.52b0.tar.gz", hash = "sha256:da75d328f9dbd59c6e61af6adec29f4bb581f5cbf3ddfae348268f9c1edaceeb"},
+    {file = "opentelemetry_instrumentation-0.51b0-py3-none-any.whl", hash = "sha256:c6de8bd26b75ec8b0e54dff59e198946e29de6a10ec65488c357d4b34aa5bdcf"},
+    {file = "opentelemetry_instrumentation-0.51b0.tar.gz", hash = "sha256:4ca266875e02f3988536982467f7ef8c32a38b8895490ddce9ad9604649424fa"},
 ]
 
 [package.dependencies]
 opentelemetry-api = ">=1.4,<2.0"
-opentelemetry-semantic-conventions = "0.52b0"
+opentelemetry-semantic-conventions = "0.51b0"
 packaging = ">=18.0"
 wrapt = ">=1.0.0,<2.0.0"
 
@@ -1743,22 +1533,22 @@ reference = "azure"
 
 [[package]]
 name = "opentelemetry-instrumentation-asgi"
-version = "0.52b0"
+version = "0.51b0"
 description = "ASGI instrumentation for OpenTelemetry"
 optional = false
 python-versions = ">=3.8"
 groups = ["main"]
 files = [
-    {file = "opentelemetry_instrumentation_asgi-0.52b0-py3-none-any.whl", hash = "sha256:65303357ef7606446756e98212b64387cc0f6d7f0b5ebb5b6961577335893366"},
-    {file = "opentelemetry_instrumentation_asgi-0.52b0.tar.gz", hash = "sha256:ae3e7e41397d55eb1c8efc635a55ca195d8ccd411cc3583ba11f185bbcc8022f"},
+    {file = "opentelemetry_instrumentation_asgi-0.51b0-py3-none-any.whl", hash = "sha256:e8072993db47303b633c6ec1bc74726ba4d32bd0c46c28dfadf99f79521a324c"},
+    {file = "opentelemetry_instrumentation_asgi-0.51b0.tar.gz", hash = "sha256:b3fe97c00f0bfa934371a69674981d76591c68d937b6422a5716ca21081b4148"},
 ]
 
 [package.dependencies]
 asgiref = ">=3.0,<4.0"
 opentelemetry-api = ">=1.12,<2.0"
-opentelemetry-instrumentation = "0.52b0"
-opentelemetry-semantic-conventions = "0.52b0"
-opentelemetry-util-http = "0.52b0"
+opentelemetry-instrumentation = "0.51b0"
+opentelemetry-semantic-conventions = "0.51b0"
+opentelemetry-util-http = "0.51b0"
 
 [package.extras]
 instruments = ["asgiref (>=3.0,<4.0)"]
@@ -1770,20 +1560,20 @@ reference = "azure"
 
 [[package]]
 name = "opentelemetry-instrumentation-dbapi"
-version = "0.52b0"
+version = "0.51b0"
 description = "OpenTelemetry Database API instrumentation"
 optional = false
 python-versions = ">=3.8"
 groups = ["main"]
 files = [
-    {file = "opentelemetry_instrumentation_dbapi-0.52b0-py3-none-any.whl", hash = "sha256:7f3a695f5e190a125bd57c993331b13104674261ce037fcabeb3aa544c808106"},
-    {file = "opentelemetry_instrumentation_dbapi-0.52b0.tar.gz", hash = "sha256:7572f6e5e3af5816d81571305ba3feb961776091061bc70e73f463bc8ad9fc02"},
+    {file = "opentelemetry_instrumentation_dbapi-0.51b0-py3-none-any.whl", hash = "sha256:1b4dfb4f25b4ef509b70fb24c637436a40fe5fc8204933b956f1d0ccaa61735f"},
+    {file = "opentelemetry_instrumentation_dbapi-0.51b0.tar.gz", hash = "sha256:740b5e17eef02a91a8d3966f06e5605817a7d875ae4d9dec8318ef652ccfc1fe"},
 ]
 
 [package.dependencies]
 opentelemetry-api = ">=1.12,<2.0"
-opentelemetry-instrumentation = "0.52b0"
-opentelemetry-semantic-conventions = "0.52b0"
+opentelemetry-instrumentation = "0.51b0"
+opentelemetry-semantic-conventions = "0.51b0"
 wrapt = ">=1.0.0,<2.0.0"
 
 [package.source]
@@ -1793,25 +1583,25 @@ reference = "azure"
 
 [[package]]
 name = "opentelemetry-instrumentation-django"
-version = "0.52b0"
+version = "0.51b0"
 description = "OpenTelemetry Instrumentation for Django"
 optional = false
 python-versions = ">=3.8"
 groups = ["main"]
 files = [
-    {file = "opentelemetry_instrumentation_django-0.52b0-py3-none-any.whl", hash = "sha256:aa48011654294ebe25e6faf4e1c7cb2d3af052efec0af2c72fa54c6692d129d9"},
-    {file = "opentelemetry_instrumentation_django-0.52b0.tar.gz", hash = "sha256:5ca8ab573f7dcee6e3db341e5a36f1e97369ac7452348a008ecfa5cbf13fb78b"},
+    {file = "opentelemetry_instrumentation_django-0.51b0-py3-none-any.whl", hash = "sha256:cc548785e6f5e0965497f7d611c9204a214d5f2fc3ceba26aea3b699f5f99d4c"},
+    {file = "opentelemetry_instrumentation_django-0.51b0.tar.gz", hash = "sha256:574ff4a22be72c8371fdbaea19dca3d667e6ebd1b2756e5be1f17761dd668d9c"},
 ]
 
 [package.dependencies]
 opentelemetry-api = ">=1.12,<2.0"
-opentelemetry-instrumentation = "0.52b0"
-opentelemetry-instrumentation-wsgi = "0.52b0"
-opentelemetry-semantic-conventions = "0.52b0"
-opentelemetry-util-http = "0.52b0"
+opentelemetry-instrumentation = "0.51b0"
+opentelemetry-instrumentation-wsgi = "0.51b0"
+opentelemetry-semantic-conventions = "0.51b0"
+opentelemetry-util-http = "0.51b0"
 
 [package.extras]
-asgi = ["opentelemetry-instrumentation-asgi (==0.52b0)"]
+asgi = ["opentelemetry-instrumentation-asgi (==0.51b0)"]
 instruments = ["django (>=1.10)"]
 
 [package.source]
@@ -1821,22 +1611,22 @@ reference = "azure"
 
 [[package]]
 name = "opentelemetry-instrumentation-fastapi"
-version = "0.52b0"
+version = "0.51b0"
 description = "OpenTelemetry FastAPI Instrumentation"
 optional = false
 python-versions = ">=3.8"
 groups = ["main"]
 files = [
-    {file = "opentelemetry_instrumentation_fastapi-0.52b0-py3-none-any.whl", hash = "sha256:738d93e5ea819c2ce7905395c64acb2792f097697b4d4b2e35a7fee8c692241f"},
-    {file = "opentelemetry_instrumentation_fastapi-0.52b0.tar.gz", hash = "sha256:89d48334db82680db4da2792d5a533a632cb1c8a20342e6263c62a9302658cb2"},
+    {file = "opentelemetry_instrumentation_fastapi-0.51b0-py3-none-any.whl", hash = "sha256:10513bbc11a1188adb9c1d2c520695f7a8f2b5f4de14e8162098035901cd6493"},
+    {file = "opentelemetry_instrumentation_fastapi-0.51b0.tar.gz", hash = "sha256:1624e70f2f4d12ceb792d8a0c331244cd6723190ccee01336273b4559bc13abc"},
 ]
 
 [package.dependencies]
 opentelemetry-api = ">=1.12,<2.0"
-opentelemetry-instrumentation = "0.52b0"
-opentelemetry-instrumentation-asgi = "0.52b0"
-opentelemetry-semantic-conventions = "0.52b0"
-opentelemetry-util-http = "0.52b0"
+opentelemetry-instrumentation = "0.51b0"
+opentelemetry-instrumentation-asgi = "0.51b0"
+opentelemetry-semantic-conventions = "0.51b0"
+opentelemetry-util-http = "0.51b0"
 
 [package.extras]
 instruments = ["fastapi (>=0.58,<1.0)"]
@@ -1848,22 +1638,22 @@ reference = "azure"
 
 [[package]]
 name = "opentelemetry-instrumentation-flask"
-version = "0.52b0"
+version = "0.51b0"
 description = "Flask instrumentation for OpenTelemetry"
 optional = false
 python-versions = ">=3.8"
 groups = ["main"]
 files = [
-    {file = "opentelemetry_instrumentation_flask-0.52b0-py3-none-any.whl", hash = "sha256:b3e2623d492b84314ba5b1d0fd619edf17250838f3e9308bea13d0c161ea8b91"},
-    {file = "opentelemetry_instrumentation_flask-0.52b0.tar.gz", hash = "sha256:3bc8e3ddf04510240f6f13abf386ec29144198babc63f17d18ac8b896692c5ef"},
+    {file = "opentelemetry_instrumentation_flask-0.51b0-py3-none-any.whl", hash = "sha256:ba2d8f72a8b4f807767f3c8a6a3fe3396b55cf01c426e5e71bbe621aaeb1a757"},
+    {file = "opentelemetry_instrumentation_flask-0.51b0.tar.gz", hash = "sha256:822f58f69b601560fafcb9e01d1f5a5afdb05bd9173d09b4efd7871e9be216c0"},
 ]
 
 [package.dependencies]
 opentelemetry-api = ">=1.12,<2.0"
-opentelemetry-instrumentation = "0.52b0"
-opentelemetry-instrumentation-wsgi = "0.52b0"
-opentelemetry-semantic-conventions = "0.52b0"
-opentelemetry-util-http = "0.52b0"
+opentelemetry-instrumentation = "0.51b0"
+opentelemetry-instrumentation-wsgi = "0.51b0"
+opentelemetry-semantic-conventions = "0.51b0"
+opentelemetry-util-http = "0.51b0"
 packaging = ">=21.0"
 
 [package.extras]
@@ -1876,20 +1666,20 @@ reference = "azure"
 
 [[package]]
 name = "opentelemetry-instrumentation-psycopg2"
-version = "0.52b0"
+version = "0.51b0"
 description = "OpenTelemetry psycopg2 instrumentation"
 optional = false
 python-versions = ">=3.8"
 groups = ["main"]
 files = [
-    {file = "opentelemetry_instrumentation_psycopg2-0.52b0-py3-none-any.whl", hash = "sha256:b72142919fe3ca73e8785578645c44f3467e57ab6af9014f0e9cf0146742a777"},
-    {file = "opentelemetry_instrumentation_psycopg2-0.52b0.tar.gz", hash = "sha256:1dac4ad0251b347ce7e694d951391c2c263c0ec4473cc1361b79587bb040520e"},
+    {file = "opentelemetry_instrumentation_psycopg2-0.51b0-py3-none-any.whl", hash = "sha256:888e58c6ee3583454c67bbd3c76c76261fdccd6507c770f93ab5819eaa48366c"},
+    {file = "opentelemetry_instrumentation_psycopg2-0.51b0.tar.gz", hash = "sha256:65b486df77845d00553a02c8c010efb79586c84a0a4643d93a985bd5ece90e88"},
 ]
 
 [package.dependencies]
 opentelemetry-api = ">=1.12,<2.0"
-opentelemetry-instrumentation = "0.52b0"
-opentelemetry-instrumentation-dbapi = "0.52b0"
+opentelemetry-instrumentation = "0.51b0"
+opentelemetry-instrumentation-dbapi = "0.51b0"
 
 [package.extras]
 instruments = ["psycopg2 (>=2.7.3.1)", "psycopg2-binary (>=2.7.3.1)"]
@@ -1901,21 +1691,21 @@ reference = "azure"
 
 [[package]]
 name = "opentelemetry-instrumentation-requests"
-version = "0.52b0"
+version = "0.51b0"
 description = "OpenTelemetry requests instrumentation"
 optional = false
 python-versions = ">=3.8"
 groups = ["main"]
 files = [
-    {file = "opentelemetry_instrumentation_requests-0.52b0-py3-none-any.whl", hash = "sha256:2806a8f522a27fab150761d69e768aa479b076cf2b0e3ca1ddf6c4ff1bda4683"},
-    {file = "opentelemetry_instrumentation_requests-0.52b0.tar.gz", hash = "sha256:8a36ac5bc92ca17454f208720de8a147518cdaf0a5b82ed1615b5367e1dbbf2a"},
+    {file = "opentelemetry_instrumentation_requests-0.51b0-py3-none-any.whl", hash = "sha256:0723aaafaeb2a825723f31c0bf644f9642377046063d1a52fc86571ced87feac"},
+    {file = "opentelemetry_instrumentation_requests-0.51b0.tar.gz", hash = "sha256:e7f4bd3ffcab6ebcce8a1c652af218e050354c8e7cac2c34814292d4de75167a"},
 ]
 
 [package.dependencies]
 opentelemetry-api = ">=1.12,<2.0"
-opentelemetry-instrumentation = "0.52b0"
-opentelemetry-semantic-conventions = "0.52b0"
-opentelemetry-util-http = "0.52b0"
+opentelemetry-instrumentation = "0.51b0"
+opentelemetry-semantic-conventions = "0.51b0"
+opentelemetry-util-http = "0.51b0"
 
 [package.extras]
 instruments = ["requests (>=2.0,<3.0)"]
@@ -1927,21 +1717,21 @@ reference = "azure"
 
 [[package]]
 name = "opentelemetry-instrumentation-urllib"
-version = "0.52b0"
+version = "0.51b0"
 description = "OpenTelemetry urllib instrumentation"
 optional = false
 python-versions = ">=3.8"
 groups = ["main"]
 files = [
-    {file = "opentelemetry_instrumentation_urllib-0.52b0-py3-none-any.whl", hash = "sha256:0713d516ea95b0462b39a57795687105f7be34889a0fed72b0e84113f554333c"},
-    {file = "opentelemetry_instrumentation_urllib-0.52b0.tar.gz", hash = "sha256:f1cd7f675bcc89b84ea9d1bbeb75ca3e199cc1d8a0479f609fc21817dfb83277"},
+    {file = "opentelemetry_instrumentation_urllib-0.51b0-py3-none-any.whl", hash = "sha256:62c5e72118ee3ac155ffb435a7afb644b9b068259e669f3822025f443f359c93"},
+    {file = "opentelemetry_instrumentation_urllib-0.51b0.tar.gz", hash = "sha256:a8c84ec4979f86ef7f8ed05491a73e67153a7cde16d69be02445d3f633c8a869"},
 ]
 
 [package.dependencies]
 opentelemetry-api = ">=1.12,<2.0"
-opentelemetry-instrumentation = "0.52b0"
-opentelemetry-semantic-conventions = "0.52b0"
-opentelemetry-util-http = "0.52b0"
+opentelemetry-instrumentation = "0.51b0"
+opentelemetry-semantic-conventions = "0.51b0"
+opentelemetry-util-http = "0.51b0"
 
 [package.source]
 type = "legacy"
@@ -1950,21 +1740,21 @@ reference = "azure"
 
 [[package]]
 name = "opentelemetry-instrumentation-urllib3"
-version = "0.52b0"
+version = "0.51b0"
 description = "OpenTelemetry urllib3 instrumentation"
 optional = false
 python-versions = ">=3.8"
 groups = ["main"]
 files = [
-    {file = "opentelemetry_instrumentation_urllib3-0.52b0-py3-none-any.whl", hash = "sha256:55b7405d9037d59e0b15a4be5361703003946d1c4c7c9b69cedc33a1e4293f1e"},
-    {file = "opentelemetry_instrumentation_urllib3-0.52b0.tar.gz", hash = "sha256:89059178a8a7b5ab70c3885315f022a8a5b09dabb0b74a6bdfc6a662990fa129"},
+    {file = "opentelemetry_instrumentation_urllib3-0.51b0-py3-none-any.whl", hash = "sha256:361efda1dfea87ab27da4448b8eb96d692ab07431a3fb9a00aaab987e51908f1"},
+    {file = "opentelemetry_instrumentation_urllib3-0.51b0.tar.gz", hash = "sha256:a45e6e9aa154fa1cdf78d82d48848e743e770cefe200d596c72a4c7a45588052"},
 ]
 
 [package.dependencies]
 opentelemetry-api = ">=1.12,<2.0"
-opentelemetry-instrumentation = "0.52b0"
-opentelemetry-semantic-conventions = "0.52b0"
-opentelemetry-util-http = "0.52b0"
+opentelemetry-instrumentation = "0.51b0"
+opentelemetry-semantic-conventions = "0.51b0"
+opentelemetry-util-http = "0.51b0"
 wrapt = ">=1.0.0,<2.0.0"
 
 [package.extras]
@@ -1977,21 +1767,21 @@ reference = "azure"
 
 [[package]]
 name = "opentelemetry-instrumentation-wsgi"
-version = "0.52b0"
+version = "0.51b0"
 description = "WSGI Middleware for OpenTelemetry"
 optional = false
 python-versions = ">=3.8"
 groups = ["main"]
 files = [
-    {file = "opentelemetry_instrumentation_wsgi-0.52b0-py3-none-any.whl", hash = "sha256:18f9fa9fbc35ff2f46006449c14542b3ba8eb2cef07bf221f877acce39e7587e"},
-    {file = "opentelemetry_instrumentation_wsgi-0.52b0.tar.gz", hash = "sha256:0ec6db5944ea95d6bf9dc4eb5064ff0eef50d4441489fee560a4e2978d09eb1b"},
+    {file = "opentelemetry_instrumentation_wsgi-0.51b0-py3-none-any.whl", hash = "sha256:bd0403cf00b39b0e4b2acf9aa08ccd6799e2d3b45b950bfaabfb10aed301727f"},
+    {file = "opentelemetry_instrumentation_wsgi-0.51b0.tar.gz", hash = "sha256:a759b020a41c5ddddbb3c71149aa60f2dd06c423ec507c8dfecec89e0570d5bc"},
 ]
 
 [package.dependencies]
 opentelemetry-api = ">=1.12,<2.0"
-opentelemetry-instrumentation = "0.52b0"
-opentelemetry-semantic-conventions = "0.52b0"
-opentelemetry-util-http = "0.52b0"
+opentelemetry-instrumentation = "0.51b0"
+opentelemetry-semantic-conventions = "0.51b0"
+opentelemetry-util-http = "0.51b0"
 
 [package.source]
 type = "legacy"
@@ -2020,19 +1810,19 @@ reference = "azure"
 
 [[package]]
 name = "opentelemetry-sdk"
-version = "1.31.0"
+version = "1.30.0"
 description = "OpenTelemetry Python SDK"
 optional = false
 python-versions = ">=3.8"
 groups = ["main"]
 files = [
-    {file = "opentelemetry_sdk-1.31.0-py3-none-any.whl", hash = "sha256:97c9a03865e69723725fb64fe04343a488c3e61e684eb804bd7d6da2215dfc60"},
-    {file = "opentelemetry_sdk-1.31.0.tar.gz", hash = "sha256:452d7d5b3c1db2e5e4cb64abede0ddd20690cb244a559c73a59652fdf6726070"},
+    {file = "opentelemetry_sdk-1.30.0-py3-none-any.whl", hash = "sha256:14fe7afc090caad881addb6926cec967129bd9260c4d33ae6a217359f6b61091"},
+    {file = "opentelemetry_sdk-1.30.0.tar.gz", hash = "sha256:c9287a9e4a7614b9946e933a67168450b9ab35f08797eb9bc77d998fa480fa18"},
 ]
 
 [package.dependencies]
-opentelemetry-api = "1.31.0"
-opentelemetry-semantic-conventions = "0.52b0"
+opentelemetry-api = "1.30.0"
+opentelemetry-semantic-conventions = "0.51b0"
 typing-extensions = ">=3.7.4"
 
 [package.source]
@@ -2042,19 +1832,19 @@ reference = "azure"
 
 [[package]]
 name = "opentelemetry-semantic-conventions"
-version = "0.52b0"
+version = "0.51b0"
 description = "OpenTelemetry Semantic Conventions"
 optional = false
 python-versions = ">=3.8"
 groups = ["main"]
 files = [
-    {file = "opentelemetry_semantic_conventions-0.52b0-py3-none-any.whl", hash = "sha256:4d843652ae1f9f3c0d4d8df0bfef740627c90495ac043fc33f0a04bad3b606e2"},
-    {file = "opentelemetry_semantic_conventions-0.52b0.tar.gz", hash = "sha256:f8bc8873a69d0a2f45746c31980baad2bb10ccee16b1816497ccf99417770386"},
+    {file = "opentelemetry_semantic_conventions-0.51b0-py3-none-any.whl", hash = "sha256:fdc777359418e8d06c86012c3dc92c88a6453ba662e941593adb062e48c2eeae"},
+    {file = "opentelemetry_semantic_conventions-0.51b0.tar.gz", hash = "sha256:3fabf47f35d1fd9aebcdca7e6802d86bd5ebc3bc3408b7e3248dde6e87a18c47"},
 ]
 
 [package.dependencies]
 deprecated = ">=1.2.6"
-opentelemetry-api = "1.31.0"
+opentelemetry-api = "1.30.0"
 
 [package.source]
 type = "legacy"
@@ -2063,14 +1853,14 @@ reference = "azure"
 
 [[package]]
 name = "opentelemetry-util-http"
-version = "0.52b0"
+version = "0.51b0"
 description = "Web util for OpenTelemetry"
 optional = false
 python-versions = ">=3.8"
 groups = ["main"]
 files = [
-    {file = "opentelemetry_util_http-0.52b0-py3-none-any.whl", hash = "sha256:89154382584ac42cd2362bdbcf825129d4dd61fe2b0cbd901b79de6964bfc72d"},
-    {file = "opentelemetry_util_http-0.52b0.tar.gz", hash = "sha256:2e0c2a206ff3a8a7ffabbdfcc1088c3eddc8f2415ecb35c01ecc2fd4fe9dfcfe"},
+    {file = "opentelemetry_util_http-0.51b0-py3-none-any.whl", hash = "sha256:0561d7a6e9c422b9ef9ae6e77eafcfcd32a2ab689f5e801475cbb67f189efa20"},
+    {file = "opentelemetry_util_http-0.51b0.tar.gz", hash = "sha256:05edd19ca1cc3be3968b1e502fd94816901a365adbeaab6b6ddb974384d3a0b9"},
 ]
 
 [package.source]
@@ -2363,30 +2153,6 @@ url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/pyth
 reference = "azure"
 
 [[package]]
-name = "protobuf"
-version = "6.30.1"
-description = ""
-optional = false
-python-versions = ">=3.9"
-groups = ["main"]
-files = [
-    {file = "protobuf-6.30.1-cp310-abi3-win32.whl", hash = "sha256:ba0706f948d0195f5cac504da156d88174e03218d9364ab40d903788c1903d7e"},
-    {file = "protobuf-6.30.1-cp310-abi3-win_amd64.whl", hash = "sha256:ed484f9ddd47f0f1bf0648806cccdb4fe2fb6b19820f9b79a5adf5dcfd1b8c5f"},
-    {file = "protobuf-6.30.1-cp39-abi3-macosx_10_9_universal2.whl", hash = "sha256:aa4f7dfaed0d840b03d08d14bfdb41348feaee06a828a8c455698234135b4075"},
-    {file = "protobuf-6.30.1-cp39-abi3-manylinux2014_aarch64.whl", hash = "sha256:47cd320b7db63e8c9ac35f5596ea1c1e61491d8a8eb6d8b45edc44760b53a4f6"},
-    {file = "protobuf-6.30.1-cp39-abi3-manylinux2014_x86_64.whl", hash = "sha256:e3083660225fa94748ac2e407f09a899e6a28bf9c0e70c75def8d15706bf85fc"},
-    {file = "protobuf-6.30.1-cp39-cp39-win32.whl", hash = "sha256:554d7e61cce2aa4c63ca27328f757a9f3867bce8ec213bf09096a8d16bcdcb6a"},
-    {file = "protobuf-6.30.1-cp39-cp39-win_amd64.whl", hash = "sha256:b510f55ce60f84dc7febc619b47215b900466e3555ab8cb1ba42deb4496d6cc0"},
-    {file = "protobuf-6.30.1-py3-none-any.whl", hash = "sha256:3c25e51e1359f1f5fa3b298faa6016e650d148f214db2e47671131b9063c53be"},
-    {file = "protobuf-6.30.1.tar.gz", hash = "sha256:535fb4e44d0236893d5cf1263a0f706f1160b689a7ab962e9da8a9ce4050b780"},
-]
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "azure"
-
-[[package]]
 name = "psutil"
 version = "6.1.1"
 description = "Cross-platform lib for process and system monitoring in Python."
@@ -2459,48 +2225,62 @@ reference = "azure"
 
 [[package]]
 name = "pydantic"
-version = "1.10.15"
+version = "1.10.21"
 description = "Data validation and settings management using python type hints"
 optional = false
 python-versions = ">=3.7"
 groups = ["main"]
 files = [
-    {file = "pydantic-1.10.15-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:22ed12ee588b1df028a2aa5d66f07bf8f8b4c8579c2e96d5a9c1f96b77f3bb55"},
-    {file = "pydantic-1.10.15-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:75279d3cac98186b6ebc2597b06bcbc7244744f6b0b44a23e4ef01e5683cc0d2"},
-    {file = "pydantic-1.10.15-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:50f1666a9940d3d68683c9d96e39640f709d7a72ff8702987dab1761036206bb"},
-    {file = "pydantic-1.10.15-cp310-cp310-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:82790d4753ee5d00739d6cb5cf56bceb186d9d6ce134aca3ba7befb1eedbc2c8"},
-    {file = "pydantic-1.10.15-cp310-cp310-musllinux_1_1_i686.whl", hash = "sha256:d207d5b87f6cbefbdb1198154292faee8017d7495a54ae58db06762004500d00"},
-    {file = "pydantic-1.10.15-cp310-cp310-musllinux_1_1_x86_64.whl", hash = "sha256:e49db944fad339b2ccb80128ffd3f8af076f9f287197a480bf1e4ca053a866f0"},
-    {file = "pydantic-1.10.15-cp310-cp310-win_amd64.whl", hash = "sha256:d3b5c4cbd0c9cb61bbbb19ce335e1f8ab87a811f6d589ed52b0254cf585d709c"},
-    {file = "pydantic-1.10.15-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:c3d5731a120752248844676bf92f25a12f6e45425e63ce22e0849297a093b5b0"},
-    {file = "pydantic-1.10.15-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:c365ad9c394f9eeffcb30a82f4246c0006417f03a7c0f8315d6211f25f7cb654"},
-    {file = "pydantic-1.10.15-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:3287e1614393119c67bd4404f46e33ae3be3ed4cd10360b48d0a4459f420c6a3"},
-    {file = "pydantic-1.10.15-cp311-cp311-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:be51dd2c8596b25fe43c0a4a59c2bee4f18d88efb8031188f9e7ddc6b469cf44"},
-    {file = "pydantic-1.10.15-cp311-cp311-musllinux_1_1_i686.whl", hash = "sha256:6a51a1dd4aa7b3f1317f65493a182d3cff708385327c1c82c81e4a9d6d65b2e4"},
-    {file = "pydantic-1.10.15-cp311-cp311-musllinux_1_1_x86_64.whl", hash = "sha256:4e316e54b5775d1eb59187f9290aeb38acf620e10f7fd2f776d97bb788199e53"},
-    {file = "pydantic-1.10.15-cp311-cp311-win_amd64.whl", hash = "sha256:0d142fa1b8f2f0ae11ddd5e3e317dcac060b951d605fda26ca9b234b92214986"},
-    {file = "pydantic-1.10.15-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:7ea210336b891f5ea334f8fc9f8f862b87acd5d4a0cbc9e3e208e7aa1775dabf"},
-    {file = "pydantic-1.10.15-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:3453685ccd7140715e05f2193d64030101eaad26076fad4e246c1cc97e1bb30d"},
-    {file = "pydantic-1.10.15-cp37-cp37m-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:9bea1f03b8d4e8e86702c918ccfd5d947ac268f0f0cc6ed71782e4b09353b26f"},
-    {file = "pydantic-1.10.15-cp37-cp37m-musllinux_1_1_i686.whl", hash = "sha256:005655cabc29081de8243126e036f2065bd7ea5b9dff95fde6d2c642d39755de"},
-    {file = "pydantic-1.10.15-cp37-cp37m-musllinux_1_1_x86_64.whl", hash = "sha256:af9850d98fc21e5bc24ea9e35dd80a29faf6462c608728a110c0a30b595e58b7"},
-    {file = "pydantic-1.10.15-cp37-cp37m-win_amd64.whl", hash = "sha256:d31ee5b14a82c9afe2bd26aaa405293d4237d0591527d9129ce36e58f19f95c1"},
-    {file = "pydantic-1.10.15-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:5e09c19df304b8123938dc3c53d3d3be6ec74b9d7d0d80f4f4b5432ae16c2022"},
-    {file = "pydantic-1.10.15-cp38-cp38-macosx_11_0_arm64.whl", hash = "sha256:7ac9237cd62947db00a0d16acf2f3e00d1ae9d3bd602b9c415f93e7a9fc10528"},
-    {file = "pydantic-1.10.15-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:584f2d4c98ffec420e02305cf675857bae03c9d617fcfdc34946b1160213a948"},
-    {file = "pydantic-1.10.15-cp38-cp38-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:bbc6989fad0c030bd70a0b6f626f98a862224bc2b1e36bfc531ea2facc0a340c"},
-    {file = "pydantic-1.10.15-cp38-cp38-musllinux_1_1_i686.whl", hash = "sha256:d573082c6ef99336f2cb5b667b781d2f776d4af311574fb53d908517ba523c22"},
-    {file = "pydantic-1.10.15-cp38-cp38-musllinux_1_1_x86_64.whl", hash = "sha256:6bd7030c9abc80134087d8b6e7aa957e43d35714daa116aced57269a445b8f7b"},
-    {file = "pydantic-1.10.15-cp38-cp38-win_amd64.whl", hash = "sha256:3350f527bb04138f8aff932dc828f154847fbdc7a1a44c240fbfff1b57f49a12"},
-    {file = "pydantic-1.10.15-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:51d405b42f1b86703555797270e4970a9f9bd7953f3990142e69d1037f9d9e51"},
-    {file = "pydantic-1.10.15-cp39-cp39-macosx_11_0_arm64.whl", hash = "sha256:a980a77c52723b0dc56640ced396b73a024d4b74f02bcb2d21dbbac1debbe9d0"},
-    {file = "pydantic-1.10.15-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:67f1a1fb467d3f49e1708a3f632b11c69fccb4e748a325d5a491ddc7b5d22383"},
-    {file = "pydantic-1.10.15-cp39-cp39-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:676ed48f2c5bbad835f1a8ed8a6d44c1cd5a21121116d2ac40bd1cd3619746ed"},
-    {file = "pydantic-1.10.15-cp39-cp39-musllinux_1_1_i686.whl", hash = "sha256:92229f73400b80c13afcd050687f4d7e88de9234d74b27e6728aa689abcf58cc"},
-    {file = "pydantic-1.10.15-cp39-cp39-musllinux_1_1_x86_64.whl", hash = "sha256:2746189100c646682eff0bce95efa7d2e203420d8e1c613dc0c6b4c1d9c1fde4"},
-    {file = "pydantic-1.10.15-cp39-cp39-win_amd64.whl", hash = "sha256:394f08750bd8eaad714718812e7fab615f873b3cdd0b9d84e76e51ef3b50b6b7"},
-    {file = "pydantic-1.10.15-py3-none-any.whl", hash = "sha256:28e552a060ba2740d0d2aabe35162652c1459a0b9069fe0db7f4ee0e18e74d58"},
-    {file = "pydantic-1.10.15.tar.gz", hash = "sha256:ca832e124eda231a60a041da4f013e3ff24949d94a01154b137fc2f2a43c3ffb"},
+    {file = "pydantic-1.10.21-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:245e486e0fec53ec2366df9cf1cba36e0bbf066af7cd9c974bbbd9ba10e1e586"},
+    {file = "pydantic-1.10.21-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:6c54f8d4c151c1de784c5b93dfbb872067e3414619e10e21e695f7bb84d1d1fd"},
+    {file = "pydantic-1.10.21-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:6b64708009cfabd9c2211295144ff455ec7ceb4c4fb45a07a804309598f36187"},
+    {file = "pydantic-1.10.21-cp310-cp310-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:8a148410fa0e971ba333358d11a6dea7b48e063de127c2b09ece9d1c1137dde4"},
+    {file = "pydantic-1.10.21-cp310-cp310-musllinux_1_2_i686.whl", hash = "sha256:36ceadef055af06e7756eb4b871cdc9e5a27bdc06a45c820cd94b443de019bbf"},
+    {file = "pydantic-1.10.21-cp310-cp310-musllinux_1_2_x86_64.whl", hash = "sha256:c0501e1d12df6ab1211b8cad52d2f7b2cd81f8e8e776d39aa5e71e2998d0379f"},
+    {file = "pydantic-1.10.21-cp310-cp310-win_amd64.whl", hash = "sha256:c261127c275d7bce50b26b26c7d8427dcb5c4803e840e913f8d9df3f99dca55f"},
+    {file = "pydantic-1.10.21-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:8b6350b68566bb6b164fb06a3772e878887f3c857c46c0c534788081cb48adf4"},
+    {file = "pydantic-1.10.21-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:935b19fdcde236f4fbf691959fa5c3e2b6951fff132964e869e57c70f2ad1ba3"},
+    {file = "pydantic-1.10.21-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:2b6a04efdcd25486b27f24c1648d5adc1633ad8b4506d0e96e5367f075ed2e0b"},
+    {file = "pydantic-1.10.21-cp311-cp311-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:c1ba253eb5af8d89864073e6ce8e6c8dec5f49920cff61f38f5c3383e38b1c9f"},
+    {file = "pydantic-1.10.21-cp311-cp311-musllinux_1_2_i686.whl", hash = "sha256:57f0101e6c97b411f287a0b7cf5ebc4e5d3b18254bf926f45a11615d29475793"},
+    {file = "pydantic-1.10.21-cp311-cp311-musllinux_1_2_x86_64.whl", hash = "sha256:90e85834f0370d737c77a386ce505c21b06bfe7086c1c568b70e15a568d9670d"},
+    {file = "pydantic-1.10.21-cp311-cp311-win_amd64.whl", hash = "sha256:6a497bc66b3374b7d105763d1d3de76d949287bf28969bff4656206ab8a53aa9"},
+    {file = "pydantic-1.10.21-cp312-cp312-macosx_10_13_x86_64.whl", hash = "sha256:2ed4a5f13cf160d64aa331ab9017af81f3481cd9fd0e49f1d707b57fe1b9f3ae"},
+    {file = "pydantic-1.10.21-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:3b7693bb6ed3fbe250e222f9415abb73111bb09b73ab90d2d4d53f6390e0ccc1"},
+    {file = "pydantic-1.10.21-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:185d5f1dff1fead51766da9b2de4f3dc3b8fca39e59383c273f34a6ae254e3e2"},
+    {file = "pydantic-1.10.21-cp312-cp312-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:38e6d35cf7cd1727822c79e324fa0677e1a08c88a34f56695101f5ad4d5e20e5"},
+    {file = "pydantic-1.10.21-cp312-cp312-musllinux_1_2_i686.whl", hash = "sha256:1d7c332685eafacb64a1a7645b409a166eb7537f23142d26895746f628a3149b"},
+    {file = "pydantic-1.10.21-cp312-cp312-musllinux_1_2_x86_64.whl", hash = "sha256:2c9b782db6f993a36092480eeaab8ba0609f786041b01f39c7c52252bda6d85f"},
+    {file = "pydantic-1.10.21-cp312-cp312-win_amd64.whl", hash = "sha256:7ce64d23d4e71d9698492479505674c5c5b92cda02b07c91dfc13633b2eef805"},
+    {file = "pydantic-1.10.21-cp313-cp313-macosx_10_13_x86_64.whl", hash = "sha256:0067935d35044950be781933ab91b9a708eaff124bf860fa2f70aeb1c4be7212"},
+    {file = "pydantic-1.10.21-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:5e8148c2ce4894ce7e5a4925d9d3fdce429fb0e821b5a8783573f3611933a251"},
+    {file = "pydantic-1.10.21-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:a4973232c98b9b44c78b1233693e5e1938add5af18042f031737e1214455f9b8"},
+    {file = "pydantic-1.10.21-cp313-cp313-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:662bf5ce3c9b1cef32a32a2f4debe00d2f4839fefbebe1d6956e681122a9c839"},
+    {file = "pydantic-1.10.21-cp313-cp313-musllinux_1_2_i686.whl", hash = "sha256:98737c3ab5a2f8a85f2326eebcd214510f898881a290a7939a45ec294743c875"},
+    {file = "pydantic-1.10.21-cp313-cp313-musllinux_1_2_x86_64.whl", hash = "sha256:0bb58bbe65a43483d49f66b6c8474424d551a3fbe8a7796c42da314bac712738"},
+    {file = "pydantic-1.10.21-cp313-cp313-win_amd64.whl", hash = "sha256:e622314542fb48542c09c7bd1ac51d71c5632dd3c92dc82ede6da233f55f4848"},
+    {file = "pydantic-1.10.21-cp37-cp37m-macosx_10_9_x86_64.whl", hash = "sha256:d356aa5b18ef5a24d8081f5c5beb67c0a2a6ff2a953ee38d65a2aa96526b274f"},
+    {file = "pydantic-1.10.21-cp37-cp37m-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:08caa8c0468172d27c669abfe9e7d96a8b1655ec0833753e117061febaaadef5"},
+    {file = "pydantic-1.10.21-cp37-cp37m-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:c677aa39ec737fec932feb68e4a2abe142682f2885558402602cd9746a1c92e8"},
+    {file = "pydantic-1.10.21-cp37-cp37m-musllinux_1_2_i686.whl", hash = "sha256:79577cc045d3442c4e845df53df9f9202546e2ba54954c057d253fc17cd16cb1"},
+    {file = "pydantic-1.10.21-cp37-cp37m-musllinux_1_2_x86_64.whl", hash = "sha256:b6b73ab347284719f818acb14f7cd80696c6fdf1bd34feee1955d7a72d2e64ce"},
+    {file = "pydantic-1.10.21-cp37-cp37m-win_amd64.whl", hash = "sha256:46cffa24891b06269e12f7e1ec50b73f0c9ab4ce71c2caa4ccf1fb36845e1ff7"},
+    {file = "pydantic-1.10.21-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:298d6f765e3c9825dfa78f24c1efd29af91c3ab1b763e1fd26ae4d9e1749e5c8"},
+    {file = "pydantic-1.10.21-cp38-cp38-macosx_11_0_arm64.whl", hash = "sha256:f2f4a2305f15eff68f874766d982114ac89468f1c2c0b97640e719cf1a078374"},
+    {file = "pydantic-1.10.21-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:35b263b60c519354afb3a60107d20470dd5250b3ce54c08753f6975c406d949b"},
+    {file = "pydantic-1.10.21-cp38-cp38-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:e23a97a6c2f2db88995496db9387cd1727acdacc85835ba8619dce826c0b11a6"},
+    {file = "pydantic-1.10.21-cp38-cp38-musllinux_1_2_i686.whl", hash = "sha256:3c96fed246ccc1acb2df032ff642459e4ae18b315ecbab4d95c95cfa292e8517"},
+    {file = "pydantic-1.10.21-cp38-cp38-musllinux_1_2_x86_64.whl", hash = "sha256:b92893ebefc0151474f682e7debb6ab38552ce56a90e39a8834734c81f37c8a9"},
+    {file = "pydantic-1.10.21-cp38-cp38-win_amd64.whl", hash = "sha256:b8460bc256bf0de821839aea6794bb38a4c0fbd48f949ea51093f6edce0be459"},
+    {file = "pydantic-1.10.21-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:5d387940f0f1a0adb3c44481aa379122d06df8486cc8f652a7b3b0caf08435f7"},
+    {file = "pydantic-1.10.21-cp39-cp39-macosx_11_0_arm64.whl", hash = "sha256:266ecfc384861d7b0b9c214788ddff75a2ea123aa756bcca6b2a1175edeca0fe"},
+    {file = "pydantic-1.10.21-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:61da798c05a06a362a2f8c5e3ff0341743e2818d0f530eaac0d6898f1b187f1f"},
+    {file = "pydantic-1.10.21-cp39-cp39-manylinux_2_5_i686.manylinux1_i686.manylinux_2_17_i686.manylinux2014_i686.whl", hash = "sha256:a621742da75ce272d64ea57bd7651ee2a115fa67c0f11d66d9dcfc18c2f1b106"},
+    {file = "pydantic-1.10.21-cp39-cp39-musllinux_1_2_i686.whl", hash = "sha256:9e3e4000cd54ef455694b8be9111ea20f66a686fc155feda1ecacf2322b115da"},
+    {file = "pydantic-1.10.21-cp39-cp39-musllinux_1_2_x86_64.whl", hash = "sha256:f198c8206640f4c0ef5a76b779241efb1380a300d88b1bce9bfe95a6362e674d"},
+    {file = "pydantic-1.10.21-cp39-cp39-win_amd64.whl", hash = "sha256:e7f0cda108b36a30c8fc882e4fc5b7eec8ef584aa43aa43694c6a7b274fb2b56"},
+    {file = "pydantic-1.10.21-py3-none-any.whl", hash = "sha256:db70c920cba9d05c69ad4a9e7f8e9e83011abb2c6490e561de9ae24aee44925c"},
+    {file = "pydantic-1.10.21.tar.gz", hash = "sha256:64b48e2b609a6c22178a56c408ee1215a7206077ecb8a193e2fda31858b2362a"},
 ]
 
 [package.dependencies]
@@ -2655,74 +2435,6 @@ files = [
 
 [package.dependencies]
 six = ">=1.5"
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "azure"
-
-[[package]]
-name = "pyyaml"
-version = "6.0.2"
-description = "YAML parser and emitter for Python"
-optional = false
-python-versions = ">=3.8"
-groups = ["main"]
-files = [
-    {file = "PyYAML-6.0.2-cp310-cp310-macosx_10_9_x86_64.whl", hash = "sha256:0a9a2848a5b7feac301353437eb7d5957887edbf81d56e903999a75a3d743086"},
-    {file = "PyYAML-6.0.2-cp310-cp310-macosx_11_0_arm64.whl", hash = "sha256:29717114e51c84ddfba879543fb232a6ed60086602313ca38cce623c1d62cfbf"},
-    {file = "PyYAML-6.0.2-cp310-cp310-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:8824b5a04a04a047e72eea5cec3bc266db09e35de6bdfe34c9436ac5ee27d237"},
-    {file = "PyYAML-6.0.2-cp310-cp310-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:7c36280e6fb8385e520936c3cb3b8042851904eba0e58d277dca80a5cfed590b"},
-    {file = "PyYAML-6.0.2-cp310-cp310-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:ec031d5d2feb36d1d1a24380e4db6d43695f3748343d99434e6f5f9156aaa2ed"},
-    {file = "PyYAML-6.0.2-cp310-cp310-musllinux_1_1_aarch64.whl", hash = "sha256:936d68689298c36b53b29f23c6dbb74de12b4ac12ca6cfe0e047bedceea56180"},
-    {file = "PyYAML-6.0.2-cp310-cp310-musllinux_1_1_x86_64.whl", hash = "sha256:23502f431948090f597378482b4812b0caae32c22213aecf3b55325e049a6c68"},
-    {file = "PyYAML-6.0.2-cp310-cp310-win32.whl", hash = "sha256:2e99c6826ffa974fe6e27cdb5ed0021786b03fc98e5ee3c5bfe1fd5015f42b99"},
-    {file = "PyYAML-6.0.2-cp310-cp310-win_amd64.whl", hash = "sha256:a4d3091415f010369ae4ed1fc6b79def9416358877534caf6a0fdd2146c87a3e"},
-    {file = "PyYAML-6.0.2-cp311-cp311-macosx_10_9_x86_64.whl", hash = "sha256:cc1c1159b3d456576af7a3e4d1ba7e6924cb39de8f67111c735f6fc832082774"},
-    {file = "PyYAML-6.0.2-cp311-cp311-macosx_11_0_arm64.whl", hash = "sha256:1e2120ef853f59c7419231f3bf4e7021f1b936f6ebd222406c3b60212205d2ee"},
-    {file = "PyYAML-6.0.2-cp311-cp311-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:5d225db5a45f21e78dd9358e58a98702a0302f2659a3c6cd320564b75b86f47c"},
-    {file = "PyYAML-6.0.2-cp311-cp311-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:5ac9328ec4831237bec75defaf839f7d4564be1e6b25ac710bd1a96321cc8317"},
-    {file = "PyYAML-6.0.2-cp311-cp311-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:3ad2a3decf9aaba3d29c8f537ac4b243e36bef957511b4766cb0057d32b0be85"},
-    {file = "PyYAML-6.0.2-cp311-cp311-musllinux_1_1_aarch64.whl", hash = "sha256:ff3824dc5261f50c9b0dfb3be22b4567a6f938ccce4587b38952d85fd9e9afe4"},
-    {file = "PyYAML-6.0.2-cp311-cp311-musllinux_1_1_x86_64.whl", hash = "sha256:797b4f722ffa07cc8d62053e4cff1486fa6dc094105d13fea7b1de7d8bf71c9e"},
-    {file = "PyYAML-6.0.2-cp311-cp311-win32.whl", hash = "sha256:11d8f3dd2b9c1207dcaf2ee0bbbfd5991f571186ec9cc78427ba5bd32afae4b5"},
-    {file = "PyYAML-6.0.2-cp311-cp311-win_amd64.whl", hash = "sha256:e10ce637b18caea04431ce14fabcf5c64a1c61ec9c56b071a4b7ca131ca52d44"},
-    {file = "PyYAML-6.0.2-cp312-cp312-macosx_10_9_x86_64.whl", hash = "sha256:c70c95198c015b85feafc136515252a261a84561b7b1d51e3384e0655ddf25ab"},
-    {file = "PyYAML-6.0.2-cp312-cp312-macosx_11_0_arm64.whl", hash = "sha256:ce826d6ef20b1bc864f0a68340c8b3287705cae2f8b4b1d932177dcc76721725"},
-    {file = "PyYAML-6.0.2-cp312-cp312-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:1f71ea527786de97d1a0cc0eacd1defc0985dcf6b3f17bb77dcfc8c34bec4dc5"},
-    {file = "PyYAML-6.0.2-cp312-cp312-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:9b22676e8097e9e22e36d6b7bda33190d0d400f345f23d4065d48f4ca7ae0425"},
-    {file = "PyYAML-6.0.2-cp312-cp312-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:80bab7bfc629882493af4aa31a4cfa43a4c57c83813253626916b8c7ada83476"},
-    {file = "PyYAML-6.0.2-cp312-cp312-musllinux_1_1_aarch64.whl", hash = "sha256:0833f8694549e586547b576dcfaba4a6b55b9e96098b36cdc7ebefe667dfed48"},
-    {file = "PyYAML-6.0.2-cp312-cp312-musllinux_1_1_x86_64.whl", hash = "sha256:8b9c7197f7cb2738065c481a0461e50ad02f18c78cd75775628afb4d7137fb3b"},
-    {file = "PyYAML-6.0.2-cp312-cp312-win32.whl", hash = "sha256:ef6107725bd54b262d6dedcc2af448a266975032bc85ef0172c5f059da6325b4"},
-    {file = "PyYAML-6.0.2-cp312-cp312-win_amd64.whl", hash = "sha256:7e7401d0de89a9a855c839bc697c079a4af81cf878373abd7dc625847d25cbd8"},
-    {file = "PyYAML-6.0.2-cp313-cp313-macosx_10_13_x86_64.whl", hash = "sha256:efdca5630322a10774e8e98e1af481aad470dd62c3170801852d752aa7a783ba"},
-    {file = "PyYAML-6.0.2-cp313-cp313-macosx_11_0_arm64.whl", hash = "sha256:50187695423ffe49e2deacb8cd10510bc361faac997de9efef88badc3bb9e2d1"},
-    {file = "PyYAML-6.0.2-cp313-cp313-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:0ffe8360bab4910ef1b9e87fb812d8bc0a308b0d0eef8c8f44e0254ab3b07133"},
-    {file = "PyYAML-6.0.2-cp313-cp313-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:17e311b6c678207928d649faa7cb0d7b4c26a0ba73d41e99c4fff6b6c3276484"},
-    {file = "PyYAML-6.0.2-cp313-cp313-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:70b189594dbe54f75ab3a1acec5f1e3faa7e8cf2f1e08d9b561cb41b845f69d5"},
-    {file = "PyYAML-6.0.2-cp313-cp313-musllinux_1_1_aarch64.whl", hash = "sha256:41e4e3953a79407c794916fa277a82531dd93aad34e29c2a514c2c0c5fe971cc"},
-    {file = "PyYAML-6.0.2-cp313-cp313-musllinux_1_1_x86_64.whl", hash = "sha256:68ccc6023a3400877818152ad9a1033e3db8625d899c72eacb5a668902e4d652"},
-    {file = "PyYAML-6.0.2-cp313-cp313-win32.whl", hash = "sha256:bc2fa7c6b47d6bc618dd7fb02ef6fdedb1090ec036abab80d4681424b84c1183"},
-    {file = "PyYAML-6.0.2-cp313-cp313-win_amd64.whl", hash = "sha256:8388ee1976c416731879ac16da0aff3f63b286ffdd57cdeb95f3f2e085687563"},
-    {file = "PyYAML-6.0.2-cp38-cp38-macosx_10_9_x86_64.whl", hash = "sha256:24471b829b3bf607e04e88d79542a9d48bb037c2267d7927a874e6c205ca7e9a"},
-    {file = "PyYAML-6.0.2-cp38-cp38-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:d7fded462629cfa4b685c5416b949ebad6cec74af5e2d42905d41e257e0869f5"},
-    {file = "PyYAML-6.0.2-cp38-cp38-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:d84a1718ee396f54f3a086ea0a66d8e552b2ab2017ef8b420e92edbc841c352d"},
-    {file = "PyYAML-6.0.2-cp38-cp38-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:9056c1ecd25795207ad294bcf39f2db3d845767be0ea6e6a34d856f006006083"},
-    {file = "PyYAML-6.0.2-cp38-cp38-musllinux_1_1_x86_64.whl", hash = "sha256:82d09873e40955485746739bcb8b4586983670466c23382c19cffecbf1fd8706"},
-    {file = "PyYAML-6.0.2-cp38-cp38-win32.whl", hash = "sha256:43fa96a3ca0d6b1812e01ced1044a003533c47f6ee8aca31724f78e93ccc089a"},
-    {file = "PyYAML-6.0.2-cp38-cp38-win_amd64.whl", hash = "sha256:01179a4a8559ab5de078078f37e5c1a30d76bb88519906844fd7bdea1b7729ff"},
-    {file = "PyYAML-6.0.2-cp39-cp39-macosx_10_9_x86_64.whl", hash = "sha256:688ba32a1cffef67fd2e9398a2efebaea461578b0923624778664cc1c914db5d"},
-    {file = "PyYAML-6.0.2-cp39-cp39-macosx_11_0_arm64.whl", hash = "sha256:a8786accb172bd8afb8be14490a16625cbc387036876ab6ba70912730faf8e1f"},
-    {file = "PyYAML-6.0.2-cp39-cp39-manylinux_2_17_aarch64.manylinux2014_aarch64.whl", hash = "sha256:d8e03406cac8513435335dbab54c0d385e4a49e4945d2909a581c83647ca0290"},
-    {file = "PyYAML-6.0.2-cp39-cp39-manylinux_2_17_s390x.manylinux2014_s390x.whl", hash = "sha256:f753120cb8181e736c57ef7636e83f31b9c0d1722c516f7e86cf15b7aa57ff12"},
-    {file = "PyYAML-6.0.2-cp39-cp39-manylinux_2_17_x86_64.manylinux2014_x86_64.whl", hash = "sha256:3b1fdb9dc17f5a7677423d508ab4f243a726dea51fa5e70992e59a7411c89d19"},
-    {file = "PyYAML-6.0.2-cp39-cp39-musllinux_1_1_aarch64.whl", hash = "sha256:0b69e4ce7a131fe56b7e4d770c67429700908fc0752af059838b1cfb41960e4e"},
-    {file = "PyYAML-6.0.2-cp39-cp39-musllinux_1_1_x86_64.whl", hash = "sha256:a9f8c2e67970f13b16084e04f134610fd1d374bf477b17ec1599185cf611d725"},
-    {file = "PyYAML-6.0.2-cp39-cp39-win32.whl", hash = "sha256:6395c297d42274772abc367baaa79683958044e5d3835486c16da75d2a694631"},
-    {file = "PyYAML-6.0.2-cp39-cp39-win_amd64.whl", hash = "sha256:39693e1f8320ae4f43943590b49779ffb98acb81f788220ea932a6b6c51004d8"},
-    {file = "pyyaml-6.0.2.tar.gz", hash = "sha256:d584d9ec91ad65861cc08d42e834324ef890a082e591037abe114850ff7bbc3e"},
-]
 
 [package.source]
 type = "legacy"
@@ -3010,23 +2722,6 @@ url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/pyth
 reference = "azure"
 
 [[package]]
-name = "xmltodict"
-version = "0.14.2"
-description = "Makes working with XML feel like you are working with JSON"
-optional = false
-python-versions = ">=3.6"
-groups = ["main"]
-files = [
-    {file = "xmltodict-0.14.2-py2.py3-none-any.whl", hash = "sha256:20cc7d723ed729276e808f26fb6b3599f786cbc37e06c65e192ba77c40f20aac"},
-    {file = "xmltodict-0.14.2.tar.gz", hash = "sha256:201e7c28bb210e374999d1dde6382923ab0ed1a8a5faeece48ab525b7810a553"},
-]
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "azure"
-
-[[package]]
 name = "yarl"
 version = "1.18.3"
 description = "Yet another URL library"
@@ -3156,4 +2851,4 @@ reference = "azure"
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.11"
-content-hash = "3877282a652705026703d24918df7899f39ee450d327f0a2e6272157761c2684"
+content-hash = "7c42874dc34eeb85c0d130b3cd521656c48e7ed47704efd2b81a69f8c09c0d60"
