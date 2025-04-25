@@ -2851,4 +2851,4 @@ reference = "azure"
 [metadata]
 lock-version = "2.1"
 python-versions = "^3.11"
-content-hash = "7c42874dc34eeb85c0d130b3cd521656c48e7ed47704efd2b81a69f8c09c0d60"
+content-hash = "d940f5a927dba972440d52f46e81446cd5819ab13b2b86f393972896a29c7fff"

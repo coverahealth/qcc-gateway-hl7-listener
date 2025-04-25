@@ -5,18 +5,13 @@ description = "HL7 listener service for QCC gateway appliance"
 authors = ["sajal-g <sajalgoyal@gmail.com>"]
 
 packages = [
-    { include = "hl7_listener", from = "src/main/py"},    
+    { include = "hl7_listener", from = "src/main/py"},
 ]
 
 [[tool.poetry.source]]
 name = "azure"
 url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
 priority = "primary"
-
-[[tool.poetry.source]]
-name = "development-pypi"
-url = "https://coverahealth.jfrog.io/artifactory/api/pypi/development-pypi/simple"
-priority = "supplemental"
 
 [[tool.poetry.source]]
 name = "pypi-public"
