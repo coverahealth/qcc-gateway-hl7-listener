@@ -5,12 +5,12 @@ description = "HL7 listener service for QCC gateway appliance"
 authors = ["sajal-g <sajalgoyal@gmail.com>"]
 
 packages = [
-    { include = "hl7_listener", from = "src/main/py"},    
+    { include = "hl7_listener", from = "src/main/py"},
 ]
 
 [[tool.poetry.source]]
-name = "development-pypi"
-url = "https://coverahealth.jfrog.io/artifactory/api/pypi/development-pypi/simple"
+name = "azure"
+url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
 priority = "primary"
 
 [[tool.poetry.source]]
@@ -24,9 +24,9 @@ aiohttp = "^3.8.3"
 hl7 = "^0.4.5"
 pydantic = "^1.10.7"
 nats-py = "^2.4.0"
-covera-logging = "^1.0.9"
-covera-tracing = "^1.0.1"
-covera-cloud-integration = "^1.0.30"
+covera-logging = "^2.1.0"
+covera-tracing = "^1.0.4"
+covera-cloud-integration = "^1.0.35"
 
 [tool.poetry.group.test.dependencies]
 pytest = "7.1.2"
