@@ -10,7 +10,7 @@ packages = [
 
 [[tool.poetry.source]]
 name = "development-pypi"
-url = "https://coverahealth.jfrog.io/artifactory/api/pypi/development-pypi/simple"
+url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
 priority = "primary"
 
 
@@ -22,11 +22,12 @@ priority = "primary"
 python = "^3.11"
 aiohttp = "^3.8.3"
 hl7 = "^0.4.5"
-pydantic = "^1.10.7"
 aiobotocore = "^2.5.0"
 nats-py = "^2.4.0"
-covera-ddtrace = "^0.1.11"
-covera-logging = "^1.0.8"
+covera-ddtrace = "2.0.2"
+covera-logging = "2.1.0"
+pydantic = "2.10.2"
+pydantic-settings = "^2.10.1"
 
 [tool.poetry.group.test.dependencies]
 pytest = "7.1.2"

@@ -1,11 +1,9 @@
-from pydantic import (
-    AnyUrl,
-    BaseSettings
-)
+from pydantic_settings import BaseSettings
+from pydantic import AnyUrl
 
 from hl7_listener.settings import (
     QueueType,
-    settings as settings_
+    Settings 
 )
 
 import hl7_listener.messaging.sqs as _sqs
@@ -27,6 +25,7 @@ MESSAGER_CONFIG_MAP = {
     QueueType.SQS: {"settings": SQSSettings, "messager": _sqs.SQSMessager}
 }
 
+settings_: Settings = Settings.get_settings()
 
 settings = MESSAGER_CONFIG_MAP[settings_.OUTBOUND_QUEUE_TYPE]["settings"]()
 messager = MESSAGER_CONFIG_MAP[settings_.OUTBOUND_QUEUE_TYPE]["messager"]()

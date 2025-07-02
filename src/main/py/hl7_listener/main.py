@@ -24,10 +24,10 @@ from hl7_listener.messaging.settings import (
     settings as messager_settings,
     messager
 )
-from hl7_listener.settings import settings
+from hl7_listener.settings import Settings
 
 logger = configure_get_logger()
-
+settings: Settings = Settings.get_settings()
 
 def exception_formatter(exception_text: str):
     exception_text = re.sub(r'\"MSH\|.*\"', "<hl7message>", exception_text)
@@ -67,7 +67,7 @@ async def process_received_hl7_messages(hl7_reader, hl7_writer, ddspan=None):
             await messager.send_msg(msg=str(hl7_message))
 
             # Send ACK to acknowledge receipt of the message.
-            hl7_writer.writemessage(hl7_message.create_ack())
+            await hl7_writer.writemessage(hl7_message.create_ack())
             # The drain() will fail if the hl7 sender does not process the ACK.
             await hl7_writer.drain()
 
@@ -79,7 +79,7 @@ async def process_received_hl7_messages(hl7_reader, hl7_writer, ddspan=None):
             exception=Exception(exception_formatter(str(exp)))
         )
         # Send ack code Application Reject (AR).
-        hl7_writer.writemessage(hl7_message.create_ack(ack_code="AR"))
+        await hl7_writer.writemessage(hl7_message.create_ack(ack_code="AR"))
 
     except asyncio.IncompleteReadError as exp:
         if hl7_reader.at_eof():
@@ -111,13 +111,13 @@ async def process_received_hl7_messages(hl7_reader, hl7_writer, ddspan=None):
         )
         if hl7_message:
             # Send ack code Application Error (AE).
-            hl7_writer.writemessage(hl7_message.create_ack(ack_code="AE"))
+            await hl7_writer.writemessage(hl7_message.create_ack(ack_code="AE"))
         else:
             raise Exception(exception_formatter(str(exp)))
 
     finally:
         if hl7_writer:
-            hl7_writer.close()
+            await hl7_writer.close()
             await hl7_writer.wait_closed()
         # Note: the message sender will close the hl7_reader (writer from the
         # sender perspective).
