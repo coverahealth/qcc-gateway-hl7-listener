@@ -24,10 +24,10 @@ from hl7_listener.messaging.settings import (
     settings as messager_settings,
     messager
 )
-from hl7_listener.settings import Settings
+from hl7_listener.settings import settings
 
 logger = configure_get_logger()
-settings: Settings = Settings.get_settings()
+
 
 def exception_formatter(exception_text: str):
     exception_text = re.sub(r'\"MSH\|.*\"', "<hl7message>", exception_text)

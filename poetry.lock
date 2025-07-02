@@ -25,11 +25,6 @@ awscli = ["awscli (>=1.40.22,<1.40.27)"]
 boto3 = ["boto3 (>=1.38.23,<1.38.28)"]
 httpx = ["httpx (>=0.25.1,<0.29)"]
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [[package]]
 name = "aiohappyeyeballs"
 version = "2.6.1"
@@ -40,11 +35,6 @@ files = [
     {file = "aiohappyeyeballs-2.6.1-py3-none-any.whl", hash = "sha256:f349ba8f4b75cb25c99c5c2d84e997e485204d2902a9597802b0371f09331fb8"},
     {file = "aiohappyeyeballs-2.6.1.tar.gz", hash = "sha256:c3f9d0113123803ccadfdf3f0faa505bc78e6a72d1cc4806cbd719826e943558"},
 ]
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
 
 [[package]]
 name = "aiohttp"
@@ -153,11 +143,6 @@ yarl = ">=1.17.0,<2.0"
 [package.extras]
 speedups = ["Brotli", "aiodns (>=3.3.0)", "brotlicffi"]
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [[package]]
 name = "aioitertools"
 version = "0.12.0"
@@ -173,11 +158,6 @@ files = [
 dev = ["attribution (==1.8.0)", "black (==24.8.0)", "build (>=1.2)", "coverage (==7.6.1)", "flake8 (==7.1.1)", "flit (==3.9.0)", "mypy (==1.11.2)", "ufmt (==2.7.1)", "usort (==1.0.8.post1)"]
 docs = ["sphinx (==8.0.2)", "sphinx-mdinclude (==0.6.2)"]
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [[package]]
 name = "aiosignal"
 version = "1.3.2"
@@ -192,11 +172,6 @@ files = [
 [package.dependencies]
 frozenlist = ">=1.1.0"
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [[package]]
 name = "annotated-types"
 version = "0.7.0"
@@ -207,11 +182,6 @@ files = [
     {file = "annotated_types-0.7.0-py3-none-any.whl", hash = "sha256:1f02e8b43a8fbbc3f3e0d4f0f4bfc8131bcb4eebe8849b8e5c773f3a1c582a53"},
     {file = "annotated_types-0.7.0.tar.gz", hash = "sha256:aff07c09a53a08bc8cfccb9c85b05f1aa9a2a6f23728d790723543408344ce89"},
 ]
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
 
 [[package]]
 name = "asgiref"
@@ -227,11 +197,6 @@ files = [
 [package.extras]
 tests = ["mypy (>=0.800)", "pytest", "pytest-asyncio"]
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [[package]]
 name = "atomicwrites"
 version = "1.4.1"
@@ -241,11 +206,6 @@ python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
 files = [
     {file = "atomicwrites-1.4.1.tar.gz", hash = "sha256:81b2c9071a49367a7f770170e5eec8cb66567cfbbc8c73d20ce5ca4a8d71cf11"},
 ]
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
 
 [[package]]
 name = "attrs"
@@ -265,11 +225,6 @@ dev = ["cloudpickle", "hypothesis", "mypy (>=1.11.1)", "pre-commit-uv", "pympler
 docs = ["cogapp", "furo", "myst-parser", "sphinx", "sphinx-notfound-page", "sphinxcontrib-towncrier", "towncrier"]
 tests = ["cloudpickle", "hypothesis", "mypy (>=1.11.1)", "pympler", "pytest (>=4.3.0)", "pytest-mypy-plugins", "pytest-xdist[psutil]"]
 tests-mypy = ["mypy (>=1.11.1)", "pytest-mypy-plugins"]
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
 
 [[package]]
 name = "azure-core"
@@ -291,11 +246,6 @@ typing-extensions = ">=4.6.0"
 aio = ["aiohttp (>=3.0)"]
 tracing = ["opentelemetry-api (>=1.26,<2.0)"]
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [[package]]
 name = "azure-core-tracing-opentelemetry"
 version = "1.0.0b12"
@@ -310,11 +260,6 @@ files = [
 [package.dependencies]
 azure-core = ">=1.24.0"
 opentelemetry-api = ">=1.12.0"
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
 
 [[package]]
 name = "azure-identity"
@@ -333,11 +278,6 @@ cryptography = ">=2.5"
 msal = ">=1.30.0"
 msal-extensions = ">=1.2.0"
 typing-extensions = ">=4.0.0"
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
 
 [[package]]
 name = "azure-monitor-opentelemetry"
@@ -364,11 +304,6 @@ opentelemetry-instrumentation-urllib3 = ">=0.49b0,<0.53b0"
 opentelemetry-resource-detector-azure = ">=0.1.4,<0.2.0"
 opentelemetry-sdk = ">=1.28.0,<1.32"
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [[package]]
 name = "azure-monitor-opentelemetry-exporter"
 version = "1.0.0b38"
@@ -388,11 +323,6 @@ msrest = ">=0.6.10"
 opentelemetry-api = ">=1.26,<2.0"
 opentelemetry-sdk = ">=1.26,<2.0"
 psutil = ">=5.9,<8"
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
 
 [[package]]
 name = "black"
@@ -438,17 +368,12 @@ d = ["aiohttp (>=3.7.4)", "aiohttp (>=3.7.4,!=3.9.0)"]
 jupyter = ["ipython (>=7.8.0)", "tokenize-rt (>=3.2.0)"]
 uvloop = ["uvloop (>=0.15.2)"]
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [[package]]
 name = "botocore"
 version = "1.38.27"
 description = "Low-level, data-driven core of boto 3."
 optional = false
-python-versions = ">= 3.9"
+python-versions = ">=3.9"
 files = [
     {file = "botocore-1.38.27-py3-none-any.whl", hash = "sha256:a785d5e9a5eda88ad6ab9ed8b87d1f2ac409d0226bba6ff801c55359e94d91a8"},
     {file = "botocore-1.38.27.tar.gz", hash = "sha256:9788f7efe974328a38cbade64cc0b1e67d27944b899f88cb786ae362973133b6"},
@@ -462,11 +387,6 @@ urllib3 = {version = ">=1.25.4,<2.2.0 || >2.2.0,<3", markers = "python_version >
 [package.extras]
 crt = ["awscrt (==0.23.8)"]
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [[package]]
 name = "bytecode"
 version = "0.16.2"
@@ -477,11 +397,6 @@ files = [
     {file = "bytecode-0.16.2-py3-none-any.whl", hash = "sha256:0a7dea0387ec5cae5ec77578690c5ca7470c8a202c50ce64a426d86380cddd7f"},
     {file = "bytecode-0.16.2.tar.gz", hash = "sha256:f05020b6dc1f48cdadd946f7c3a03131ba0f312bd103767c5d75559de5c308f8"},
 ]
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
 
 [[package]]
 name = "cattrs"
@@ -508,11 +423,6 @@ pyyaml = ["pyyaml (>=6.0)"]
 tomlkit = ["tomlkit (>=0.11.8)"]
 ujson = ["ujson (>=5.10.0)"]
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [[package]]
 name = "certifi"
 version = "2025.6.15"
@@ -523,11 +433,6 @@ files = [
     {file = "certifi-2025.6.15-py3-none-any.whl", hash = "sha256:2e0c7ce7cb5d8f8634ca55d2ba7e6ec2689a2fd6537d8dec1296a477a4910057"},
     {file = "certifi-2025.6.15.tar.gz", hash = "sha256:d747aa5a8b9bbbb1bb8c22bb13e22bd1f18e9796defa16bab421f7f7a317323b"},
 ]
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
 
 [[package]]
 name = "cffi"
@@ -607,11 +512,6 @@ files = [
 
 [package.dependencies]
 pycparser = "*"
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
 
 [[package]]
 name = "charset-normalizer"
@@ -714,11 +614,6 @@ files = [
     {file = "charset_normalizer-3.4.2.tar.gz", hash = "sha256:5baececa9ecba31eff645232d59845c07aa030f0c81ee70184a90d35099a0e63"},
 ]
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [[package]]
 name = "click"
 version = "8.2.1"
@@ -733,11 +628,6 @@ files = [
 [package.dependencies]
 colorama = {version = "*", markers = "platform_system == \"Windows\""}
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [[package]]
 name = "colorama"
 version = "0.4.6"
@@ -748,11 +638,6 @@ files = [
     {file = "colorama-0.4.6-py2.py3-none-any.whl", hash = "sha256:4f1d9991f5acc0ca119f9d443620b77f9d6b33703e51011c16baf57afb285fc6"},
     {file = "colorama-0.4.6.tar.gz", hash = "sha256:08695f5cb7ed6e0531a20572697297273c47b8cae5a63ffc6d6ed5c201be6e44"},
 ]
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
 
 [[package]]
 name = "covera-ddtrace"
@@ -771,7 +656,7 @@ PyYAML = ">=6.0,<7.0"
 
 [package.source]
 type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
+url = "https://coverahealth.jfrog.io/artifactory/api/pypi/development-pypi/simple"
 reference = "development-pypi"
 
 [[package]]
@@ -791,7 +676,7 @@ structlog = ">=23.2.0,<24.0.0"
 
 [package.source]
 type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
+url = "https://coverahealth.jfrog.io/artifactory/api/pypi/development-pypi/simple"
 reference = "development-pypi"
 
 [[package]]
@@ -873,17 +758,12 @@ files = [
 [package.extras]
 toml = ["tomli"]
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [[package]]
 name = "cryptography"
 version = "45.0.4"
 description = "cryptography is a package which provides cryptographic recipes and primitives to Python developers."
 optional = false
-python-versions = ">=3.7, !=3.9.0, !=3.9.1"
+python-versions = "!=3.9.0,!=3.9.1,>=3.7"
 files = [
     {file = "cryptography-45.0.4-cp311-abi3-macosx_10_9_universal2.whl", hash = "sha256:425a9a6ac2823ee6e46a76a21a4e8342d8fa5c01e08b823c1f19a8b74f096069"},
     {file = "cryptography-45.0.4-cp311-abi3-manylinux2014_aarch64.manylinux_2_17_aarch64.whl", hash = "sha256:680806cf63baa0039b920f4976f5f31b10e772de42f16310a6839d9f21a26b0d"},
@@ -937,11 +817,6 @@ ssh = ["bcrypt (>=3.1.5)"]
 test = ["certifi (>=2024)", "cryptography-vectors (==45.0.4)", "pretend (>=0.7)", "pytest (>=7.4.0)", "pytest-benchmark (>=4.0)", "pytest-cov (>=2.10.1)", "pytest-xdist (>=3.5.0)"]
 test-randomorder = ["pytest-randomly"]
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [[package]]
 name = "ddsketch"
 version = "3.0.1"
@@ -959,17 +834,12 @@ six = "*"
 [package.extras]
 serialization = ["protobuf (>=3.0.0)"]
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [[package]]
 name = "ddtrace"
 version = "1.20.19"
 description = "Datadog APM client library"
 optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*, !=3.4.*"
+python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,!=3.4.*,>=2.7"
 files = [
     {file = "ddtrace-1.20.19-cp27-cp27m-macosx_11_0_x86_64.whl", hash = "sha256:cb66942cf0a2b3b5a466b4e73b58ac0b7bca91778414e85b4dd595838eb6e949"},
     {file = "ddtrace-1.20.19-cp27-cp27m-manylinux2010_i686.whl", hash = "sha256:4a4ec74c8e7cc1f0980231fcd4c5aa6da6c9acc13e9ff387f0c133659ac2d3ec"},
@@ -1057,17 +927,12 @@ xmltodict = ">=0.12"
 [package.extras]
 opentracing = ["opentracing (>=2.0.0)"]
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [[package]]
 name = "deprecated"
 version = "1.2.18"
 description = "Python @deprecated decorator to deprecate old python classes, functions or methods."
 optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
+python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,>=2.7"
 files = [
     {file = "Deprecated-1.2.18-py2.py3-none-any.whl", hash = "sha256:bd5011788200372a32418f888e326a09ff80d0214bd961147cfed01b5c018eec"},
     {file = "deprecated-1.2.18.tar.gz", hash = "sha256:422b6f6d859da6f2ef57857761bfb392480502a64c3028ca9bbe86085d72115d"},
@@ -1079,17 +944,12 @@ wrapt = ">=1.10,<2"
 [package.extras]
 dev = ["PyTest", "PyTest-Cov", "bump2version (<1)", "setuptools", "tox"]
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [[package]]
 name = "docformatter"
 version = "1.7.7"
 description = "Formats docstrings to follow PEP 257"
 optional = false
-python-versions = ">=3.9,<4.0"
+python-versions = "<4.0,>=3.9"
 files = [
     {file = "docformatter-1.7.7-py3-none-any.whl", hash = "sha256:7af49f8a46346a77858f6651f431b882c503c2f4442c8b4524b920c863277834"},
     {file = "docformatter-1.7.7.tar.gz", hash = "sha256:ea0e1e8867e5af468dfc3f9e947b92230a55be9ec17cd1609556387bffac7978"},
@@ -1101,11 +961,6 @@ untokenize = ">=0.1.1,<0.2.0"
 
 [package.extras]
 tomli = ["tomli (>=2.0.0,<3.0.0)"]
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
 
 [[package]]
 name = "envier"
@@ -1121,11 +976,6 @@ files = [
 [package.extras]
 mypy = ["mypy"]
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [[package]]
 name = "fixedint"
 version = "0.1.6"
@@ -1137,11 +987,6 @@ files = [
     {file = "fixedint-0.1.6-py3-none-any.whl", hash = "sha256:b8cf9f913735d2904deadda7a6daa9f57100599da1de57a7448ea1be75ae8c9c"},
     {file = "fixedint-0.1.6.tar.gz", hash = "sha256:703005d090499d41ce7ce2ee7eae8f7a5589a81acdc6b79f1728a56495f2c799"},
 ]
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
 
 [[package]]
 name = "frozenlist"
@@ -1256,11 +1101,6 @@ files = [
     {file = "frozenlist-1.7.0.tar.gz", hash = "sha256:2e310d81923c2437ea8670467121cc3e9b0f76d3043cc1d2331d56c7fb7a3a8f"},
 ]
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [[package]]
 name = "hl7"
 version = "0.4.5"
@@ -1271,11 +1111,6 @@ files = [
     {file = "hl7-0.4.5-py2.py3-none-any.whl", hash = "sha256:f46bf7c165801fd40e8fcc9f2be41c5794415039adc97646aee7ee6b20ce8ccd"},
     {file = "hl7-0.4.5.tar.gz", hash = "sha256:b6eb97499ebe236e00c3009d43e6b0f040de002df12a292fa5efbd2ce2a8a838"},
 ]
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
 
 [[package]]
 name = "idna"
@@ -1290,11 +1125,6 @@ files = [
 
 [package.extras]
 all = ["flake8 (>=7.1.1)", "mypy (>=1.11.2)", "pytest (>=8.3.2)", "ruff (>=0.6.2)"]
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
 
 [[package]]
 name = "importlib-metadata"
@@ -1319,11 +1149,6 @@ perf = ["ipython"]
 test = ["flufl.flake8", "importlib_resources (>=1.3)", "jaraco.test (>=5.4)", "packaging", "pyfakefs", "pytest (>=6,!=8.1.*)", "pytest-perf (>=0.9.2)"]
 type = ["pytest-mypy"]
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [[package]]
 name = "iniconfig"
 version = "2.1.0"
@@ -1335,11 +1160,6 @@ files = [
     {file = "iniconfig-2.1.0.tar.gz", hash = "sha256:3abbd2e30b36733fee78f9c7f7308f2d0050e88f0087fd25c2645f63c773e1c7"},
 ]
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [[package]]
 name = "isodate"
 version = "0.7.2"
@@ -1350,11 +1170,6 @@ files = [
     {file = "isodate-0.7.2-py3-none-any.whl", hash = "sha256:28009937d8031054830160fce6d409ed342816b543597cece116d966c6d99e15"},
     {file = "isodate-0.7.2.tar.gz", hash = "sha256:4cd1aa0f43ca76f4a6c6c0292a85f40b35ec2e43e315b59f06e6d32171a953e6"},
 ]
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
 
 [[package]]
 name = "isort"
@@ -1370,11 +1185,6 @@ files = [
 [package.extras]
 colors = ["colorama (>=0.4.6)"]
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [[package]]
 name = "jmespath"
 version = "1.0.1"
@@ -1385,11 +1195,6 @@ files = [
     {file = "jmespath-1.0.1-py3-none-any.whl", hash = "sha256:02e2e4cc71b5bcab88332eebf907519190dd9e6e82107fa7f83b1003a6252980"},
     {file = "jmespath-1.0.1.tar.gz", hash = "sha256:90261b206d6defd58fdd5e85f478bf633a2901798906be2ad389150c5c60edbe"},
 ]
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
 
 [[package]]
 name = "msal"
@@ -1410,11 +1215,6 @@ requests = ">=2.0.0,<3"
 [package.extras]
 broker = ["pymsalruntime (>=0.14,<0.18)", "pymsalruntime (>=0.17,<0.18)"]
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [[package]]
 name = "msal-extensions"
 version = "1.3.1"
@@ -1431,11 +1231,6 @@ msal = ">=1.29,<2"
 
 [package.extras]
 portalocker = ["portalocker (>=1.4,<4)"]
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
 
 [[package]]
 name = "msrest"
@@ -1457,11 +1252,6 @@ requests-oauthlib = ">=0.5.0"
 
 [package.extras]
 async = ["aiodns", "aiohttp (>=3.0)"]
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
 
 [[package]]
 name = "multidict"
@@ -1570,11 +1360,6 @@ files = [
     {file = "multidict-6.5.1.tar.gz", hash = "sha256:a835ea8103f4723915d7d621529c80ef48db48ae0c818afcabe0f95aa1febc3a"},
 ]
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [[package]]
 name = "mypy-extensions"
 version = "1.1.0"
@@ -1585,11 +1370,6 @@ files = [
     {file = "mypy_extensions-1.1.0-py3-none-any.whl", hash = "sha256:1be4cccdb0f2482337c4743e60421de3a356cd97508abadd57d47403e94f5505"},
     {file = "mypy_extensions-1.1.0.tar.gz", hash = "sha256:52e68efc3284861e772bbcd66823fde5ae21fd2fdb51c62a211403730b916558"},
 ]
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
 
 [[package]]
 name = "nats-py"
@@ -1605,11 +1385,6 @@ files = [
 aiohttp = ["aiohttp"]
 fast-parse = ["fast-mail-parser"]
 nkeys = ["nkeys"]
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
 
 [[package]]
 name = "oauthlib"
@@ -1627,11 +1402,6 @@ rsa = ["cryptography (>=3.0.0)"]
 signals = ["blinker (>=1.4.0)"]
 signedtoken = ["cryptography (>=3.0.0)", "pyjwt (>=2.0.0,<3)"]
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [[package]]
 name = "opentelemetry-api"
 version = "1.31.1"
@@ -1646,11 +1416,6 @@ files = [
 [package.dependencies]
 deprecated = ">=1.2.6"
 importlib-metadata = ">=6.0,<8.7.0"
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
 
 [[package]]
 name = "opentelemetry-instrumentation"
@@ -1668,11 +1433,6 @@ opentelemetry-api = ">=1.4,<2.0"
 opentelemetry-semantic-conventions = "0.52b1"
 packaging = ">=18.0"
 wrapt = ">=1.0.0,<2.0.0"
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
 
 [[package]]
 name = "opentelemetry-instrumentation-asgi"
@@ -1695,11 +1455,6 @@ opentelemetry-util-http = "0.52b1"
 [package.extras]
 instruments = ["asgiref (>=3.0,<4.0)"]
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [[package]]
 name = "opentelemetry-instrumentation-dbapi"
 version = "0.52b1"
@@ -1716,11 +1471,6 @@ opentelemetry-api = ">=1.12,<2.0"
 opentelemetry-instrumentation = "0.52b1"
 opentelemetry-semantic-conventions = "0.52b1"
 wrapt = ">=1.0.0,<2.0.0"
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
 
 [[package]]
 name = "opentelemetry-instrumentation-django"
@@ -1744,11 +1494,6 @@ opentelemetry-util-http = "0.52b1"
 asgi = ["opentelemetry-instrumentation-asgi (==0.52b1)"]
 instruments = ["django (>=1.10)"]
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [[package]]
 name = "opentelemetry-instrumentation-fastapi"
 version = "0.52b1"
@@ -1769,11 +1514,6 @@ opentelemetry-util-http = "0.52b1"
 
 [package.extras]
 instruments = ["fastapi (>=0.58,<1.0)"]
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
 
 [[package]]
 name = "opentelemetry-instrumentation-flask"
@@ -1797,11 +1537,6 @@ packaging = ">=21.0"
 [package.extras]
 instruments = ["flask (>=1.0)"]
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [[package]]
 name = "opentelemetry-instrumentation-psycopg2"
 version = "0.52b1"
@@ -1820,11 +1555,6 @@ opentelemetry-instrumentation-dbapi = "0.52b1"
 
 [package.extras]
 instruments = ["psycopg2 (>=2.7.3.1)", "psycopg2-binary (>=2.7.3.1)"]
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
 
 [[package]]
 name = "opentelemetry-instrumentation-requests"
@@ -1846,11 +1576,6 @@ opentelemetry-util-http = "0.52b1"
 [package.extras]
 instruments = ["requests (>=2.0,<3.0)"]
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [[package]]
 name = "opentelemetry-instrumentation-urllib"
 version = "0.52b1"
@@ -1867,11 +1592,6 @@ opentelemetry-api = ">=1.12,<2.0"
 opentelemetry-instrumentation = "0.52b1"
 opentelemetry-semantic-conventions = "0.52b1"
 opentelemetry-util-http = "0.52b1"
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
 
 [[package]]
 name = "opentelemetry-instrumentation-urllib3"
@@ -1894,11 +1614,6 @@ wrapt = ">=1.0.0,<2.0.0"
 [package.extras]
 instruments = ["urllib3 (>=1.0.0,<3.0.0)"]
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [[package]]
 name = "opentelemetry-instrumentation-wsgi"
 version = "0.52b1"
@@ -1916,11 +1631,6 @@ opentelemetry-instrumentation = "0.52b1"
 opentelemetry-semantic-conventions = "0.52b1"
 opentelemetry-util-http = "0.52b1"
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [[package]]
 name = "opentelemetry-resource-detector-azure"
 version = "0.1.5"
@@ -1934,11 +1644,6 @@ files = [
 
 [package.dependencies]
 opentelemetry-sdk = ">=1.21,<2.0"
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
 
 [[package]]
 name = "opentelemetry-sdk"
@@ -1956,11 +1661,6 @@ opentelemetry-api = "1.31.1"
 opentelemetry-semantic-conventions = "0.52b1"
 typing-extensions = ">=3.7.4"
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [[package]]
 name = "opentelemetry-semantic-conventions"
 version = "0.52b1"
@@ -1976,11 +1676,6 @@ files = [
 deprecated = ">=1.2.6"
 opentelemetry-api = "1.31.1"
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [[package]]
 name = "opentelemetry-util-http"
 version = "0.52b1"
@@ -1991,11 +1686,6 @@ files = [
     {file = "opentelemetry_util_http-0.52b1-py3-none-any.whl", hash = "sha256:6a6ab6bfa23fef96f4995233e874f67602adf9d224895981b4ab9d4dde23de78"},
     {file = "opentelemetry_util_http-0.52b1.tar.gz", hash = "sha256:c03c8c23f1b75fadf548faece7ead3aecd50761c5593a2b2831b48730eee5b31"},
 ]
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
 
 [[package]]
 name = "packaging"
@@ -2008,11 +1698,6 @@ files = [
     {file = "packaging-23.2.tar.gz", hash = "sha256:048fb0e9405036518eaaf48a55953c750c11e1a1b68e0dd1a9d62ed0c092cfc5"},
 ]
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [[package]]
 name = "pathspec"
 version = "0.12.1"
@@ -2023,11 +1708,6 @@ files = [
     {file = "pathspec-0.12.1-py3-none-any.whl", hash = "sha256:a0d503e138a4c123b27490a4f7beda6a01c6f288df0e4a8b79c7eb0dc7b4cc08"},
     {file = "pathspec-0.12.1.tar.gz", hash = "sha256:a482d51503a1ab33b1c67a6c3813a26953dbdc71c31dacaef9a838c4e29f5712"},
 ]
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
 
 [[package]]
 name = "platformdirs"
@@ -2045,11 +1725,6 @@ docs = ["furo (>=2024.8.6)", "proselint (>=0.14)", "sphinx (>=8.1.3)", "sphinx-a
 test = ["appdirs (==1.4.4)", "covdefaults (>=2.3)", "pytest (>=8.3.4)", "pytest-cov (>=6)", "pytest-mock (>=3.14)"]
 type = ["mypy (>=1.14.1)"]
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [[package]]
 name = "pluggy"
 version = "1.6.0"
@@ -2064,11 +1739,6 @@ files = [
 [package.extras]
 dev = ["pre-commit", "tox"]
 testing = ["coverage", "pytest", "pytest-benchmark"]
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
 
 [[package]]
 name = "propcache"
@@ -2177,11 +1847,6 @@ files = [
     {file = "propcache-0.3.2.tar.gz", hash = "sha256:20d7d62e4e7ef05f221e0db2856b979540686342e7dd9973b815599c7057e168"},
 ]
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [[package]]
 name = "protobuf"
 version = "6.31.1"
@@ -2199,11 +1864,6 @@ files = [
     {file = "protobuf-6.31.1-py3-none-any.whl", hash = "sha256:720a6c7e6b77288b85063569baae8536671b39f15cc22037ec7045658d80489e"},
     {file = "protobuf-6.31.1.tar.gz", hash = "sha256:d8cac4c982f0b957a4dc73a80e2ea24fab08e679c0de9deb835f4a12d69aca9a"},
 ]
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
 
 [[package]]
 name = "psutil"
@@ -2225,13 +1885,8 @@ files = [
 ]
 
 [package.extras]
-dev = ["abi3audit", "black (==24.10.0)", "check-manifest", "coverage", "packaging", "pylint", "pyperf", "pypinfo", "pytest", "pytest-cov", "pytest-xdist", "requests", "rstcheck", "ruff", "setuptools", "sphinx", "sphinx-rtd-theme", "toml-sort", "twine", "virtualenv", "vulture", "wheel"]
+dev = ["abi3audit", "black (==24.10.0)", "check-manifest", "coverage", "packaging", "pylint", "pyperf", "pypinfo", "pytest", "pytest-cov", "pytest-xdist", "requests", "rstcheck", "ruff", "setuptools", "sphinx", "sphinx_rtd_theme", "toml-sort", "twine", "virtualenv", "vulture", "wheel"]
 test = ["pytest", "pytest-xdist", "setuptools"]
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
 
 [[package]]
 name = "py"
@@ -2244,11 +1899,6 @@ files = [
     {file = "py-1.11.0.tar.gz", hash = "sha256:51c75c4126074b472f746a24399ad32f6053d1b34b68d2fa41e558e6f4a98719"},
 ]
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [[package]]
 name = "pycparser"
 version = "2.22"
@@ -2259,11 +1909,6 @@ files = [
     {file = "pycparser-2.22-py3-none-any.whl", hash = "sha256:c3702b6d3dd8c7abc1afa565d7e63d53a1d0bd86cdc24edd75470f4de499cfcc"},
     {file = "pycparser-2.22.tar.gz", hash = "sha256:491c8be9c040f5390f5bf44a5b07752bd07f56edf992381b05c701439eec10f6"},
 ]
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
 
 [[package]]
 name = "pydantic"
@@ -2284,11 +1929,6 @@ typing-extensions = ">=4.12.2"
 [package.extras]
 email = ["email-validator (>=2.0.0)"]
 timezone = ["tzdata"]
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
 
 [[package]]
 name = "pydantic-core"
@@ -2402,11 +2042,6 @@ files = [
 [package.dependencies]
 typing-extensions = ">=4.6.0,<4.7.0 || >4.7.0"
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [[package]]
 name = "pydantic-settings"
 version = "2.10.1"
@@ -2430,11 +2065,6 @@ gcp-secret-manager = ["google-cloud-secret-manager (>=2.23.1)"]
 toml = ["tomli (>=2.0.1)"]
 yaml = ["pyyaml (>=6.0.1)"]
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [[package]]
 name = "pyjwt"
 version = "2.10.1"
@@ -2454,11 +2084,6 @@ crypto = ["cryptography (>=3.4.0)"]
 dev = ["coverage[toml] (==5.0.4)", "cryptography (>=3.4.0)", "pre-commit", "pytest (>=6.0.0,<7.0.0)", "sphinx", "sphinx-rtd-theme", "zope.interface"]
 docs = ["sphinx", "sphinx-rtd-theme", "zope.interface"]
 tests = ["coverage[toml] (==5.0.4)", "pytest (>=6.0.0,<7.0.0)"]
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
 
 [[package]]
 name = "pytest"
@@ -2484,11 +2109,6 @@ tomli = ">=1.0.0"
 [package.extras]
 testing = ["argcomplete", "hypothesis (>=3.56)", "mock", "nose", "pygments (>=2.7.2)", "requests", "xmlschema"]
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [[package]]
 name = "pytest-asyncio"
 version = "0.19.0"
@@ -2505,11 +2125,6 @@ pytest = ">=6.1.0"
 
 [package.extras]
 testing = ["coverage (>=6.2)", "flaky (>=3.5.0)", "hypothesis (>=5.7.1)", "mypy (>=0.931)", "pytest-trio (>=0.7.0)"]
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
 
 [[package]]
 name = "pytest-cov"
@@ -2529,11 +2144,6 @@ pytest = ">=4.6"
 [package.extras]
 testing = ["fields", "hunter", "process-tests", "pytest-xdist", "six", "virtualenv"]
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [[package]]
 name = "pytest-mock"
 version = "3.8.2"
@@ -2551,11 +2161,6 @@ pytest = ">=5.0"
 [package.extras]
 dev = ["pre-commit", "pytest-asyncio", "tox"]
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [[package]]
 name = "python-dateutil"
 version = "2.9.0.post0"
@@ -2570,11 +2175,6 @@ files = [
 [package.dependencies]
 six = ">=1.5"
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [[package]]
 name = "python-dotenv"
 version = "1.1.1"
@@ -2588,11 +2188,6 @@ files = [
 
 [package.extras]
 cli = ["click (>=5.0)"]
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
 
 [[package]]
 name = "pyyaml"
@@ -2656,11 +2251,6 @@ files = [
     {file = "pyyaml-6.0.2.tar.gz", hash = "sha256:d584d9ec91ad65861cc08d42e834324ef890a082e591037abe114850ff7bbc3e"},
 ]
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [[package]]
 name = "requests"
 version = "2.32.4"
@@ -2682,11 +2272,6 @@ urllib3 = ">=1.21.1,<3"
 socks = ["PySocks (>=1.5.6,!=1.5.7)"]
 use-chardet-on-py3 = ["chardet (>=3.0.2,<6)"]
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [[package]]
 name = "requests-oauthlib"
 version = "2.0.0"
@@ -2705,26 +2290,16 @@ requests = ">=2.0.0"
 [package.extras]
 rsa = ["oauthlib[signedtoken] (>=3.0.0)"]
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [[package]]
 name = "six"
 version = "1.17.0"
 description = "Python 2 and 3 compatibility utilities"
 optional = false
-python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*"
+python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,>=2.7"
 files = [
     {file = "six-1.17.0-py2.py3-none-any.whl", hash = "sha256:4721f391ed90541fddacab5acf947aa0d3dc7d27b2e1e8eda2be8970586c3274"},
     {file = "six-1.17.0.tar.gz", hash = "sha256:ff70335d468e7eb6ec65b95b99d3a2836546063f63acc5171de367e834932a81"},
 ]
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
 
 [[package]]
 name = "structlog"
@@ -2742,11 +2317,6 @@ dev = ["structlog[tests,typing]"]
 docs = ["furo", "myst-parser", "sphinx", "sphinx-notfound-page", "sphinxcontrib-mermaid", "sphinxext-opengraph", "twisted"]
 tests = ["freezegun (>=0.2.8)", "pretend", "pytest (>=6.0)", "pytest-asyncio (>=0.17)", "simplejson"]
 typing = ["mypy (>=1.4)", "rich", "twisted"]
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
 
 [[package]]
 name = "tomli"
@@ -2789,11 +2359,6 @@ files = [
     {file = "tomli-2.2.1.tar.gz", hash = "sha256:cd45e1dc79c835ce60f7404ec8119f2eb06d38b1deba146f07ced3bbc44505ff"},
 ]
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [[package]]
 name = "typing-extensions"
 version = "4.14.0"
@@ -2804,11 +2369,6 @@ files = [
     {file = "typing_extensions-4.14.0-py3-none-any.whl", hash = "sha256:a1514509136dd0b477638fc68d6a91497af5076466ad0fa6c338e44e359944af"},
     {file = "typing_extensions-4.14.0.tar.gz", hash = "sha256:8676b788e32f02ab42d9e7c61324048ae4c6d844a399eebace3d4979d75ceef4"},
 ]
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
 
 [[package]]
 name = "typing-inspection"
@@ -2824,11 +2384,6 @@ files = [
 [package.dependencies]
 typing-extensions = ">=4.12.0"
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [[package]]
 name = "untokenize"
 version = "0.1.1"
@@ -2838,11 +2393,6 @@ python-versions = "*"
 files = [
     {file = "untokenize-0.1.1.tar.gz", hash = "sha256:3865dbbbb8efb4bb5eaa72f1be7f3e0be00ea8b7f125c69cbd1f5fda926f37a2"},
 ]
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
 
 [[package]]
 name = "urllib3"
@@ -2860,11 +2410,6 @@ brotli = ["brotli (>=1.0.9)", "brotlicffi (>=0.8.0)"]
 h2 = ["h2 (>=4,<5)"]
 socks = ["pysocks (>=1.5.6,!=1.5.7,<2.0)"]
 zstd = ["zstandard (>=0.18.0)"]
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
 
 [[package]]
 name = "wrapt"
@@ -2954,11 +2499,6 @@ files = [
     {file = "wrapt-1.17.2.tar.gz", hash = "sha256:41388e9d4d1522446fe79d3213196bd9e3b301a336965b9e27ca2788ebd122f3"},
 ]
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [[package]]
 name = "xmltodict"
 version = "0.14.2"
@@ -2969,11 +2509,6 @@ files = [
     {file = "xmltodict-0.14.2-py2.py3-none-any.whl", hash = "sha256:20cc7d723ed729276e808f26fb6b3599f786cbc37e06c65e192ba77c40f20aac"},
     {file = "xmltodict-0.14.2.tar.gz", hash = "sha256:201e7c28bb210e374999d1dde6382923ab0ed1a8a5faeece48ab525b7810a553"},
 ]
-
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
 
 [[package]]
 name = "yarl"
@@ -3093,11 +2628,6 @@ idna = ">=2.0"
 multidict = ">=4.0"
 propcache = ">=0.2.1"
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [[package]]
 name = "zipp"
 version = "3.23.0"
@@ -3117,12 +2647,7 @@ enabler = ["pytest-enabler (>=2.2)"]
 test = ["big-O", "jaraco.functools", "jaraco.itertools", "jaraco.test", "more_itertools", "pytest (>=6,!=8.1.*)", "pytest-ignore-flaky"]
 type = ["pytest-mypy"]
 
-[package.source]
-type = "legacy"
-url = "https://coverahealth.pkgs.visualstudio.com/AppsDevOps-Hub/_packaging/python-packages/pypi/simple"
-reference = "development-pypi"
-
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.11"
-content-hash = "b8dc42617bfa78301ac5a269ed7fdccaed6602b07075c5d99283866198478fd3"
+content-hash = "dc59f91a6f01a5a9a0cfac145cd5b3f401cf4aeed69ad44cc5430b93b884663e"

@@ -21,3 +21,5 @@ class Settings(BaseSettings):
         if cls._instance is None:
             cls._instance = cls()
         return cls._instance
+
+settings: Settings = Settings.get_settings()
