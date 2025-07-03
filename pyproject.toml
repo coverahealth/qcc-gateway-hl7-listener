@@ -24,8 +24,8 @@ aiohttp = "^3.8.3"
 hl7 = "^0.4.5"
 aiobotocore = "^2.5.0"
 nats-py = "^2.4.0"
-pydantic-settings = "2.6.1"
-covera-ddtrace = "2.0.2"
+pydantic-settings = "2.10.1"
+covera-ddtrace = "2.0.3"
 covera-logging = "^2.1.0"
 
 [tool.poetry.group.test.dependencies]
