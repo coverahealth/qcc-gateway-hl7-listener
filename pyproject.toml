@@ -22,11 +22,11 @@ priority = "supplemental"
 python = "^3.11"
 aiohttp = "^3.8.3"
 hl7 = "^0.4.5"
-pydantic = "^1.10.7"
 nats-py = "^2.4.0"
 covera-logging = "^2.1.0"
 covera-tracing = "^1.0.4"
-covera-cloud-integration = "1.0.36"
+pydantic-settings = "2.10.1"
+covera-cloud-integration = "^2.0.0"
 
 [tool.poetry.group.test.dependencies]
 pytest = "7.1.2"
