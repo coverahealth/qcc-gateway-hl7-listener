@@ -163,8 +163,8 @@ async def main():
     logger.info(
         "HL7 Listener started",
         logging_code='HL7LLOG001',
-        settings=settings.dict(),
-        messager_settings=messager_settings.dict()
+        settings=settings.model_dump(),
+        messager_settings=messager_settings.model_dump()
     )
 
     #In case of cloud connect, the connect method will return empty handed

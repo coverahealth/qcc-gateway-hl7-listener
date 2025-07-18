@@ -1,5 +1,5 @@
-from pydantic import BaseSettings
-
+from typing import ClassVar
+from pydantic_settings import BaseSettings
 from enum import Enum
 
 class QueueType(str, Enum):
@@ -14,4 +14,13 @@ class Settings(BaseSettings):
     LOG_LEVEL: str = "INFO"
 
 
-settings = Settings()
+    _instance: ClassVar["Settings"] = None
+
+    @classmethod
+    def get_settings(cls) -> "Settings":
+        if cls._instance is None:
+            cls._instance = cls()
+        return cls._instance
+
+
+settings: Settings = Settings.get_settings()
