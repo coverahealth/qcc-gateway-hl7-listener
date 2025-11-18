@@ -26,7 +26,7 @@ nats-py = "^2.4.0"
 covera-logging = "^2.1.0"
 covera-tracing = "^1.0.4"
 pydantic-settings = "2.10.1"
-covera-cloud-integration = "^2.0.0"
+covera-cloud-integration = "2.0.3"
 
 [tool.poetry.group.test.dependencies]
 pytest = "7.1.2"
