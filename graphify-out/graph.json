@@ -1,0 +1,2568 @@
+{
+  "directed": false,
+  "multigraph": false,
+  "graph": {},
+  "nodes": [
+    {
+      "label": "nats.sh",
+      "file_type": "code",
+      "source_file": "local/nats.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "file"
+      },
+      "_origin": "ast",
+      "id": "local_nats",
+      "community": 10,
+      "norm_label": "nats.sh"
+    },
+    {
+      "label": "nats.sh script",
+      "file_type": "code",
+      "source_file": "local/nats.sh",
+      "source_location": "L1",
+      "metadata": {
+        "language": "bash",
+        "kind": "bash_entrypoint"
+      },
+      "_origin": "ast",
+      "id": "users_sajalgoyal_src_github_com_coverahealth_qcc_gateway_qcc_gateway_hl7_listener_local_nats_sh__entry",
+      "community": 10,
+      "norm_label": "nats.sh script"
+    },
+    {
+      "label": "qcc-gateway-hl7-listener",
+      "file_type": "code",
+      "type": "package",
+      "ecosystem": "python",
+      "source_file": "pyproject.toml",
+      "source_location": "L1",
+      "version": "1.0.0",
+      "_origin": "ast",
+      "id": "pkg_qcc_gateway_hl7_listener",
+      "community": 12,
+      "norm_label": "qcc-gateway-hl7-listener"
+    },
+    {
+      "label": "healthcheck.py",
+      "file_type": "code",
+      "source_file": "src/main/py/hl7_listener/healthcheck.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "hl7_listener_healthcheck",
+      "community": 6,
+      "norm_label": "healthcheck.py"
+    },
+    {
+      "label": "health_check_handler()",
+      "file_type": "code",
+      "source_file": "src/main/py/hl7_listener/healthcheck.py",
+      "source_location": "L4",
+      "_origin": "ast",
+      "id": "hl7_listener_healthcheck_health_check_handler",
+      "community": 6,
+      "norm_label": "health_check_handler()"
+    },
+    {
+      "label": "start_health_check_server()",
+      "file_type": "code",
+      "source_file": "src/main/py/hl7_listener/healthcheck.py",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "hl7_listener_healthcheck_start_health_check_server",
+      "community": 6,
+      "norm_label": "start_health_check_server()"
+    },
+    {
+      "label": "main.py",
+      "file_type": "code",
+      "source_file": "src/main/py/hl7_listener/main.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "hl7_listener_main",
+      "community": 6,
+      "norm_label": "main.py"
+    },
+    {
+      "label": "exception_formatter()",
+      "file_type": "code",
+      "source_file": "src/main/py/hl7_listener/main.py",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "hl7_listener_main_exception_formatter",
+      "community": 6,
+      "norm_label": "exception_formatter()"
+    },
+    {
+      "label": "process_received_hl7_messages()",
+      "file_type": "code",
+      "source_file": "src/main/py/hl7_listener/main.py",
+      "source_location": "L40",
+      "_origin": "ast",
+      "id": "hl7_listener_main_process_received_hl7_messages",
+      "community": 6,
+      "norm_label": "process_received_hl7_messages()"
+    },
+    {
+      "label": "hl7_receiver()",
+      "file_type": "code",
+      "source_file": "src/main/py/hl7_listener/main.py",
+      "source_location": "L130",
+      "_origin": "ast",
+      "id": "hl7_listener_main_hl7_receiver",
+      "community": 6,
+      "norm_label": "hl7_receiver()"
+    },
+    {
+      "label": "main()",
+      "file_type": "code",
+      "source_file": "src/main/py/hl7_listener/main.py",
+      "source_location": "L160",
+      "_origin": "ast",
+      "id": "hl7_listener_main_main",
+      "community": 6,
+      "norm_label": "main()"
+    },
+    {
+      "label": "This HL7 MLLP Listener/Receiver Service will do the following:  1) Connect to th",
+      "file_type": "rationale",
+      "source_file": "src/main/py/hl7_listener/main.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "hl7_listener_main_rationale_1",
+      "community": 6,
+      "norm_label": "this hl7 mllp listener/receiver service will do the following:  1) connect to th"
+    },
+    {
+      "label": "This will be called every time a socket connects to the receiver/listener.",
+      "file_type": "rationale",
+      "source_file": "src/main/py/hl7_listener/main.py",
+      "source_location": "L41",
+      "_origin": "ast",
+      "id": "hl7_listener_main_rationale_41",
+      "community": 6,
+      "norm_label": "this will be called every time a socket connects to the receiver/listener."
+    },
+    {
+      "label": "Receive HL7 MLLP messages on the configured host and port.",
+      "file_type": "rationale",
+      "source_file": "src/main/py/hl7_listener/main.py",
+      "source_location": "L131",
+      "_origin": "ast",
+      "id": "hl7_listener_main_rationale_131",
+      "community": 6,
+      "norm_label": "receive hl7 mllp messages on the configured host and port."
+    },
+    {
+      "label": "__init__.py",
+      "file_type": "code",
+      "source_file": "src/main/py/hl7_listener/messaging/__init__.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "messaging_init",
+      "community": 11,
+      "norm_label": "__init__.py"
+    },
+    {
+      "label": "base.py",
+      "file_type": "code",
+      "source_file": "src/main/py/hl7_listener/messaging/base.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "messaging_base",
+      "community": 4,
+      "norm_label": "base.py"
+    },
+    {
+      "label": "MessagingInterface",
+      "file_type": "code",
+      "source_file": "src/main/py/hl7_listener/messaging/base.py",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "messaging_base_messaginginterface",
+      "community": 4,
+      "norm_label": "messaginginterface"
+    },
+    {
+      "label": "ABC",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "abc",
+      "community": 4,
+      "norm_label": "abc"
+    },
+    {
+      "label": ".send_msg()",
+      "file_type": "code",
+      "source_file": "src/main/py/hl7_listener/messaging/base.py",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "messaging_base_messaginginterface_send_msg",
+      "community": 4,
+      "norm_label": ".send_msg()"
+    },
+    {
+      "label": "Any",
+      "file_type": "code",
+      "source_file": "src/main/py/hl7_listener/messaging/base.py",
+      "source_location": "L8",
+      "_origin": "ast",
+      "id": "any",
+      "community": 4,
+      "norm_label": "any"
+    },
+    {
+      "label": ".connect()",
+      "file_type": "code",
+      "source_file": "src/main/py/hl7_listener/messaging/base.py",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "messaging_base_messaginginterface_connect",
+      "community": 4,
+      "norm_label": ".connect()"
+    },
+    {
+      "label": "cloud_messaging.py",
+      "file_type": "code",
+      "source_file": "src/main/py/hl7_listener/messaging/cloud_messaging.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "messaging_cloud_messaging",
+      "community": 4,
+      "norm_label": "cloud_messaging.py"
+    },
+    {
+      "label": "CloudMessager",
+      "file_type": "code",
+      "source_file": "src/main/py/hl7_listener/messaging/cloud_messaging.py",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "messaging_cloud_messaging_cloudmessager",
+      "community": 4,
+      "norm_label": "cloudmessager"
+    },
+    {
+      "label": ".connect()",
+      "file_type": "code",
+      "source_file": "src/main/py/hl7_listener/messaging/cloud_messaging.py",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "messaging_cloud_messaging_cloudmessager_connect",
+      "community": 4,
+      "norm_label": ".connect()"
+    },
+    {
+      "label": ".send_msg()",
+      "file_type": "code",
+      "source_file": "src/main/py/hl7_listener/messaging/cloud_messaging.py",
+      "source_location": "L26",
+      "_origin": "ast",
+      "id": "messaging_cloud_messaging_cloudmessager_send_msg",
+      "community": 4,
+      "norm_label": ".send_msg()"
+    },
+    {
+      "label": "Dont need this method so basically just putting a pass on it since we create cli",
+      "file_type": "rationale",
+      "source_file": "src/main/py/hl7_listener/messaging/cloud_messaging.py",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "messaging_cloud_messaging_rationale_18",
+      "community": 4,
+      "norm_label": "dont need this method so basically just putting a pass on it since we create cli"
+    },
+    {
+      "label": "Sends a msg to an cloud messaging queue.",
+      "file_type": "rationale",
+      "source_file": "src/main/py/hl7_listener/messaging/cloud_messaging.py",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "messaging_cloud_messaging_rationale_27",
+      "community": 4,
+      "norm_label": "sends a msg to an cloud messaging queue."
+    },
+    {
+      "label": "nats.py",
+      "file_type": "code",
+      "source_file": "src/main/py/hl7_listener/messaging/nats.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "messaging_nats",
+      "community": 3,
+      "norm_label": "nats.py"
+    },
+    {
+      "label": "NATSMessager",
+      "file_type": "code",
+      "source_file": "src/main/py/hl7_listener/messaging/nats.py",
+      "source_location": "L17",
+      "_origin": "ast",
+      "id": "messaging_nats_natsmessager",
+      "community": 3,
+      "norm_label": "natsmessager"
+    },
+    {
+      "label": ".connect()",
+      "file_type": "code",
+      "source_file": "src/main/py/hl7_listener/messaging/nats.py",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "messaging_nats_natsmessager_connect",
+      "community": 3,
+      "norm_label": ".connect()"
+    },
+    {
+      "label": ".send_msg()",
+      "file_type": "code",
+      "source_file": "src/main/py/hl7_listener/messaging/nats.py",
+      "source_location": "L41",
+      "_origin": "ast",
+      "id": "messaging_nats_natsmessager_send_msg",
+      "community": 3,
+      "norm_label": ".send_msg()"
+    },
+    {
+      "label": "Connect to the NATS jetstream server.",
+      "file_type": "rationale",
+      "source_file": "src/main/py/hl7_listener/messaging/nats.py",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "messaging_nats_rationale_21",
+      "community": 3,
+      "norm_label": "connect to the nats jetstream server."
+    },
+    {
+      "label": "Synchronously (no callback or async ACK) send the input message to the NATS",
+      "file_type": "rationale",
+      "source_file": "src/main/py/hl7_listener/messaging/nats.py",
+      "source_location": "L42",
+      "_origin": "ast",
+      "id": "messaging_nats_rationale_42",
+      "community": 3,
+      "norm_label": "synchronously (no callback or async ack) send the input message to the nats"
+    },
+    {
+      "label": "settings.py",
+      "file_type": "code",
+      "source_file": "src/main/py/hl7_listener/messaging/settings.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "messaging_settings",
+      "community": 2,
+      "norm_label": "settings.py"
+    },
+    {
+      "label": "CloudMessagingSettings",
+      "file_type": "code",
+      "source_file": "src/main/py/hl7_listener/messaging/settings.py",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "messaging_settings_cloudmessagingsettings",
+      "community": 2,
+      "norm_label": "cloudmessagingsettings"
+    },
+    {
+      "label": "BaseSettings",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "basesettings",
+      "community": 2,
+      "norm_label": "basesettings"
+    },
+    {
+      "label": ".get_settings()",
+      "file_type": "code",
+      "source_file": "src/main/py/hl7_listener/messaging/settings.py",
+      "source_location": "L21",
+      "_origin": "ast",
+      "id": "messaging_settings_cloudmessagingsettings_get_settings",
+      "community": 2,
+      "norm_label": ".get_settings()"
+    },
+    {
+      "label": "NATSSettings",
+      "file_type": "code",
+      "source_file": "src/main/py/hl7_listener/messaging/settings.py",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "messaging_settings_natssettings",
+      "community": 2,
+      "norm_label": "natssettings"
+    },
+    {
+      "label": ".get_settings()",
+      "file_type": "code",
+      "source_file": "src/main/py/hl7_listener/messaging/settings.py",
+      "source_location": "L35",
+      "_origin": "ast",
+      "id": "messaging_settings_natssettings_get_settings",
+      "community": 2,
+      "norm_label": ".get_settings()"
+    },
+    {
+      "label": "settings.py",
+      "file_type": "code",
+      "source_file": "src/main/py/hl7_listener/settings.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "hl7_listener_settings",
+      "community": 2,
+      "norm_label": "settings.py"
+    },
+    {
+      "label": "QueueType",
+      "file_type": "code",
+      "source_file": "src/main/py/hl7_listener/settings.py",
+      "source_location": "L5",
+      "_origin": "ast",
+      "id": "hl7_listener_settings_queuetype",
+      "community": 2,
+      "norm_label": "queuetype"
+    },
+    {
+      "label": "str",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "str",
+      "community": 2,
+      "norm_label": "str"
+    },
+    {
+      "label": "Enum",
+      "file_type": "code",
+      "source_file": "",
+      "source_location": "",
+      "_origin": "ast",
+      "id": "enum",
+      "community": 2,
+      "norm_label": "enum"
+    },
+    {
+      "label": "Settings",
+      "file_type": "code",
+      "source_file": "src/main/py/hl7_listener/settings.py",
+      "source_location": "L10",
+      "_origin": "ast",
+      "id": "hl7_listener_settings_settings",
+      "community": 2,
+      "norm_label": "settings"
+    },
+    {
+      "label": ".get_settings()",
+      "file_type": "code",
+      "source_file": "src/main/py/hl7_listener/settings.py",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "hl7_listener_settings_settings_get_settings",
+      "community": 2,
+      "norm_label": ".get_settings()"
+    },
+    {
+      "label": "conftest.py",
+      "file_type": "code",
+      "source_file": "src/test/conftest.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "test_conftest",
+      "community": 13,
+      "norm_label": "conftest.py"
+    },
+    {
+      "label": "test_main.py",
+      "file_type": "code",
+      "source_file": "src/test/py/test_main.py",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "py_test_main",
+      "community": 3,
+      "norm_label": "test_main.py"
+    },
+    {
+      "label": "mock_pilot_settings()",
+      "file_type": "code",
+      "source_file": "src/test/py/test_main.py",
+      "source_location": "L30",
+      "_origin": "ast",
+      "id": "py_test_main_mock_pilot_settings",
+      "community": 3,
+      "norm_label": "mock_pilot_settings()"
+    },
+    {
+      "label": "test_nc_connect()",
+      "file_type": "code",
+      "source_file": "src/test/py/test_main.py",
+      "source_location": "L39",
+      "_origin": "ast",
+      "id": "py_test_main_test_nc_connect",
+      "community": 3,
+      "norm_label": "test_nc_connect()"
+    },
+    {
+      "label": "test_send_msg()",
+      "file_type": "code",
+      "source_file": "src/test/py/test_main.py",
+      "source_location": "L50",
+      "_origin": "ast",
+      "id": "py_test_main_test_send_msg",
+      "community": 3,
+      "norm_label": "test_send_msg()"
+    },
+    {
+      "label": "test_send_msg_cloud_messaging()",
+      "file_type": "code",
+      "source_file": "src/test/py/test_main.py",
+      "source_location": "L61",
+      "_origin": "ast",
+      "id": "py_test_main_test_send_msg_cloud_messaging",
+      "community": 2,
+      "norm_label": "test_send_msg_cloud_messaging()"
+    },
+    {
+      "label": "test_pilot()",
+      "file_type": "code",
+      "source_file": "src/test/py/test_main.py",
+      "source_location": "L79",
+      "_origin": "ast",
+      "id": "py_test_main_test_pilot",
+      "community": 3,
+      "norm_label": "test_pilot()"
+    },
+    {
+      "label": "test_processed_received_hl7_messages()",
+      "file_type": "code",
+      "source_file": "src/test/py/test_main.py",
+      "source_location": "L96",
+      "_origin": "ast",
+      "id": "py_test_main_test_processed_received_hl7_messages",
+      "community": 3,
+      "norm_label": "test_processed_received_hl7_messages()"
+    },
+    {
+      "label": "test_hl7_receiver_exception()",
+      "file_type": "code",
+      "source_file": "src/test/py/test_main.py",
+      "source_location": "L187",
+      "_origin": "ast",
+      "id": "py_test_main_test_hl7_receiver_exception",
+      "community": 3,
+      "norm_label": "test_hl7_receiver_exception()"
+    },
+    {
+      "label": "CLAUDE.md",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "claude",
+      "community": 5,
+      "norm_label": "claude.md"
+    },
+    {
+      "label": "qcc-gateway-hl7-listener Project Context",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "claude_qcc_gateway_hl7_listener_project_context",
+      "community": 0,
+      "norm_label": "qcc-gateway-hl7-listener project context"
+    },
+    {
+      "label": "Project Overview",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "claude_project_overview",
+      "community": 0,
+      "norm_label": "project overview"
+    },
+    {
+      "label": "Purpose",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "claude_purpose",
+      "community": 0,
+      "norm_label": "purpose"
+    },
+    {
+      "label": "Key Responsibilities",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "claude_key_responsibilities",
+      "community": 0,
+      "norm_label": "key responsibilities"
+    },
+    {
+      "label": "Technology Stack",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "claude_technology_stack",
+      "community": 0,
+      "norm_label": "technology stack"
+    },
+    {
+      "label": "Commands",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "claude_commands",
+      "community": 0,
+      "norm_label": "commands"
+    },
+    {
+      "label": "Development",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "claude_development",
+      "community": 0,
+      "norm_label": "development"
+    },
+    {
+      "label": "Graphify",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L39",
+      "_origin": "ast",
+      "id": "claude_graphify",
+      "community": 0,
+      "norm_label": "graphify"
+    },
+    {
+      "label": "Architecture",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L47",
+      "_origin": "ast",
+      "id": "claude_architecture",
+      "community": 0,
+      "norm_label": "architecture"
+    },
+    {
+      "label": "Service Boundaries",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L49",
+      "_origin": "ast",
+      "id": "claude_service_boundaries",
+      "community": 0,
+      "norm_label": "service boundaries"
+    },
+    {
+      "label": "Key Design Patterns",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L54",
+      "_origin": "ast",
+      "id": "claude_key_design_patterns",
+      "community": 0,
+      "norm_label": "key design patterns"
+    },
+    {
+      "label": "Code Structure",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L61",
+      "_origin": "ast",
+      "id": "claude_code_structure",
+      "community": 0,
+      "norm_label": "code structure"
+    },
+    {
+      "label": "Configuration",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L87",
+      "_origin": "ast",
+      "id": "claude_configuration",
+      "community": 0,
+      "norm_label": "configuration"
+    },
+    {
+      "label": "Environment Variables",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L89",
+      "_origin": "ast",
+      "id": "claude_environment_variables",
+      "community": 0,
+      "norm_label": "environment variables"
+    },
+    {
+      "label": "Data Contracts",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L111",
+      "_origin": "ast",
+      "id": "claude_data_contracts",
+      "community": 0,
+      "norm_label": "data contracts"
+    },
+    {
+      "label": "Key Endpoints",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L115",
+      "_origin": "ast",
+      "id": "claude_key_endpoints",
+      "community": 0,
+      "norm_label": "key endpoints"
+    },
+    {
+      "label": "Testing",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L120",
+      "_origin": "ast",
+      "id": "claude_testing",
+      "community": 0,
+      "norm_label": "testing"
+    },
+    {
+      "label": "Troubleshooting",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L129",
+      "_origin": "ast",
+      "id": "claude_troubleshooting",
+      "community": 0,
+      "norm_label": "troubleshooting"
+    },
+    {
+      "label": "Related Documentation",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L140",
+      "_origin": "ast",
+      "id": "claude_related_documentation",
+      "community": 0,
+      "norm_label": "related documentation"
+    },
+    {
+      "label": "Graphify Integration",
+      "file_type": "document",
+      "source_file": "CLAUDE.md",
+      "source_location": "L147",
+      "_origin": "ast",
+      "id": "claude_graphify_integration",
+      "community": 0,
+      "norm_label": "graphify integration"
+    },
+    {
+      "label": "README.md",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "readme",
+      "community": 5,
+      "norm_label": "readme.md"
+    },
+    {
+      "label": "qcc-gateway-hl7-listener",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "readme_qcc_gateway_hl7_listener",
+      "community": 1,
+      "norm_label": "qcc-gateway-hl7-listener"
+    },
+    {
+      "label": "Quick Start",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L9",
+      "_origin": "ast",
+      "id": "readme_quick_start",
+      "community": 1,
+      "norm_label": "quick start"
+    },
+    {
+      "label": "Local Development",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "readme_local_development",
+      "community": 1,
+      "norm_label": "local development"
+    },
+    {
+      "label": "Docker",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L19",
+      "_origin": "ast",
+      "id": "readme_docker",
+      "community": 1,
+      "norm_label": "docker"
+    },
+    {
+      "label": "Overview",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "readme_overview",
+      "community": 1,
+      "norm_label": "overview"
+    },
+    {
+      "label": "Development",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L37",
+      "_origin": "ast",
+      "id": "readme_development",
+      "community": 1,
+      "norm_label": "development"
+    },
+    {
+      "label": "Setup",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L39",
+      "_origin": "ast",
+      "id": "readme_setup",
+      "community": 1,
+      "norm_label": "setup"
+    },
+    {
+      "label": "Env Vars",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L49",
+      "_origin": "ast",
+      "id": "readme_env_vars",
+      "community": 9,
+      "norm_label": "env vars"
+    },
+    {
+      "label": "Adding Dependencies",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L69",
+      "_origin": "ast",
+      "id": "readme_adding_dependencies",
+      "community": 9,
+      "norm_label": "adding dependencies"
+    },
+    {
+      "label": "Install NATS Jetstream server and NATS CLI",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L73",
+      "_origin": "ast",
+      "id": "readme_install_nats_jetstream_server_and_nats_cli",
+      "community": 9,
+      "norm_label": "install nats jetstream server and nats cli"
+    },
+    {
+      "label": "Create the stream and consumer",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L83",
+      "_origin": "ast",
+      "id": "readme_create_the_stream_and_consumer",
+      "community": 9,
+      "norm_label": "create the stream and consumer"
+    },
+    {
+      "label": "Environment variables",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L96",
+      "_origin": "ast",
+      "id": "readme_environment_variables",
+      "community": 9,
+      "norm_label": "environment variables"
+    },
+    {
+      "label": "Creating the docker image",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L114",
+      "_origin": "ast",
+      "id": "readme_creating_the_docker_image",
+      "community": 9,
+      "norm_label": "creating the docker image"
+    },
+    {
+      "label": "Testing",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L124",
+      "_origin": "ast",
+      "id": "readme_testing",
+      "community": 1,
+      "norm_label": "testing"
+    },
+    {
+      "label": "With NATS Config",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L126",
+      "_origin": "ast",
+      "id": "readme_with_nats_config",
+      "community": 1,
+      "norm_label": "with nats config"
+    },
+    {
+      "label": "With Queue Config",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L170",
+      "_origin": "ast",
+      "id": "readme_with_queue_config",
+      "community": 1,
+      "norm_label": "with queue config"
+    },
+    {
+      "label": "Network & Ports",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L190",
+      "_origin": "ast",
+      "id": "readme_network_ports",
+      "community": 1,
+      "norm_label": "network & ports"
+    },
+    {
+      "label": "Troubleshooting",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L198",
+      "_origin": "ast",
+      "id": "readme_troubleshooting",
+      "community": 1,
+      "norm_label": "troubleshooting"
+    },
+    {
+      "label": "Related Documentation",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L209",
+      "_origin": "ast",
+      "id": "readme_related_documentation",
+      "community": 1,
+      "norm_label": "related documentation"
+    },
+    {
+      "label": "Graphify Knowledge Graph",
+      "file_type": "document",
+      "source_file": "README.md",
+      "source_location": "L217",
+      "_origin": "ast",
+      "id": "readme_graphify_knowledge_graph",
+      "community": 1,
+      "norm_label": "graphify knowledge graph"
+    },
+    {
+      "label": "data-contracts.md",
+      "file_type": "document",
+      "source_file": "docs/data-contracts.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_data_contracts",
+      "community": 5,
+      "norm_label": "data-contracts.md"
+    },
+    {
+      "label": "Data Contracts & Schemas",
+      "file_type": "document",
+      "source_file": "docs/data-contracts.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_data_contracts_data_contracts_schemas",
+      "community": 8,
+      "norm_label": "data contracts & schemas"
+    },
+    {
+      "label": "HL7 Message Format",
+      "file_type": "document",
+      "source_file": "docs/data-contracts.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "docs_data_contracts_hl7_message_format",
+      "community": 8,
+      "norm_label": "hl7 message format"
+    },
+    {
+      "label": "HTTP Endpoint",
+      "file_type": "document",
+      "source_file": "docs/data-contracts.md",
+      "source_location": "L12",
+      "_origin": "ast",
+      "id": "docs_data_contracts_http_endpoint",
+      "community": 8,
+      "norm_label": "http endpoint"
+    },
+    {
+      "label": "POST /hl7",
+      "file_type": "document",
+      "source_file": "docs/data-contracts.md",
+      "source_location": "L14",
+      "_origin": "ast",
+      "id": "docs_data_contracts_post_hl7",
+      "community": 8,
+      "norm_label": "post /hl7"
+    },
+    {
+      "label": "MLLP Protocol",
+      "file_type": "document",
+      "source_file": "docs/data-contracts.md",
+      "source_location": "L32",
+      "_origin": "ast",
+      "id": "docs_data_contracts_mllp_protocol",
+      "community": 8,
+      "norm_label": "mllp protocol"
+    },
+    {
+      "label": "Message Status",
+      "file_type": "document",
+      "source_file": "docs/data-contracts.md",
+      "source_location": "L37",
+      "_origin": "ast",
+      "id": "docs_data_contracts_message_status",
+      "community": 8,
+      "norm_label": "message status"
+    },
+    {
+      "label": "Error Responses",
+      "file_type": "document",
+      "source_file": "docs/data-contracts.md",
+      "source_location": "L50",
+      "_origin": "ast",
+      "id": "docs_data_contracts_error_responses",
+      "community": 8,
+      "norm_label": "error responses"
+    },
+    {
+      "label": "design.md",
+      "file_type": "document",
+      "source_file": "docs/design.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_design",
+      "community": 5,
+      "norm_label": "design.md"
+    },
+    {
+      "label": "Architecture & Design",
+      "file_type": "document",
+      "source_file": "docs/design.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_design_architecture_design",
+      "community": 7,
+      "norm_label": "architecture & design"
+    },
+    {
+      "label": "Overview",
+      "file_type": "document",
+      "source_file": "docs/design.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "docs_design_overview",
+      "community": 7,
+      "norm_label": "overview"
+    },
+    {
+      "label": "Service Purpose",
+      "file_type": "document",
+      "source_file": "docs/design.md",
+      "source_location": "L6",
+      "_origin": "ast",
+      "id": "docs_design_service_purpose",
+      "community": 7,
+      "norm_label": "service purpose"
+    },
+    {
+      "label": "Core Components",
+      "file_type": "document",
+      "source_file": "docs/design.md",
+      "source_location": "L13",
+      "_origin": "ast",
+      "id": "docs_design_core_components",
+      "community": 7,
+      "norm_label": "core components"
+    },
+    {
+      "label": "Message Receivers",
+      "file_type": "document",
+      "source_file": "docs/design.md",
+      "source_location": "L15",
+      "_origin": "ast",
+      "id": "docs_design_message_receivers",
+      "community": 7,
+      "norm_label": "message receivers"
+    },
+    {
+      "label": "Processing Pipeline",
+      "file_type": "document",
+      "source_file": "docs/design.md",
+      "source_location": "L20",
+      "_origin": "ast",
+      "id": "docs_design_processing_pipeline",
+      "community": 7,
+      "norm_label": "processing pipeline"
+    },
+    {
+      "label": "External Dependencies",
+      "file_type": "document",
+      "source_file": "docs/design.md",
+      "source_location": "L27",
+      "_origin": "ast",
+      "id": "docs_design_external_dependencies",
+      "community": 7,
+      "norm_label": "external dependencies"
+    },
+    {
+      "label": "Design Patterns",
+      "file_type": "document",
+      "source_file": "docs/design.md",
+      "source_location": "L33",
+      "_origin": "ast",
+      "id": "docs_design_design_patterns",
+      "community": 7,
+      "norm_label": "design patterns"
+    },
+    {
+      "label": "Configuration",
+      "file_type": "document",
+      "source_file": "docs/design.md",
+      "source_location": "L39",
+      "_origin": "ast",
+      "id": "docs_design_configuration",
+      "community": 7,
+      "norm_label": "configuration"
+    },
+    {
+      "label": "testing.md",
+      "file_type": "document",
+      "source_file": "docs/testing.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_testing",
+      "community": 5,
+      "norm_label": "testing.md"
+    },
+    {
+      "label": "Testing Guide",
+      "file_type": "document",
+      "source_file": "docs/testing.md",
+      "source_location": "L1",
+      "_origin": "ast",
+      "id": "docs_testing_testing_guide",
+      "community": 5,
+      "norm_label": "testing guide"
+    },
+    {
+      "label": "Test Structure",
+      "file_type": "document",
+      "source_file": "docs/testing.md",
+      "source_location": "L3",
+      "_origin": "ast",
+      "id": "docs_testing_test_structure",
+      "community": 5,
+      "norm_label": "test structure"
+    },
+    {
+      "label": "Running Tests",
+      "file_type": "document",
+      "source_file": "docs/testing.md",
+      "source_location": "L11",
+      "_origin": "ast",
+      "id": "docs_testing_running_tests",
+      "community": 5,
+      "norm_label": "running tests"
+    },
+    {
+      "label": "Test Data",
+      "file_type": "document",
+      "source_file": "docs/testing.md",
+      "source_location": "L18",
+      "_origin": "ast",
+      "id": "docs_testing_test_data",
+      "community": 5,
+      "norm_label": "test data"
+    },
+    {
+      "label": "MLLP Testing",
+      "file_type": "document",
+      "source_file": "docs/testing.md",
+      "source_location": "L24",
+      "_origin": "ast",
+      "id": "docs_testing_mllp_testing",
+      "community": 5,
+      "norm_label": "mllp testing"
+    },
+    {
+      "label": "Datadog Integration",
+      "file_type": "document",
+      "source_file": "docs/testing.md",
+      "source_location": "L31",
+      "_origin": "ast",
+      "id": "docs_testing_datadog_integration",
+      "community": 5,
+      "norm_label": "datadog integration"
+    },
+    {
+      "label": "Debugging",
+      "file_type": "document",
+      "source_file": "docs/testing.md",
+      "source_location": "L34",
+      "_origin": "ast",
+      "id": "docs_testing_debugging",
+      "community": 5,
+      "norm_label": "debugging"
+    }
+  ],
+  "links": [
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "local/nats.sh",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "local_nats",
+      "target": "users_sajalgoyal_src_github_com_coverahealth_qcc_gateway_qcc_gateway_hl7_listener_local_nats_sh__entry",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/py/hl7_listener/healthcheck.py",
+      "source_location": "L4",
+      "weight": 1.0,
+      "source": "hl7_listener_healthcheck",
+      "target": "hl7_listener_healthcheck_health_check_handler",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/py/hl7_listener/healthcheck.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "hl7_listener_healthcheck",
+      "target": "hl7_listener_healthcheck_start_health_check_server",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/py/hl7_listener/main.py",
+      "source_location": "L22",
+      "weight": 1.0,
+      "source": "hl7_listener_main",
+      "target": "hl7_listener_healthcheck",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "confidence_score": 1.0,
+      "source_file": "src/main/py/hl7_listener/main.py",
+      "source_location": "L174",
+      "weight": 1.0,
+      "source": "hl7_listener_main_main",
+      "target": "hl7_listener_healthcheck_start_health_check_server"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/py/hl7_listener/main.py",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "hl7_listener_main",
+      "target": "hl7_listener_main_exception_formatter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/py/hl7_listener/main.py",
+      "source_location": "L130",
+      "weight": 1.0,
+      "source": "hl7_listener_main",
+      "target": "hl7_listener_main_hl7_receiver",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/py/hl7_listener/main.py",
+      "source_location": "L160",
+      "weight": 1.0,
+      "source": "hl7_listener_main",
+      "target": "hl7_listener_main_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/py/hl7_listener/main.py",
+      "source_location": "L40",
+      "weight": 1.0,
+      "source": "hl7_listener_main",
+      "target": "hl7_listener_main_process_received_hl7_messages",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/py/hl7_listener/main.py",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "hl7_listener_main",
+      "target": "hl7_listener_settings",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/py/hl7_listener/main.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "hl7_listener_main_rationale_1",
+      "target": "hl7_listener_main",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/py/hl7_listener/main.py",
+      "source_location": "L155",
+      "weight": 1.0,
+      "source": "hl7_listener_main_hl7_receiver",
+      "target": "hl7_listener_main_exception_formatter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/py/hl7_listener/main.py",
+      "source_location": "L78",
+      "weight": 1.0,
+      "source": "hl7_listener_main_process_received_hl7_messages",
+      "target": "hl7_listener_main_exception_formatter",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/py/hl7_listener/main.py",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "hl7_listener_main_rationale_41",
+      "target": "hl7_listener_main_process_received_hl7_messages",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/py/hl7_listener/main.py",
+      "source_location": "L173",
+      "weight": 1.0,
+      "source": "hl7_listener_main_main",
+      "target": "hl7_listener_main_hl7_receiver",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/py/hl7_listener/main.py",
+      "source_location": "L131",
+      "weight": 1.0,
+      "source": "hl7_listener_main_rationale_131",
+      "target": "hl7_listener_main_hl7_receiver",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/py/hl7_listener/messaging/base.py",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "messaging_base",
+      "target": "abc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/py/hl7_listener/messaging/base.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "messaging_base",
+      "target": "messaging_base_messaginginterface",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/py/hl7_listener/messaging/base.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "messaging_base_messaginginterface",
+      "target": "abc",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/py/hl7_listener/messaging/base.py",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "messaging_base_messaginginterface",
+      "target": "messaging_base_messaginginterface_connect",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/py/hl7_listener/messaging/base.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "messaging_base_messaginginterface",
+      "target": "messaging_base_messaginginterface_send_msg",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "src/main/py/hl7_listener/messaging/cloud_messaging.py",
+      "source_location": "L9",
+      "weight": 0.8,
+      "source": "messaging_cloud_messaging_cloudmessager",
+      "target": "messaging_base_messaginginterface",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "uses",
+      "confidence": "INFERRED",
+      "source_file": "src/main/py/hl7_listener/messaging/nats.py",
+      "source_location": "L11",
+      "weight": 0.8,
+      "source": "messaging_nats_natsmessager",
+      "target": "messaging_base_messaginginterface",
+      "confidence_score": 0.5
+    },
+    {
+      "relation": "references",
+      "context": "parameter_type",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/py/hl7_listener/messaging/base.py",
+      "source_location": "L8",
+      "weight": 1.0,
+      "source": "messaging_base_messaginginterface_send_msg",
+      "target": "any",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/py/hl7_listener/messaging/cloud_messaging.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "messaging_cloud_messaging",
+      "target": "messaging_cloud_messaging_cloudmessager",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/py/hl7_listener/messaging/cloud_messaging.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "messaging_cloud_messaging_cloudmessager",
+      "target": "messaging_cloud_messaging_cloudmessager_connect",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/py/hl7_listener/messaging/cloud_messaging.py",
+      "source_location": "L26",
+      "weight": 1.0,
+      "source": "messaging_cloud_messaging_cloudmessager",
+      "target": "messaging_cloud_messaging_cloudmessager_send_msg",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/test/py/test_main.py",
+      "source_location": "L65",
+      "weight": 1.0,
+      "source": "py_test_main_test_send_msg_cloud_messaging",
+      "target": "messaging_cloud_messaging_cloudmessager"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/py/hl7_listener/messaging/cloud_messaging.py",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "messaging_cloud_messaging_rationale_18",
+      "target": "messaging_cloud_messaging_cloudmessager_connect",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/py/hl7_listener/messaging/cloud_messaging.py",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "messaging_cloud_messaging_rationale_27",
+      "target": "messaging_cloud_messaging_cloudmessager_send_msg",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/py/hl7_listener/messaging/nats.py",
+      "source_location": "L17",
+      "weight": 1.0,
+      "source": "messaging_nats",
+      "target": "messaging_nats_natsmessager",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/py/hl7_listener/messaging/nats.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "messaging_nats_natsmessager",
+      "target": "messaging_nats_natsmessager_connect",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/py/hl7_listener/messaging/nats.py",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "messaging_nats_natsmessager",
+      "target": "messaging_nats_natsmessager_send_msg",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/test/py/test_main.py",
+      "source_location": "L41",
+      "weight": 1.0,
+      "source": "py_test_main_test_nc_connect",
+      "target": "messaging_nats_natsmessager"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/test/py/test_main.py",
+      "source_location": "L81",
+      "weight": 1.0,
+      "source": "py_test_main_test_pilot",
+      "target": "messaging_nats_natsmessager"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/test/py/test_main.py",
+      "source_location": "L52",
+      "weight": 1.0,
+      "source": "py_test_main_test_send_msg",
+      "target": "messaging_nats_natsmessager"
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/py/hl7_listener/messaging/nats.py",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "messaging_nats_rationale_21",
+      "target": "messaging_nats_natsmessager_connect",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/py/hl7_listener/messaging/nats.py",
+      "source_location": "L42",
+      "weight": 1.0,
+      "source": "messaging_nats_rationale_42",
+      "target": "messaging_nats_natsmessager_send_msg",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/py/hl7_listener/messaging/settings.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "messaging_settings",
+      "target": "hl7_listener_settings",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/py/hl7_listener/messaging/settings.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "messaging_settings",
+      "target": "messaging_settings_cloudmessagingsettings",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/py/hl7_listener/messaging/settings.py",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "messaging_settings",
+      "target": "messaging_settings_natssettings",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/py/hl7_listener/messaging/settings.py",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "messaging_settings_cloudmessagingsettings",
+      "target": "basesettings",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/py/hl7_listener/messaging/settings.py",
+      "source_location": "L21",
+      "weight": 1.0,
+      "source": "messaging_settings_cloudmessagingsettings",
+      "target": "messaging_settings_cloudmessagingsettings_get_settings",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "INFERRED",
+      "confidence_score": 0.8,
+      "source_file": "src/test/py/test_main.py",
+      "source_location": "L68",
+      "weight": 1.0,
+      "source": "py_test_main_test_send_msg_cloud_messaging",
+      "target": "messaging_settings_cloudmessagingsettings"
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/py/hl7_listener/settings.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "hl7_listener_settings_settings",
+      "target": "basesettings",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/py/hl7_listener/messaging/settings.py",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "messaging_settings_natssettings",
+      "target": "basesettings",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/py/hl7_listener/messaging/settings.py",
+      "source_location": "L35",
+      "weight": 1.0,
+      "source": "messaging_settings_natssettings",
+      "target": "messaging_settings_natssettings_get_settings",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/py/hl7_listener/settings.py",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "hl7_listener_settings",
+      "target": "enum",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/py/hl7_listener/settings.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "hl7_listener_settings",
+      "target": "hl7_listener_settings_queuetype",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/py/hl7_listener/settings.py",
+      "source_location": "L10",
+      "weight": 1.0,
+      "source": "hl7_listener_settings",
+      "target": "hl7_listener_settings_settings",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "imports_from",
+      "context": "import",
+      "confidence": "EXTRACTED",
+      "source_file": "src/test/py/test_main.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "py_test_main",
+      "target": "hl7_listener_settings",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/py/hl7_listener/settings.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "hl7_listener_settings_queuetype",
+      "target": "enum",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "inherits",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/py/hl7_listener/settings.py",
+      "source_location": "L5",
+      "weight": 1.0,
+      "source": "hl7_listener_settings_queuetype",
+      "target": "str",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "method",
+      "confidence": "EXTRACTED",
+      "source_file": "src/main/py/hl7_listener/settings.py",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "hl7_listener_settings_settings",
+      "target": "hl7_listener_settings_settings_get_settings",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/test/py/test_main.py",
+      "source_location": "L30",
+      "weight": 1.0,
+      "source": "py_test_main",
+      "target": "py_test_main_mock_pilot_settings",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/test/py/test_main.py",
+      "source_location": "L187",
+      "weight": 1.0,
+      "source": "py_test_main",
+      "target": "py_test_main_test_hl7_receiver_exception",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/test/py/test_main.py",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "py_test_main",
+      "target": "py_test_main_test_nc_connect",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/test/py/test_main.py",
+      "source_location": "L79",
+      "weight": 1.0,
+      "source": "py_test_main",
+      "target": "py_test_main_test_pilot",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/test/py/test_main.py",
+      "source_location": "L96",
+      "weight": 1.0,
+      "source": "py_test_main",
+      "target": "py_test_main_test_processed_received_hl7_messages",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/test/py/test_main.py",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "py_test_main",
+      "target": "py_test_main_test_send_msg",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/test/py/test_main.py",
+      "source_location": "L61",
+      "weight": 1.0,
+      "source": "py_test_main",
+      "target": "py_test_main_test_send_msg_cloud_messaging",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "claude",
+      "target": "claude_qcc_gateway_hl7_listener_project_context",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L142",
+      "weight": 1.0,
+      "source": "claude",
+      "target": "docs_data_contracts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L141",
+      "weight": 1.0,
+      "source": "claude",
+      "target": "docs_design",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L143",
+      "weight": 1.0,
+      "source": "claude",
+      "target": "docs_testing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L144",
+      "weight": 1.0,
+      "source": "claude",
+      "target": "readme",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L47",
+      "weight": 1.0,
+      "source": "claude_qcc_gateway_hl7_listener_project_context",
+      "target": "claude_architecture",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L61",
+      "weight": 1.0,
+      "source": "claude_qcc_gateway_hl7_listener_project_context",
+      "target": "claude_code_structure",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "claude_qcc_gateway_hl7_listener_project_context",
+      "target": "claude_commands",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L87",
+      "weight": 1.0,
+      "source": "claude_qcc_gateway_hl7_listener_project_context",
+      "target": "claude_configuration",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L111",
+      "weight": 1.0,
+      "source": "claude_qcc_gateway_hl7_listener_project_context",
+      "target": "claude_data_contracts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L147",
+      "weight": 1.0,
+      "source": "claude_qcc_gateway_hl7_listener_project_context",
+      "target": "claude_graphify_integration",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "claude_qcc_gateway_hl7_listener_project_context",
+      "target": "claude_project_overview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L140",
+      "weight": 1.0,
+      "source": "claude_qcc_gateway_hl7_listener_project_context",
+      "target": "claude_related_documentation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L120",
+      "weight": 1.0,
+      "source": "claude_qcc_gateway_hl7_listener_project_context",
+      "target": "claude_testing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L129",
+      "weight": 1.0,
+      "source": "claude_qcc_gateway_hl7_listener_project_context",
+      "target": "claude_troubleshooting",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "claude_project_overview",
+      "target": "claude_key_responsibilities",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "claude_project_overview",
+      "target": "claude_purpose",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "claude_project_overview",
+      "target": "claude_technology_stack",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "claude_commands",
+      "target": "claude_development",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "claude_commands",
+      "target": "claude_graphify",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L54",
+      "weight": 1.0,
+      "source": "claude_architecture",
+      "target": "claude_key_design_patterns",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "claude_architecture",
+      "target": "claude_service_boundaries",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L89",
+      "weight": 1.0,
+      "source": "claude_configuration",
+      "target": "claude_environment_variables",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "CLAUDE.md",
+      "source_location": "L115",
+      "weight": 1.0,
+      "source": "claude_data_contracts",
+      "target": "claude_key_endpoints",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L213",
+      "weight": 1.0,
+      "source": "readme",
+      "target": "docs_data_contracts",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L212",
+      "weight": 1.0,
+      "source": "readme",
+      "target": "docs_design",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "references",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L214",
+      "weight": 1.0,
+      "source": "readme",
+      "target": "docs_testing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "readme",
+      "target": "readme_qcc_gateway_hl7_listener",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "readme_qcc_gateway_hl7_listener",
+      "target": "readme_development",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L49",
+      "weight": 1.0,
+      "source": "readme_qcc_gateway_hl7_listener",
+      "target": "readme_env_vars",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L217",
+      "weight": 1.0,
+      "source": "readme_qcc_gateway_hl7_listener",
+      "target": "readme_graphify_knowledge_graph",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L190",
+      "weight": 1.0,
+      "source": "readme_qcc_gateway_hl7_listener",
+      "target": "readme_network_ports",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "readme_qcc_gateway_hl7_listener",
+      "target": "readme_overview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L9",
+      "weight": 1.0,
+      "source": "readme_qcc_gateway_hl7_listener",
+      "target": "readme_quick_start",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L209",
+      "weight": 1.0,
+      "source": "readme_qcc_gateway_hl7_listener",
+      "target": "readme_related_documentation",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L124",
+      "weight": 1.0,
+      "source": "readme_qcc_gateway_hl7_listener",
+      "target": "readme_testing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L198",
+      "weight": 1.0,
+      "source": "readme_qcc_gateway_hl7_listener",
+      "target": "readme_troubleshooting",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L19",
+      "weight": 1.0,
+      "source": "readme_quick_start",
+      "target": "readme_docker",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "readme_quick_start",
+      "target": "readme_local_development",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "readme_development",
+      "target": "readme_setup",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L69",
+      "weight": 1.0,
+      "source": "readme_env_vars",
+      "target": "readme_adding_dependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L83",
+      "weight": 1.0,
+      "source": "readme_env_vars",
+      "target": "readme_create_the_stream_and_consumer",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L114",
+      "weight": 1.0,
+      "source": "readme_env_vars",
+      "target": "readme_creating_the_docker_image",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L96",
+      "weight": 1.0,
+      "source": "readme_env_vars",
+      "target": "readme_environment_variables",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L73",
+      "weight": 1.0,
+      "source": "readme_env_vars",
+      "target": "readme_install_nats_jetstream_server_and_nats_cli",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L126",
+      "weight": 1.0,
+      "source": "readme_testing",
+      "target": "readme_with_nats_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "README.md",
+      "source_location": "L170",
+      "weight": 1.0,
+      "source": "readme_testing",
+      "target": "readme_with_queue_config",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/data-contracts.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_data_contracts",
+      "target": "docs_data_contracts_data_contracts_schemas",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/data-contracts.md",
+      "source_location": "L50",
+      "weight": 1.0,
+      "source": "docs_data_contracts_data_contracts_schemas",
+      "target": "docs_data_contracts_error_responses",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/data-contracts.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "docs_data_contracts_data_contracts_schemas",
+      "target": "docs_data_contracts_hl7_message_format",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/data-contracts.md",
+      "source_location": "L12",
+      "weight": 1.0,
+      "source": "docs_data_contracts_data_contracts_schemas",
+      "target": "docs_data_contracts_http_endpoint",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/data-contracts.md",
+      "source_location": "L37",
+      "weight": 1.0,
+      "source": "docs_data_contracts_data_contracts_schemas",
+      "target": "docs_data_contracts_message_status",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/data-contracts.md",
+      "source_location": "L32",
+      "weight": 1.0,
+      "source": "docs_data_contracts_data_contracts_schemas",
+      "target": "docs_data_contracts_mllp_protocol",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/data-contracts.md",
+      "source_location": "L14",
+      "weight": 1.0,
+      "source": "docs_data_contracts_http_endpoint",
+      "target": "docs_data_contracts_post_hl7",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/design.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_design",
+      "target": "docs_design_architecture_design",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/design.md",
+      "source_location": "L39",
+      "weight": 1.0,
+      "source": "docs_design_architecture_design",
+      "target": "docs_design_configuration",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/design.md",
+      "source_location": "L13",
+      "weight": 1.0,
+      "source": "docs_design_architecture_design",
+      "target": "docs_design_core_components",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/design.md",
+      "source_location": "L33",
+      "weight": 1.0,
+      "source": "docs_design_architecture_design",
+      "target": "docs_design_design_patterns",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/design.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "docs_design_architecture_design",
+      "target": "docs_design_overview",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/design.md",
+      "source_location": "L6",
+      "weight": 1.0,
+      "source": "docs_design_architecture_design",
+      "target": "docs_design_service_purpose",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/design.md",
+      "source_location": "L27",
+      "weight": 1.0,
+      "source": "docs_design_core_components",
+      "target": "docs_design_external_dependencies",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/design.md",
+      "source_location": "L15",
+      "weight": 1.0,
+      "source": "docs_design_core_components",
+      "target": "docs_design_message_receivers",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/design.md",
+      "source_location": "L20",
+      "weight": 1.0,
+      "source": "docs_design_core_components",
+      "target": "docs_design_processing_pipeline",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/testing.md",
+      "source_location": "L1",
+      "weight": 1.0,
+      "source": "docs_testing",
+      "target": "docs_testing_testing_guide",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/testing.md",
+      "source_location": "L31",
+      "weight": 1.0,
+      "source": "docs_testing_testing_guide",
+      "target": "docs_testing_datadog_integration",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/testing.md",
+      "source_location": "L34",
+      "weight": 1.0,
+      "source": "docs_testing_testing_guide",
+      "target": "docs_testing_debugging",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/testing.md",
+      "source_location": "L24",
+      "weight": 1.0,
+      "source": "docs_testing_testing_guide",
+      "target": "docs_testing_mllp_testing",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/testing.md",
+      "source_location": "L11",
+      "weight": 1.0,
+      "source": "docs_testing_testing_guide",
+      "target": "docs_testing_running_tests",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/testing.md",
+      "source_location": "L18",
+      "weight": 1.0,
+      "source": "docs_testing_testing_guide",
+      "target": "docs_testing_test_data",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "docs/testing.md",
+      "source_location": "L3",
+      "weight": 1.0,
+      "source": "docs_testing_testing_guide",
+      "target": "docs_testing_test_structure",
+      "confidence_score": 1.0
+    }
+  ],
+  "hyperedges": [],
+  "built_at_commit": "7ad45e38201c858d5b09ad665b9c4916c2c9b67e"
+}
