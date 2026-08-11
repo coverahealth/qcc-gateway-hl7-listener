@@ -11,18 +11,19 @@
 - Provide acknowledgments to sending systems
 
 ### Key Responsibilities
-- **Message Receiving**: MLLP, HTTP, and SFTP protocol support
-- **HL7 Parsing**: Extract segments, fields, repetitions
-- **Validation**: Ensure required fields and correct structure
-- **Routing**: Determine target service based on message type
-- **Acknowledgment**: Send HL7 ACK back to sender
+- **MLLP Server**: Listen for incoming HL7 messages via MLLP protocol
+- **Message Parsing**: Extract HL7 segments and fields
+- **NATS Publishing**: Route messages to NATS JetStream
+- **Error Handling**: Halt on NATS failures to prevent message loss
+- **Health Monitoring**: Provide health check endpoint for orchestration
 
 ### Technology Stack
 - **Language**: Python 3.9+
-- **Protocol**: MLLP (Minimal Lower Layer Protocol), HTTP
-- **Framework**: FastAPI or asyncio workers
+- **Protocol**: MLLP (Minimal Lower Layer Protocol)
+- **HL7 Library**: python-hl7
 - **Message Queue**: NATS JetStream
-- **HL7 Library**: python-hl7 or custom parser
+- **Async**: asyncio for concurrent connections
+- **Health Check**: HTTP server for K8s probes
 
 ## Commands
 
