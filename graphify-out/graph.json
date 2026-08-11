@@ -618,7 +618,7 @@
       "label": "Commands",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L27",
+      "source_location": "L28",
       "_origin": "ast",
       "id": "claude_commands",
       "community": 0,
@@ -628,7 +628,7 @@
       "label": "Development",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L29",
+      "source_location": "L30",
       "_origin": "ast",
       "id": "claude_development",
       "community": 0,
@@ -638,7 +638,7 @@
       "label": "Graphify",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L39",
+      "source_location": "L40",
       "_origin": "ast",
       "id": "claude_graphify",
       "community": 0,
@@ -648,7 +648,7 @@
       "label": "Architecture",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L47",
+      "source_location": "L48",
       "_origin": "ast",
       "id": "claude_architecture",
       "community": 0,
@@ -658,7 +658,7 @@
       "label": "Service Boundaries",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L49",
+      "source_location": "L50",
       "_origin": "ast",
       "id": "claude_service_boundaries",
       "community": 0,
@@ -668,7 +668,7 @@
       "label": "Key Design Patterns",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L54",
+      "source_location": "L55",
       "_origin": "ast",
       "id": "claude_key_design_patterns",
       "community": 0,
@@ -678,7 +678,7 @@
       "label": "Code Structure",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L61",
+      "source_location": "L62",
       "_origin": "ast",
       "id": "claude_code_structure",
       "community": 0,
@@ -688,7 +688,7 @@
       "label": "Configuration",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L87",
+      "source_location": "L88",
       "_origin": "ast",
       "id": "claude_configuration",
       "community": 0,
@@ -698,7 +698,7 @@
       "label": "Environment Variables",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L89",
+      "source_location": "L90",
       "_origin": "ast",
       "id": "claude_environment_variables",
       "community": 0,
@@ -708,7 +708,7 @@
       "label": "Data Contracts",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L111",
+      "source_location": "L112",
       "_origin": "ast",
       "id": "claude_data_contracts",
       "community": 0,
@@ -718,7 +718,7 @@
       "label": "Key Endpoints",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L115",
+      "source_location": "L116",
       "_origin": "ast",
       "id": "claude_key_endpoints",
       "community": 0,
@@ -728,7 +728,7 @@
       "label": "Testing",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L120",
+      "source_location": "L121",
       "_origin": "ast",
       "id": "claude_testing",
       "community": 0,
@@ -738,7 +738,7 @@
       "label": "Troubleshooting",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L129",
+      "source_location": "L130",
       "_origin": "ast",
       "id": "claude_troubleshooting",
       "community": 0,
@@ -748,7 +748,7 @@
       "label": "Related Documentation",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L140",
+      "source_location": "L141",
       "_origin": "ast",
       "id": "claude_related_documentation",
       "community": 0,
@@ -758,7 +758,7 @@
       "label": "Graphify Integration",
       "file_type": "document",
       "source_file": "CLAUDE.md",
-      "source_location": "L147",
+      "source_location": "L148",
       "_origin": "ast",
       "id": "claude_graphify_integration",
       "community": 0,
@@ -1242,9 +1242,9 @@
       "source_file": "local/nats.sh",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "local_nats",
-      "target": "users_sajalgoyal_src_github_com_coverahealth_qcc_gateway_qcc_gateway_hl7_listener_local_nats_sh__entry",
-      "confidence_score": 1.0
+      "target": "users_sajalgoyal_src_github_com_coverahealth_qcc_gateway_qcc_gateway_hl7_listener_local_nats_sh__entry"
     },
     {
       "relation": "contains",
@@ -1252,9 +1252,9 @@
       "source_file": "src/main/py/hl7_listener/healthcheck.py",
       "source_location": "L4",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hl7_listener_healthcheck",
-      "target": "hl7_listener_healthcheck_health_check_handler",
-      "confidence_score": 1.0
+      "target": "hl7_listener_healthcheck_health_check_handler"
     },
     {
       "relation": "contains",
@@ -1262,9 +1262,9 @@
       "source_file": "src/main/py/hl7_listener/healthcheck.py",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hl7_listener_healthcheck",
-      "target": "hl7_listener_healthcheck_start_health_check_server",
-      "confidence_score": 1.0
+      "target": "hl7_listener_healthcheck_start_health_check_server"
     },
     {
       "relation": "imports_from",
@@ -1273,9 +1273,9 @@
       "source_file": "src/main/py/hl7_listener/main.py",
       "source_location": "L22",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hl7_listener_main",
-      "target": "hl7_listener_healthcheck",
-      "confidence_score": 1.0
+      "target": "hl7_listener_healthcheck"
     },
     {
       "relation": "calls",
@@ -1294,9 +1294,9 @@
       "source_file": "src/main/py/hl7_listener/main.py",
       "source_location": "L32",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hl7_listener_main",
-      "target": "hl7_listener_main_exception_formatter",
-      "confidence_score": 1.0
+      "target": "hl7_listener_main_exception_formatter"
     },
     {
       "relation": "contains",
@@ -1304,9 +1304,9 @@
       "source_file": "src/main/py/hl7_listener/main.py",
       "source_location": "L130",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hl7_listener_main",
-      "target": "hl7_listener_main_hl7_receiver",
-      "confidence_score": 1.0
+      "target": "hl7_listener_main_hl7_receiver"
     },
     {
       "relation": "contains",
@@ -1314,9 +1314,9 @@
       "source_file": "src/main/py/hl7_listener/main.py",
       "source_location": "L160",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hl7_listener_main",
-      "target": "hl7_listener_main_main",
-      "confidence_score": 1.0
+      "target": "hl7_listener_main_main"
     },
     {
       "relation": "contains",
@@ -1324,9 +1324,9 @@
       "source_file": "src/main/py/hl7_listener/main.py",
       "source_location": "L40",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hl7_listener_main",
-      "target": "hl7_listener_main_process_received_hl7_messages",
-      "confidence_score": 1.0
+      "target": "hl7_listener_main_process_received_hl7_messages"
     },
     {
       "relation": "imports_from",
@@ -1335,9 +1335,9 @@
       "source_file": "src/main/py/hl7_listener/main.py",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hl7_listener_main",
-      "target": "hl7_listener_settings",
-      "confidence_score": 1.0
+      "target": "hl7_listener_settings"
     },
     {
       "relation": "rationale_for",
@@ -1345,9 +1345,9 @@
       "source_file": "src/main/py/hl7_listener/main.py",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hl7_listener_main_rationale_1",
-      "target": "hl7_listener_main",
-      "confidence_score": 1.0
+      "target": "hl7_listener_main"
     },
     {
       "relation": "calls",
@@ -1356,9 +1356,9 @@
       "source_file": "src/main/py/hl7_listener/main.py",
       "source_location": "L155",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hl7_listener_main_hl7_receiver",
-      "target": "hl7_listener_main_exception_formatter",
-      "confidence_score": 1.0
+      "target": "hl7_listener_main_exception_formatter"
     },
     {
       "relation": "calls",
@@ -1367,9 +1367,9 @@
       "source_file": "src/main/py/hl7_listener/main.py",
       "source_location": "L78",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hl7_listener_main_process_received_hl7_messages",
-      "target": "hl7_listener_main_exception_formatter",
-      "confidence_score": 1.0
+      "target": "hl7_listener_main_exception_formatter"
     },
     {
       "relation": "rationale_for",
@@ -1377,9 +1377,9 @@
       "source_file": "src/main/py/hl7_listener/main.py",
       "source_location": "L41",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hl7_listener_main_rationale_41",
-      "target": "hl7_listener_main_process_received_hl7_messages",
-      "confidence_score": 1.0
+      "target": "hl7_listener_main_process_received_hl7_messages"
     },
     {
       "relation": "calls",
@@ -1388,9 +1388,9 @@
       "source_file": "src/main/py/hl7_listener/main.py",
       "source_location": "L173",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hl7_listener_main_main",
-      "target": "hl7_listener_main_hl7_receiver",
-      "confidence_score": 1.0
+      "target": "hl7_listener_main_hl7_receiver"
     },
     {
       "relation": "rationale_for",
@@ -1398,9 +1398,9 @@
       "source_file": "src/main/py/hl7_listener/main.py",
       "source_location": "L131",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hl7_listener_main_rationale_131",
-      "target": "hl7_listener_main_hl7_receiver",
-      "confidence_score": 1.0
+      "target": "hl7_listener_main_hl7_receiver"
     },
     {
       "relation": "imports_from",
@@ -1409,9 +1409,9 @@
       "source_file": "src/main/py/hl7_listener/messaging/base.py",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "messaging_base",
-      "target": "abc",
-      "confidence_score": 1.0
+      "target": "abc"
     },
     {
       "relation": "contains",
@@ -1419,9 +1419,9 @@
       "source_file": "src/main/py/hl7_listener/messaging/base.py",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "messaging_base",
-      "target": "messaging_base_messaginginterface",
-      "confidence_score": 1.0
+      "target": "messaging_base_messaginginterface"
     },
     {
       "relation": "inherits",
@@ -1429,9 +1429,9 @@
       "source_file": "src/main/py/hl7_listener/messaging/base.py",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "messaging_base_messaginginterface",
-      "target": "abc",
-      "confidence_score": 1.0
+      "target": "abc"
     },
     {
       "relation": "method",
@@ -1439,9 +1439,9 @@
       "source_file": "src/main/py/hl7_listener/messaging/base.py",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "messaging_base_messaginginterface",
-      "target": "messaging_base_messaginginterface_connect",
-      "confidence_score": 1.0
+      "target": "messaging_base_messaginginterface_connect"
     },
     {
       "relation": "method",
@@ -1449,9 +1449,9 @@
       "source_file": "src/main/py/hl7_listener/messaging/base.py",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "messaging_base_messaginginterface",
-      "target": "messaging_base_messaginginterface_send_msg",
-      "confidence_score": 1.0
+      "target": "messaging_base_messaginginterface_send_msg"
     },
     {
       "relation": "uses",
@@ -1459,9 +1459,9 @@
       "source_file": "src/main/py/hl7_listener/messaging/cloud_messaging.py",
       "source_location": "L9",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "messaging_cloud_messaging_cloudmessager",
-      "target": "messaging_base_messaginginterface",
-      "confidence_score": 0.5
+      "target": "messaging_base_messaginginterface"
     },
     {
       "relation": "uses",
@@ -1469,9 +1469,9 @@
       "source_file": "src/main/py/hl7_listener/messaging/nats.py",
       "source_location": "L11",
       "weight": 0.8,
+      "confidence_score": 0.5,
       "source": "messaging_nats_natsmessager",
-      "target": "messaging_base_messaginginterface",
-      "confidence_score": 0.5
+      "target": "messaging_base_messaginginterface"
     },
     {
       "relation": "references",
@@ -1480,9 +1480,9 @@
       "source_file": "src/main/py/hl7_listener/messaging/base.py",
       "source_location": "L8",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "messaging_base_messaginginterface_send_msg",
-      "target": "any",
-      "confidence_score": 1.0
+      "target": "any"
     },
     {
       "relation": "contains",
@@ -1490,9 +1490,9 @@
       "source_file": "src/main/py/hl7_listener/messaging/cloud_messaging.py",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "messaging_cloud_messaging",
-      "target": "messaging_cloud_messaging_cloudmessager",
-      "confidence_score": 1.0
+      "target": "messaging_cloud_messaging_cloudmessager"
     },
     {
       "relation": "method",
@@ -1500,9 +1500,9 @@
       "source_file": "src/main/py/hl7_listener/messaging/cloud_messaging.py",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "messaging_cloud_messaging_cloudmessager",
-      "target": "messaging_cloud_messaging_cloudmessager_connect",
-      "confidence_score": 1.0
+      "target": "messaging_cloud_messaging_cloudmessager_connect"
     },
     {
       "relation": "method",
@@ -1510,9 +1510,9 @@
       "source_file": "src/main/py/hl7_listener/messaging/cloud_messaging.py",
       "source_location": "L26",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "messaging_cloud_messaging_cloudmessager",
-      "target": "messaging_cloud_messaging_cloudmessager_send_msg",
-      "confidence_score": 1.0
+      "target": "messaging_cloud_messaging_cloudmessager_send_msg"
     },
     {
       "relation": "calls",
@@ -1531,9 +1531,9 @@
       "source_file": "src/main/py/hl7_listener/messaging/cloud_messaging.py",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "messaging_cloud_messaging_rationale_18",
-      "target": "messaging_cloud_messaging_cloudmessager_connect",
-      "confidence_score": 1.0
+      "target": "messaging_cloud_messaging_cloudmessager_connect"
     },
     {
       "relation": "rationale_for",
@@ -1541,9 +1541,9 @@
       "source_file": "src/main/py/hl7_listener/messaging/cloud_messaging.py",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "messaging_cloud_messaging_rationale_27",
-      "target": "messaging_cloud_messaging_cloudmessager_send_msg",
-      "confidence_score": 1.0
+      "target": "messaging_cloud_messaging_cloudmessager_send_msg"
     },
     {
       "relation": "contains",
@@ -1551,9 +1551,9 @@
       "source_file": "src/main/py/hl7_listener/messaging/nats.py",
       "source_location": "L17",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "messaging_nats",
-      "target": "messaging_nats_natsmessager",
-      "confidence_score": 1.0
+      "target": "messaging_nats_natsmessager"
     },
     {
       "relation": "method",
@@ -1561,9 +1561,9 @@
       "source_file": "src/main/py/hl7_listener/messaging/nats.py",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "messaging_nats_natsmessager",
-      "target": "messaging_nats_natsmessager_connect",
-      "confidence_score": 1.0
+      "target": "messaging_nats_natsmessager_connect"
     },
     {
       "relation": "method",
@@ -1571,9 +1571,9 @@
       "source_file": "src/main/py/hl7_listener/messaging/nats.py",
       "source_location": "L41",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "messaging_nats_natsmessager",
-      "target": "messaging_nats_natsmessager_send_msg",
-      "confidence_score": 1.0
+      "target": "messaging_nats_natsmessager_send_msg"
     },
     {
       "relation": "calls",
@@ -1614,9 +1614,9 @@
       "source_file": "src/main/py/hl7_listener/messaging/nats.py",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "messaging_nats_rationale_21",
-      "target": "messaging_nats_natsmessager_connect",
-      "confidence_score": 1.0
+      "target": "messaging_nats_natsmessager_connect"
     },
     {
       "relation": "rationale_for",
@@ -1624,9 +1624,9 @@
       "source_file": "src/main/py/hl7_listener/messaging/nats.py",
       "source_location": "L42",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "messaging_nats_rationale_42",
-      "target": "messaging_nats_natsmessager_send_msg",
-      "confidence_score": 1.0
+      "target": "messaging_nats_natsmessager_send_msg"
     },
     {
       "relation": "imports_from",
@@ -1635,9 +1635,9 @@
       "source_file": "src/main/py/hl7_listener/messaging/settings.py",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "messaging_settings",
-      "target": "hl7_listener_settings",
-      "confidence_score": 1.0
+      "target": "hl7_listener_settings"
     },
     {
       "relation": "contains",
@@ -1645,9 +1645,9 @@
       "source_file": "src/main/py/hl7_listener/messaging/settings.py",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "messaging_settings",
-      "target": "messaging_settings_cloudmessagingsettings",
-      "confidence_score": 1.0
+      "target": "messaging_settings_cloudmessagingsettings"
     },
     {
       "relation": "contains",
@@ -1655,9 +1655,9 @@
       "source_file": "src/main/py/hl7_listener/messaging/settings.py",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "messaging_settings",
-      "target": "messaging_settings_natssettings",
-      "confidence_score": 1.0
+      "target": "messaging_settings_natssettings"
     },
     {
       "relation": "inherits",
@@ -1665,9 +1665,9 @@
       "source_file": "src/main/py/hl7_listener/messaging/settings.py",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "messaging_settings_cloudmessagingsettings",
-      "target": "basesettings",
-      "confidence_score": 1.0
+      "target": "basesettings"
     },
     {
       "relation": "method",
@@ -1675,9 +1675,9 @@
       "source_file": "src/main/py/hl7_listener/messaging/settings.py",
       "source_location": "L21",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "messaging_settings_cloudmessagingsettings",
-      "target": "messaging_settings_cloudmessagingsettings_get_settings",
-      "confidence_score": 1.0
+      "target": "messaging_settings_cloudmessagingsettings_get_settings"
     },
     {
       "relation": "calls",
@@ -1696,9 +1696,9 @@
       "source_file": "src/main/py/hl7_listener/settings.py",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hl7_listener_settings_settings",
-      "target": "basesettings",
-      "confidence_score": 1.0
+      "target": "basesettings"
     },
     {
       "relation": "inherits",
@@ -1706,9 +1706,9 @@
       "source_file": "src/main/py/hl7_listener/messaging/settings.py",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "messaging_settings_natssettings",
-      "target": "basesettings",
-      "confidence_score": 1.0
+      "target": "basesettings"
     },
     {
       "relation": "method",
@@ -1716,9 +1716,9 @@
       "source_file": "src/main/py/hl7_listener/messaging/settings.py",
       "source_location": "L35",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "messaging_settings_natssettings",
-      "target": "messaging_settings_natssettings_get_settings",
-      "confidence_score": 1.0
+      "target": "messaging_settings_natssettings_get_settings"
     },
     {
       "relation": "imports_from",
@@ -1727,9 +1727,9 @@
       "source_file": "src/main/py/hl7_listener/settings.py",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hl7_listener_settings",
-      "target": "enum",
-      "confidence_score": 1.0
+      "target": "enum"
     },
     {
       "relation": "contains",
@@ -1737,9 +1737,9 @@
       "source_file": "src/main/py/hl7_listener/settings.py",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hl7_listener_settings",
-      "target": "hl7_listener_settings_queuetype",
-      "confidence_score": 1.0
+      "target": "hl7_listener_settings_queuetype"
     },
     {
       "relation": "contains",
@@ -1747,9 +1747,9 @@
       "source_file": "src/main/py/hl7_listener/settings.py",
       "source_location": "L10",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hl7_listener_settings",
-      "target": "hl7_listener_settings_settings",
-      "confidence_score": 1.0
+      "target": "hl7_listener_settings_settings"
     },
     {
       "relation": "imports_from",
@@ -1758,9 +1758,9 @@
       "source_file": "src/test/py/test_main.py",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "py_test_main",
-      "target": "hl7_listener_settings",
-      "confidence_score": 1.0
+      "target": "hl7_listener_settings"
     },
     {
       "relation": "inherits",
@@ -1768,9 +1768,9 @@
       "source_file": "src/main/py/hl7_listener/settings.py",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hl7_listener_settings_queuetype",
-      "target": "enum",
-      "confidence_score": 1.0
+      "target": "enum"
     },
     {
       "relation": "inherits",
@@ -1778,9 +1778,9 @@
       "source_file": "src/main/py/hl7_listener/settings.py",
       "source_location": "L5",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hl7_listener_settings_queuetype",
-      "target": "str",
-      "confidence_score": 1.0
+      "target": "str"
     },
     {
       "relation": "method",
@@ -1788,9 +1788,9 @@
       "source_file": "src/main/py/hl7_listener/settings.py",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "hl7_listener_settings_settings",
-      "target": "hl7_listener_settings_settings_get_settings",
-      "confidence_score": 1.0
+      "target": "hl7_listener_settings_settings_get_settings"
     },
     {
       "relation": "contains",
@@ -1798,9 +1798,9 @@
       "source_file": "src/test/py/test_main.py",
       "source_location": "L30",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "py_test_main",
-      "target": "py_test_main_mock_pilot_settings",
-      "confidence_score": 1.0
+      "target": "py_test_main_mock_pilot_settings"
     },
     {
       "relation": "contains",
@@ -1808,9 +1808,9 @@
       "source_file": "src/test/py/test_main.py",
       "source_location": "L187",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "py_test_main",
-      "target": "py_test_main_test_hl7_receiver_exception",
-      "confidence_score": 1.0
+      "target": "py_test_main_test_hl7_receiver_exception"
     },
     {
       "relation": "contains",
@@ -1818,9 +1818,9 @@
       "source_file": "src/test/py/test_main.py",
       "source_location": "L39",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "py_test_main",
-      "target": "py_test_main_test_nc_connect",
-      "confidence_score": 1.0
+      "target": "py_test_main_test_nc_connect"
     },
     {
       "relation": "contains",
@@ -1828,9 +1828,9 @@
       "source_file": "src/test/py/test_main.py",
       "source_location": "L79",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "py_test_main",
-      "target": "py_test_main_test_pilot",
-      "confidence_score": 1.0
+      "target": "py_test_main_test_pilot"
     },
     {
       "relation": "contains",
@@ -1838,9 +1838,9 @@
       "source_file": "src/test/py/test_main.py",
       "source_location": "L96",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "py_test_main",
-      "target": "py_test_main_test_processed_received_hl7_messages",
-      "confidence_score": 1.0
+      "target": "py_test_main_test_processed_received_hl7_messages"
     },
     {
       "relation": "contains",
@@ -1848,9 +1848,9 @@
       "source_file": "src/test/py/test_main.py",
       "source_location": "L50",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "py_test_main",
-      "target": "py_test_main_test_send_msg",
-      "confidence_score": 1.0
+      "target": "py_test_main_test_send_msg"
     },
     {
       "relation": "contains",
@@ -1858,9 +1858,9 @@
       "source_file": "src/test/py/test_main.py",
       "source_location": "L61",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "py_test_main",
-      "target": "py_test_main_test_send_msg_cloud_messaging",
-      "confidence_score": 1.0
+      "target": "py_test_main_test_send_msg_cloud_messaging"
     },
     {
       "relation": "contains",
@@ -1868,9 +1868,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude",
-      "target": "claude_qcc_gateway_hl7_listener_project_context",
-      "confidence_score": 1.0
+      "target": "claude_qcc_gateway_hl7_listener_project_context"
     },
     {
       "relation": "references",
@@ -1878,9 +1878,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L142",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude",
-      "target": "docs_data_contracts",
-      "confidence_score": 1.0
+      "target": "docs_data_contracts"
     },
     {
       "relation": "references",
@@ -1888,9 +1888,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L141",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude",
-      "target": "docs_design",
-      "confidence_score": 1.0
+      "target": "docs_design"
     },
     {
       "relation": "references",
@@ -1898,9 +1898,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L143",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude",
-      "target": "docs_testing",
-      "confidence_score": 1.0
+      "target": "docs_testing"
     },
     {
       "relation": "references",
@@ -1908,9 +1908,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L144",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude",
-      "target": "readme",
-      "confidence_score": 1.0
+      "target": "readme"
     },
     {
       "relation": "contains",
@@ -1918,9 +1918,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L47",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_qcc_gateway_hl7_listener_project_context",
-      "target": "claude_architecture",
-      "confidence_score": 1.0
+      "target": "claude_architecture"
     },
     {
       "relation": "contains",
@@ -1928,9 +1928,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L61",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_qcc_gateway_hl7_listener_project_context",
-      "target": "claude_code_structure",
-      "confidence_score": 1.0
+      "target": "claude_code_structure"
     },
     {
       "relation": "contains",
@@ -1938,9 +1938,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_qcc_gateway_hl7_listener_project_context",
-      "target": "claude_commands",
-      "confidence_score": 1.0
+      "target": "claude_commands"
     },
     {
       "relation": "contains",
@@ -1948,9 +1948,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L87",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_qcc_gateway_hl7_listener_project_context",
-      "target": "claude_configuration",
-      "confidence_score": 1.0
+      "target": "claude_configuration"
     },
     {
       "relation": "contains",
@@ -1958,9 +1958,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L111",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_qcc_gateway_hl7_listener_project_context",
-      "target": "claude_data_contracts",
-      "confidence_score": 1.0
+      "target": "claude_data_contracts"
     },
     {
       "relation": "contains",
@@ -1968,9 +1968,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L147",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_qcc_gateway_hl7_listener_project_context",
-      "target": "claude_graphify_integration",
-      "confidence_score": 1.0
+      "target": "claude_graphify_integration"
     },
     {
       "relation": "contains",
@@ -1978,9 +1978,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_qcc_gateway_hl7_listener_project_context",
-      "target": "claude_project_overview",
-      "confidence_score": 1.0
+      "target": "claude_project_overview"
     },
     {
       "relation": "contains",
@@ -1988,9 +1988,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L140",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_qcc_gateway_hl7_listener_project_context",
-      "target": "claude_related_documentation",
-      "confidence_score": 1.0
+      "target": "claude_related_documentation"
     },
     {
       "relation": "contains",
@@ -1998,9 +1998,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L120",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_qcc_gateway_hl7_listener_project_context",
-      "target": "claude_testing",
-      "confidence_score": 1.0
+      "target": "claude_testing"
     },
     {
       "relation": "contains",
@@ -2008,9 +2008,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L129",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_qcc_gateway_hl7_listener_project_context",
-      "target": "claude_troubleshooting",
-      "confidence_score": 1.0
+      "target": "claude_troubleshooting"
     },
     {
       "relation": "contains",
@@ -2018,9 +2018,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_project_overview",
-      "target": "claude_key_responsibilities",
-      "confidence_score": 1.0
+      "target": "claude_key_responsibilities"
     },
     {
       "relation": "contains",
@@ -2028,9 +2028,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_project_overview",
-      "target": "claude_purpose",
-      "confidence_score": 1.0
+      "target": "claude_purpose"
     },
     {
       "relation": "contains",
@@ -2038,9 +2038,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_project_overview",
-      "target": "claude_technology_stack",
-      "confidence_score": 1.0
+      "target": "claude_technology_stack"
     },
     {
       "relation": "contains",
@@ -2048,9 +2048,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L29",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_commands",
-      "target": "claude_development",
-      "confidence_score": 1.0
+      "target": "claude_development"
     },
     {
       "relation": "contains",
@@ -2058,9 +2058,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L39",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_commands",
-      "target": "claude_graphify",
-      "confidence_score": 1.0
+      "target": "claude_graphify"
     },
     {
       "relation": "contains",
@@ -2068,9 +2068,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L54",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_architecture",
-      "target": "claude_key_design_patterns",
-      "confidence_score": 1.0
+      "target": "claude_key_design_patterns"
     },
     {
       "relation": "contains",
@@ -2078,9 +2078,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L49",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_architecture",
-      "target": "claude_service_boundaries",
-      "confidence_score": 1.0
+      "target": "claude_service_boundaries"
     },
     {
       "relation": "contains",
@@ -2088,9 +2088,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L89",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_configuration",
-      "target": "claude_environment_variables",
-      "confidence_score": 1.0
+      "target": "claude_environment_variables"
     },
     {
       "relation": "contains",
@@ -2098,9 +2098,9 @@
       "source_file": "CLAUDE.md",
       "source_location": "L115",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "claude_data_contracts",
-      "target": "claude_key_endpoints",
-      "confidence_score": 1.0
+      "target": "claude_key_endpoints"
     },
     {
       "relation": "references",
@@ -2108,9 +2108,9 @@
       "source_file": "README.md",
       "source_location": "L213",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme",
-      "target": "docs_data_contracts",
-      "confidence_score": 1.0
+      "target": "docs_data_contracts"
     },
     {
       "relation": "references",
@@ -2118,9 +2118,9 @@
       "source_file": "README.md",
       "source_location": "L212",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme",
-      "target": "docs_design",
-      "confidence_score": 1.0
+      "target": "docs_design"
     },
     {
       "relation": "references",
@@ -2128,9 +2128,9 @@
       "source_file": "README.md",
       "source_location": "L214",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme",
-      "target": "docs_testing",
-      "confidence_score": 1.0
+      "target": "docs_testing"
     },
     {
       "relation": "contains",
@@ -2138,9 +2138,9 @@
       "source_file": "README.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme",
-      "target": "readme_qcc_gateway_hl7_listener",
-      "confidence_score": 1.0
+      "target": "readme_qcc_gateway_hl7_listener"
     },
     {
       "relation": "contains",
@@ -2148,9 +2148,9 @@
       "source_file": "README.md",
       "source_location": "L37",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_qcc_gateway_hl7_listener",
-      "target": "readme_development",
-      "confidence_score": 1.0
+      "target": "readme_development"
     },
     {
       "relation": "contains",
@@ -2158,9 +2158,9 @@
       "source_file": "README.md",
       "source_location": "L49",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_qcc_gateway_hl7_listener",
-      "target": "readme_env_vars",
-      "confidence_score": 1.0
+      "target": "readme_env_vars"
     },
     {
       "relation": "contains",
@@ -2168,9 +2168,9 @@
       "source_file": "README.md",
       "source_location": "L217",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_qcc_gateway_hl7_listener",
-      "target": "readme_graphify_knowledge_graph",
-      "confidence_score": 1.0
+      "target": "readme_graphify_knowledge_graph"
     },
     {
       "relation": "contains",
@@ -2178,9 +2178,9 @@
       "source_file": "README.md",
       "source_location": "L190",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_qcc_gateway_hl7_listener",
-      "target": "readme_network_ports",
-      "confidence_score": 1.0
+      "target": "readme_network_ports"
     },
     {
       "relation": "contains",
@@ -2188,9 +2188,9 @@
       "source_file": "README.md",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_qcc_gateway_hl7_listener",
-      "target": "readme_overview",
-      "confidence_score": 1.0
+      "target": "readme_overview"
     },
     {
       "relation": "contains",
@@ -2198,9 +2198,9 @@
       "source_file": "README.md",
       "source_location": "L9",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_qcc_gateway_hl7_listener",
-      "target": "readme_quick_start",
-      "confidence_score": 1.0
+      "target": "readme_quick_start"
     },
     {
       "relation": "contains",
@@ -2208,9 +2208,9 @@
       "source_file": "README.md",
       "source_location": "L209",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_qcc_gateway_hl7_listener",
-      "target": "readme_related_documentation",
-      "confidence_score": 1.0
+      "target": "readme_related_documentation"
     },
     {
       "relation": "contains",
@@ -2218,9 +2218,9 @@
       "source_file": "README.md",
       "source_location": "L124",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_qcc_gateway_hl7_listener",
-      "target": "readme_testing",
-      "confidence_score": 1.0
+      "target": "readme_testing"
     },
     {
       "relation": "contains",
@@ -2228,9 +2228,9 @@
       "source_file": "README.md",
       "source_location": "L198",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_qcc_gateway_hl7_listener",
-      "target": "readme_troubleshooting",
-      "confidence_score": 1.0
+      "target": "readme_troubleshooting"
     },
     {
       "relation": "contains",
@@ -2238,9 +2238,9 @@
       "source_file": "README.md",
       "source_location": "L19",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_quick_start",
-      "target": "readme_docker",
-      "confidence_score": 1.0
+      "target": "readme_docker"
     },
     {
       "relation": "contains",
@@ -2248,9 +2248,9 @@
       "source_file": "README.md",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_quick_start",
-      "target": "readme_local_development",
-      "confidence_score": 1.0
+      "target": "readme_local_development"
     },
     {
       "relation": "contains",
@@ -2258,9 +2258,9 @@
       "source_file": "README.md",
       "source_location": "L39",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_development",
-      "target": "readme_setup",
-      "confidence_score": 1.0
+      "target": "readme_setup"
     },
     {
       "relation": "contains",
@@ -2268,9 +2268,9 @@
       "source_file": "README.md",
       "source_location": "L69",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_env_vars",
-      "target": "readme_adding_dependencies",
-      "confidence_score": 1.0
+      "target": "readme_adding_dependencies"
     },
     {
       "relation": "contains",
@@ -2278,9 +2278,9 @@
       "source_file": "README.md",
       "source_location": "L83",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_env_vars",
-      "target": "readme_create_the_stream_and_consumer",
-      "confidence_score": 1.0
+      "target": "readme_create_the_stream_and_consumer"
     },
     {
       "relation": "contains",
@@ -2288,9 +2288,9 @@
       "source_file": "README.md",
       "source_location": "L114",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_env_vars",
-      "target": "readme_creating_the_docker_image",
-      "confidence_score": 1.0
+      "target": "readme_creating_the_docker_image"
     },
     {
       "relation": "contains",
@@ -2298,9 +2298,9 @@
       "source_file": "README.md",
       "source_location": "L96",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_env_vars",
-      "target": "readme_environment_variables",
-      "confidence_score": 1.0
+      "target": "readme_environment_variables"
     },
     {
       "relation": "contains",
@@ -2308,9 +2308,9 @@
       "source_file": "README.md",
       "source_location": "L73",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_env_vars",
-      "target": "readme_install_nats_jetstream_server_and_nats_cli",
-      "confidence_score": 1.0
+      "target": "readme_install_nats_jetstream_server_and_nats_cli"
     },
     {
       "relation": "contains",
@@ -2318,9 +2318,9 @@
       "source_file": "README.md",
       "source_location": "L126",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_testing",
-      "target": "readme_with_nats_config",
-      "confidence_score": 1.0
+      "target": "readme_with_nats_config"
     },
     {
       "relation": "contains",
@@ -2328,9 +2328,9 @@
       "source_file": "README.md",
       "source_location": "L170",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "readme_testing",
-      "target": "readme_with_queue_config",
-      "confidence_score": 1.0
+      "target": "readme_with_queue_config"
     },
     {
       "relation": "contains",
@@ -2338,9 +2338,9 @@
       "source_file": "docs/data-contracts.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_data_contracts",
-      "target": "docs_data_contracts_data_contracts_schemas",
-      "confidence_score": 1.0
+      "target": "docs_data_contracts_data_contracts_schemas"
     },
     {
       "relation": "contains",
@@ -2348,9 +2348,9 @@
       "source_file": "docs/data-contracts.md",
       "source_location": "L50",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_data_contracts_data_contracts_schemas",
-      "target": "docs_data_contracts_error_responses",
-      "confidence_score": 1.0
+      "target": "docs_data_contracts_error_responses"
     },
     {
       "relation": "contains",
@@ -2358,9 +2358,9 @@
       "source_file": "docs/data-contracts.md",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_data_contracts_data_contracts_schemas",
-      "target": "docs_data_contracts_hl7_message_format",
-      "confidence_score": 1.0
+      "target": "docs_data_contracts_hl7_message_format"
     },
     {
       "relation": "contains",
@@ -2368,9 +2368,9 @@
       "source_file": "docs/data-contracts.md",
       "source_location": "L12",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_data_contracts_data_contracts_schemas",
-      "target": "docs_data_contracts_http_endpoint",
-      "confidence_score": 1.0
+      "target": "docs_data_contracts_http_endpoint"
     },
     {
       "relation": "contains",
@@ -2378,9 +2378,9 @@
       "source_file": "docs/data-contracts.md",
       "source_location": "L37",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_data_contracts_data_contracts_schemas",
-      "target": "docs_data_contracts_message_status",
-      "confidence_score": 1.0
+      "target": "docs_data_contracts_message_status"
     },
     {
       "relation": "contains",
@@ -2388,9 +2388,9 @@
       "source_file": "docs/data-contracts.md",
       "source_location": "L32",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_data_contracts_data_contracts_schemas",
-      "target": "docs_data_contracts_mllp_protocol",
-      "confidence_score": 1.0
+      "target": "docs_data_contracts_mllp_protocol"
     },
     {
       "relation": "contains",
@@ -2398,9 +2398,9 @@
       "source_file": "docs/data-contracts.md",
       "source_location": "L14",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_data_contracts_http_endpoint",
-      "target": "docs_data_contracts_post_hl7",
-      "confidence_score": 1.0
+      "target": "docs_data_contracts_post_hl7"
     },
     {
       "relation": "contains",
@@ -2408,9 +2408,9 @@
       "source_file": "docs/design.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_design",
-      "target": "docs_design_architecture_design",
-      "confidence_score": 1.0
+      "target": "docs_design_architecture_design"
     },
     {
       "relation": "contains",
@@ -2418,9 +2418,9 @@
       "source_file": "docs/design.md",
       "source_location": "L39",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_design_architecture_design",
-      "target": "docs_design_configuration",
-      "confidence_score": 1.0
+      "target": "docs_design_configuration"
     },
     {
       "relation": "contains",
@@ -2428,9 +2428,9 @@
       "source_file": "docs/design.md",
       "source_location": "L13",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_design_architecture_design",
-      "target": "docs_design_core_components",
-      "confidence_score": 1.0
+      "target": "docs_design_core_components"
     },
     {
       "relation": "contains",
@@ -2438,9 +2438,9 @@
       "source_file": "docs/design.md",
       "source_location": "L33",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_design_architecture_design",
-      "target": "docs_design_design_patterns",
-      "confidence_score": 1.0
+      "target": "docs_design_design_patterns"
     },
     {
       "relation": "contains",
@@ -2448,9 +2448,9 @@
       "source_file": "docs/design.md",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_design_architecture_design",
-      "target": "docs_design_overview",
-      "confidence_score": 1.0
+      "target": "docs_design_overview"
     },
     {
       "relation": "contains",
@@ -2458,9 +2458,9 @@
       "source_file": "docs/design.md",
       "source_location": "L6",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_design_architecture_design",
-      "target": "docs_design_service_purpose",
-      "confidence_score": 1.0
+      "target": "docs_design_service_purpose"
     },
     {
       "relation": "contains",
@@ -2468,9 +2468,9 @@
       "source_file": "docs/design.md",
       "source_location": "L27",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_design_core_components",
-      "target": "docs_design_external_dependencies",
-      "confidence_score": 1.0
+      "target": "docs_design_external_dependencies"
     },
     {
       "relation": "contains",
@@ -2478,9 +2478,9 @@
       "source_file": "docs/design.md",
       "source_location": "L15",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_design_core_components",
-      "target": "docs_design_message_receivers",
-      "confidence_score": 1.0
+      "target": "docs_design_message_receivers"
     },
     {
       "relation": "contains",
@@ -2488,9 +2488,9 @@
       "source_file": "docs/design.md",
       "source_location": "L20",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_design_core_components",
-      "target": "docs_design_processing_pipeline",
-      "confidence_score": 1.0
+      "target": "docs_design_processing_pipeline"
     },
     {
       "relation": "contains",
@@ -2498,9 +2498,9 @@
       "source_file": "docs/testing.md",
       "source_location": "L1",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_testing",
-      "target": "docs_testing_testing_guide",
-      "confidence_score": 1.0
+      "target": "docs_testing_testing_guide"
     },
     {
       "relation": "contains",
@@ -2508,9 +2508,9 @@
       "source_file": "docs/testing.md",
       "source_location": "L31",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_testing_testing_guide",
-      "target": "docs_testing_datadog_integration",
-      "confidence_score": 1.0
+      "target": "docs_testing_datadog_integration"
     },
     {
       "relation": "contains",
@@ -2518,9 +2518,9 @@
       "source_file": "docs/testing.md",
       "source_location": "L34",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_testing_testing_guide",
-      "target": "docs_testing_debugging",
-      "confidence_score": 1.0
+      "target": "docs_testing_debugging"
     },
     {
       "relation": "contains",
@@ -2528,9 +2528,9 @@
       "source_file": "docs/testing.md",
       "source_location": "L24",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_testing_testing_guide",
-      "target": "docs_testing_mllp_testing",
-      "confidence_score": 1.0
+      "target": "docs_testing_mllp_testing"
     },
     {
       "relation": "contains",
@@ -2538,9 +2538,9 @@
       "source_file": "docs/testing.md",
       "source_location": "L11",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_testing_testing_guide",
-      "target": "docs_testing_running_tests",
-      "confidence_score": 1.0
+      "target": "docs_testing_running_tests"
     },
     {
       "relation": "contains",
@@ -2548,9 +2548,9 @@
       "source_file": "docs/testing.md",
       "source_location": "L18",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_testing_testing_guide",
-      "target": "docs_testing_test_data",
-      "confidence_score": 1.0
+      "target": "docs_testing_test_data"
     },
     {
       "relation": "contains",
@@ -2558,11 +2558,11 @@
       "source_file": "docs/testing.md",
       "source_location": "L3",
       "weight": 1.0,
+      "confidence_score": 1.0,
       "source": "docs_testing_testing_guide",
-      "target": "docs_testing_test_structure",
-      "confidence_score": 1.0
+      "target": "docs_testing_test_structure"
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "7ad45e38201c858d5b09ad665b9c4916c2c9b67e"
+  "built_at_commit": "4ec297514ede523d913eaccb31edc94f61fb9e49"
 }
