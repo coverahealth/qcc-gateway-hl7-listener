@@ -1,5 +1,31 @@
-# gateway-hl7-listener
-This is a Python service that does the following:
+# qcc-gateway-hl7-listener
+This is a Python service that receives and processes HL7 medical messages.
+
+**Part of:** QCC Gateway ecosystem
+**Purpose:** HL7 message reception and routing
+**Language:** Python (async MLLP server)
+**Port:** 2575 (MLLP), 8000 (HTTP)
+
+## Quick Start
+
+### Local Development
+```bash
+poetry install
+direnv allow
+just start-local   # Starts NATS and listener
+just test          # Run tests
+```
+
+### Docker
+```bash
+just docker-build <user> <key>
+just docker-up
+```
+
+---
+
+## Overview
+This service does the following:
 * Listen/receive MLLP HL7 messages from the configured port.
 * Publish (NATS Publish-Subscribe mode) the received HL7 messages to either the configured NATS JetStream server "Subject" (e.g., "hl7.<subject-name>") or configured Cloud Based queue.
 Note that the "Subject" is associated with a JetStream "Stream" (e.g., "hl7") and the stream's "Consumer" (e.g.,"queue").
@@ -160,3 +186,40 @@ Hit the send button and confirm success in the logs:
 ![send confirmation](diagrams/hl7_inspector_send_confirmation.png)
 
 Confirm the message was processed by the service and sent to Cloud queue your environment points to.
+
+## Network & Ports
+
+| Service | Port | Protocol | Purpose |
+|---------|------|----------|---------|
+| MLLP Listener | 2575 | TCP | HL7 message reception |
+| HTTP API | 8000 | HTTP | Status and management |
+| NATS | 4222 | TCP | Message queue |
+
+## Troubleshooting
+
+| Issue | Cause | Solution |
+|-------|-------|----------|
+| Connection refused on port 2575 | Service not listening | Start service: `just start-local` |
+| HL7 messages not processed | NATS not running | Start NATS: `docker-compose up nats` |
+| ACK not sent to sender | Outgoing queue blocked | Check NATS `hl7.queue` consumer status |
+| Port 2575 already in use | Another service running | Kill process: `lsof -i :2575` |
+| Parse error on valid HL7 | Validation too strict | Set `VALIDATION_STRICT=false` |
+| Messages in dead letter queue | Permanent parsing failures | Check sample in `tests/fixtures/` for comparison |
+
+## Related Documentation
+
+- **[CLAUDE.md](CLAUDE.md)** - Project context and configuration
+- **[docs/design.md](docs/design.md)** - Service architecture
+- **[docs/data-contracts.md](docs/data-contracts.md)** - HL7 message schemas
+- **[docs/testing.md](docs/testing.md)** - Testing guide
+- **[QCC Project Overview](../../qcc_project_overview.md)**
+
+## Graphify Knowledge Graph
+
+Initialize (one-time):
+```bash
+graphify claude install
+graphify hook install
+graphify update .
+graphify query "what HL7 segments are parsed"
+```
