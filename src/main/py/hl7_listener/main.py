@@ -135,7 +135,8 @@ async def hl7_receiver():
                 process_received_hl7_messages,  # Callback function.
                 host=settings.HL7_MLLP_HOST,
                 port=int(settings.HL7_MLLP_PORT),
-                encoding='UTF-8'
+                encoding='UTF-8',
+                encoding_errors="replace"
         ) as hl7_server:
             # Listen forever or until a cancel occurs.
             await hl7_server.serve_forever()

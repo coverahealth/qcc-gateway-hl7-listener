@@ -1,5 +1,6 @@
 """Tests for main.py."""
 
+import asyncio
 import json
 import os
 from pathlib import Path
@@ -183,9 +184,42 @@ async def test_processed_received_hl7_messages(mocker, caplog):
     assert found_log_statement
 
 
+def test_hl7_message_with_invalid_utf8_replacement_can_parse():
+    with open(_hl7_messages_relative_dir + "/adt-a01-invalid-utf8.hl7", "rb") as file:
+        hl7_text = file.read().decode("UTF-8", errors="replace")
+
+    assert "EVER\ufffdYMAN" in hl7_text
+
+    parsed = main.hl7.parse(hl7_text)
+    assert parsed["MSH.F9.R1.1"] == "ADT"
+    assert parsed["MSH.F9.R1.2"] == "A01"
+
+
 @pytest.mark.asyncio
 async def test_hl7_receiver_exception(mocker):
     # Session config parameters should result in a connection error that
     # raises an Exception.
     with pytest.raises(Exception):
         await main.hl7_receiver()
+
+
+@pytest.mark.asyncio
+async def test_hl7_receiver_replaces_invalid_encoding_bytes(mocker):
+    mock_hl7_server = AsyncMock()
+    mock_hl7_server.serve_forever.side_effect = asyncio.CancelledError()
+    mock_start_hl7_server = mocker.patch.object(
+        main,
+        "start_hl7_server",
+        new=AsyncMock(),
+    )
+    mock_start_hl7_server.return_value.__aenter__.return_value = mock_hl7_server
+
+    await main.hl7_receiver()
+
+    mock_start_hl7_server.assert_awaited_once_with(
+        main.process_received_hl7_messages,
+        host=settings.HL7_MLLP_HOST,
+        port=int(settings.HL7_MLLP_PORT),
+        encoding="UTF-8",
+        encoding_errors="replace",
+    )
