@@ -184,11 +184,21 @@ async def test_processed_received_hl7_messages(mocker, caplog):
     assert found_log_statement
 
 
-def test_hl7_message_with_invalid_utf8_replacement_can_parse():
-    with open(_hl7_messages_relative_dir + "/adt-a01-invalid-utf8.hl7", "rb") as file:
+@pytest.mark.parametrize(
+    "file_name, expected_patient_name",
+    [
+        ("adt-a01-invalid-utf8.hl7", "EV\ufffdER\ufffdYM\ufffdAN"),
+        ("adt-a01-truncated-utf8.hl7", "EVER\ufffdYMAN"),
+    ],
+)
+def test_hl7_message_with_utf8_replacement_can_parse(
+    file_name,
+    expected_patient_name,
+):
+    with open(_hl7_messages_relative_dir + f"/{file_name}", "rb") as file:
         hl7_text = file.read().decode("UTF-8", errors="replace")
 
-    assert "EVER\ufffdYMAN" in hl7_text
+    assert expected_patient_name in hl7_text
 
     parsed = main.hl7.parse(hl7_text)
     assert parsed["MSH.F9.R1.1"] == "ADT"
