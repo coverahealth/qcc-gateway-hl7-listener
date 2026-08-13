@@ -37,14 +37,15 @@ def mock_pilot_settings(mocker) -> Mock:
 
 
 @pytest.mark.asyncio
-async def test_nc_connect(mocker):
-    mocker.patch.object(NATS_Client, "connect")
+async def test_nc_connect(monkeypatch):
+    monkeypatch.setattr(NATS_Client, "connect", AsyncMock())
     result = await NATSMessager().connect()
     assert result is True
 
-    NATS_Client.connect.side_effect = ErrNoServers()
+    monkeypatch.setattr(NATS_Client, "connect", AsyncMock(side_effect=ErrNoServers()))
+    mock_ = NATSMessager()
     with pytest.raises(ErrNoServers):
-        await NATSMessager().connect()
+        await mock_.connect()
 
 
 @pytest.mark.asyncio
@@ -124,7 +125,8 @@ async def test_processed_received_hl7_messages(mocker, caplog):
     mocker.patch.object(asyncmock_writer, "writemessage")
     mocker.patch.object(asyncmock_writer, "drain")
 
-    mocker.patch.object(NATSMessager, "send_msg", new=AsyncMock())
+    send_msg_mock = AsyncMock()
+    mocker.patch.object(NATSMessager, "send_msg", new=send_msg_mock)
 
     # Above mocks setup to test the "happy" path.
     #
@@ -151,10 +153,8 @@ async def test_processed_received_hl7_messages(mocker, caplog):
     #
     asyncmock_reader.reset_mock()
     asyncmock_reader.at_eof.side_effect = [False, False]
-    asyncmock_reader.readmessage.side_effect = Exception(
-        "some bytes".encode(), 22
-    )
-    with pytest.raises(Exception):
+    asyncmock_reader.readmessage.side_effect = RuntimeError("forced read failure")
+    with pytest.raises(Exception, match="forced read failure"):
         await main.process_received_hl7_messages(asyncmock_reader, asyncmock_writer)
 
     # Test general Exception after hl7_message is defined. This should result in
@@ -168,7 +168,7 @@ async def test_processed_received_hl7_messages(mocker, caplog):
     # Last param needed to save mock calls.
     mocker.patch.object(mock_hl7_message, "create_ack", mock_hl7_message)
     mocker.patch.object(mock_hl7_message, "__str__", return_value=hl7_text)
-    NATSMessager.send_msg.side_effect = Exception("force exception from mock")
+    send_msg_mock.side_effect = Exception("force exception from mock")
     await main.process_received_hl7_messages(asyncmock_reader, asyncmock_writer)
 
     assert "ack_code='AE'" in str(mock_hl7_message.mock_calls[0])
