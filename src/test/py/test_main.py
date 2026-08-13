@@ -209,7 +209,13 @@ def test_hl7_message_with_utf8_replacement_can_parse(
 async def test_hl7_receiver_exception(mocker):
     # Session config parameters should result in a connection error that
     # raises an Exception.
-    with pytest.raises(Exception):
+    mocker.patch.object(
+        main,
+        "start_hl7_server",
+        new=AsyncMock(side_effect=RuntimeError("forced receiver failure")),
+    )
+
+    with pytest.raises(Exception, match="forced receiver failure"):
         await main.hl7_receiver()
 
 
