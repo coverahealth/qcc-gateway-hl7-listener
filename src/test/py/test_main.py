@@ -1,5 +1,6 @@
 """Tests for main.py."""
 
+import asyncio
 import json
 import os
 from pathlib import Path
@@ -36,14 +37,15 @@ def mock_pilot_settings(mocker) -> Mock:
 
 
 @pytest.mark.asyncio
-async def test_nc_connect(mocker):
-    mocker.patch.object(NATS_Client, "connect")
+async def test_nc_connect(monkeypatch):
+    monkeypatch.setattr(NATS_Client, "connect", AsyncMock())
     result = await NATSMessager().connect()
     assert result is True
 
-    NATS_Client.connect.side_effect = ErrNoServers()
+    monkeypatch.setattr(NATS_Client, "connect", AsyncMock(side_effect=ErrNoServers()))
+    mock_ = NATSMessager()
     with pytest.raises(ErrNoServers):
-        await NATSMessager().connect()
+        await mock_.connect()
 
 
 @pytest.mark.asyncio
@@ -123,7 +125,8 @@ async def test_processed_received_hl7_messages(mocker, caplog):
     mocker.patch.object(asyncmock_writer, "writemessage")
     mocker.patch.object(asyncmock_writer, "drain")
 
-    mocker.patch.object(NATSMessager, "send_msg", new=AsyncMock())
+    send_msg_mock = AsyncMock()
+    mocker.patch.object(NATSMessager, "send_msg", new=send_msg_mock)
 
     # Above mocks setup to test the "happy" path.
     #
@@ -150,10 +153,8 @@ async def test_processed_received_hl7_messages(mocker, caplog):
     #
     asyncmock_reader.reset_mock()
     asyncmock_reader.at_eof.side_effect = [False, False]
-    asyncmock_reader.readmessage.side_effect = Exception(
-        "some bytes".encode(), 22
-    )
-    with pytest.raises(Exception):
+    asyncmock_reader.readmessage.side_effect = RuntimeError("forced read failure")
+    with pytest.raises(Exception, match="forced read failure"):
         await main.process_received_hl7_messages(asyncmock_reader, asyncmock_writer)
 
     # Test general Exception after hl7_message is defined. This should result in
@@ -167,7 +168,7 @@ async def test_processed_received_hl7_messages(mocker, caplog):
     # Last param needed to save mock calls.
     mocker.patch.object(mock_hl7_message, "create_ack", mock_hl7_message)
     mocker.patch.object(mock_hl7_message, "__str__", return_value=hl7_text)
-    NATSMessager.send_msg.side_effect = Exception("force exception from mock")
+    send_msg_mock.side_effect = Exception("force exception from mock")
     await main.process_received_hl7_messages(asyncmock_reader, asyncmock_writer)
 
     assert "ack_code='AE'" in str(mock_hl7_message.mock_calls[0])
@@ -183,9 +184,58 @@ async def test_processed_received_hl7_messages(mocker, caplog):
     assert found_log_statement
 
 
+@pytest.mark.parametrize(
+    "file_name, expected_patient_name",
+    [
+        ("adt-a01-invalid-utf8.hl7", "EV\ufffdER\ufffdYM\ufffdAN"),
+        ("adt-a01-truncated-utf8.hl7", "EVER\ufffdYMAN"),
+    ],
+)
+def test_hl7_message_with_utf8_replacement_can_parse(
+    file_name,
+    expected_patient_name,
+):
+    with open(_hl7_messages_relative_dir + f"/{file_name}", "rb") as file:
+        hl7_text = file.read().decode("UTF-8", errors="replace")
+
+    assert expected_patient_name in hl7_text
+
+    parsed = main.hl7.parse(hl7_text)
+    assert parsed["MSH.F9.R1.1"] == "ADT"
+    assert parsed["MSH.F9.R1.2"] == "A01"
+
+
 @pytest.mark.asyncio
 async def test_hl7_receiver_exception(mocker):
     # Session config parameters should result in a connection error that
     # raises an Exception.
-    with pytest.raises(Exception):
+    mocker.patch.object(
+        main,
+        "start_hl7_server",
+        new=AsyncMock(side_effect=RuntimeError("forced receiver failure")),
+    )
+
+    with pytest.raises(Exception, match="forced receiver failure"):
         await main.hl7_receiver()
+
+
+@pytest.mark.asyncio
+async def test_hl7_receiver_replaces_invalid_encoding_bytes(mocker):
+    mock_hl7_server = AsyncMock()
+    mock_hl7_server.serve_forever.side_effect = asyncio.CancelledError()
+    mock_start_hl7_server = mocker.patch.object(
+        main,
+        "start_hl7_server",
+        new=AsyncMock(),
+    )
+    mock_start_hl7_server.return_value.__aenter__.return_value = mock_hl7_server
+
+    await main.hl7_receiver()
+
+    mock_start_hl7_server.assert_awaited_once_with(
+        main.process_received_hl7_messages,
+        host=settings.HL7_MLLP_HOST,
+        port=int(settings.HL7_MLLP_PORT),
+        encoding="UTF-8",
+        encoding_errors="replace",
+    )
