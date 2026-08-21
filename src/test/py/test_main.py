@@ -187,18 +187,19 @@ async def test_processed_received_hl7_messages(mocker, caplog):
 @pytest.mark.parametrize(
     "file_name, expected_patient_name",
     [
-        ("adt-a01-invalid-utf8.hl7", "EV\ufffdER\ufffdYM\ufffdAN"),
-        ("adt-a01-truncated-utf8.hl7", "EVER\ufffdYMAN"),
+        ("adt-a01-invalid-utf8.hl7", "EVERYMAN"),
+        ("adt-a01-truncated-utf8.hl7", "EVERYMAN"),
     ],
 )
-def test_hl7_message_with_utf8_replacement_can_parse(
+def test_hl7_message_with_invalid_utf8_ignored_can_parse(
     file_name,
     expected_patient_name,
 ):
     with open(_hl7_messages_relative_dir + f"/{file_name}", "rb") as file:
-        hl7_text = file.read().decode("UTF-8", errors="replace")
+        hl7_text = file.read().decode("UTF-8", errors="ignore")
 
     assert expected_patient_name in hl7_text
+    assert "\ufffd" not in hl7_text
 
     parsed = main.hl7.parse(hl7_text)
     assert parsed["MSH.F9.R1.1"] == "ADT"
@@ -220,7 +221,7 @@ async def test_hl7_receiver_exception(mocker):
 
 
 @pytest.mark.asyncio
-async def test_hl7_receiver_replaces_invalid_encoding_bytes(mocker):
+async def test_hl7_receiver_ignores_invalid_encoding_bytes(mocker):
     mock_hl7_server = AsyncMock()
     mock_hl7_server.serve_forever.side_effect = asyncio.CancelledError()
     mock_start_hl7_server = mocker.patch.object(
@@ -237,5 +238,5 @@ async def test_hl7_receiver_replaces_invalid_encoding_bytes(mocker):
         host=settings.HL7_MLLP_HOST,
         port=int(settings.HL7_MLLP_PORT),
         encoding="UTF-8",
-        encoding_errors="replace",
+        encoding_errors="ignore",
     )
