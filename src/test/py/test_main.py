@@ -191,9 +191,11 @@ async def test_processed_received_hl7_messages(mocker, caplog):
         ("adt-a01-truncated-utf8.hl7", "EVERYMAN"),
     ],
 )
-def test_hl7_message_with_invalid_utf8_ignored_can_parse(
+@pytest.mark.asyncio
+async def test_processed_received_hl7_messages_ignores_invalid_utf8(
     file_name,
     expected_patient_name,
+    mocker,
 ):
     with open(_hl7_messages_relative_dir + f"/{file_name}", "rb") as file:
         hl7_text = file.read().decode("UTF-8", errors="ignore")
@@ -201,9 +203,65 @@ def test_hl7_message_with_invalid_utf8_ignored_can_parse(
     assert expected_patient_name in hl7_text
     assert "\ufffd" not in hl7_text
 
-    parsed = main.hl7.parse(hl7_text)
-    assert parsed["MSH.F9.R1.1"] == "ADT"
-    assert parsed["MSH.F9.R1.2"] == "A01"
+    asyncmock_reader = AsyncMock()
+    asyncmock_reader.at_eof = Mock()
+    asyncmock_reader.at_eof.side_effect = [False, True]
+    hl7_message = main.hl7.parse(hl7_text)
+    mocker.patch.object(asyncmock_reader, "readmessage", return_value=hl7_message)
+
+    asyncmock_writer = AsyncMock()
+    mocker.patch.object(
+        asyncmock_writer, "get_extra_info", return_value="test_hl7_peername"
+    )
+    mocker.patch.object(asyncmock_writer, "writemessage")
+    mocker.patch.object(asyncmock_writer, "drain")
+
+    send_msg_mock = mocker.patch.object(main.messager, "send_msg", new=AsyncMock())
+
+    await main.process_received_hl7_messages(asyncmock_reader, asyncmock_writer)
+
+    sent_message = send_msg_mock.await_args.kwargs["msg"]
+    assert expected_patient_name in sent_message
+    assert "\ufffd" not in sent_message
+    asyncmock_writer.writemessage.assert_called_once()
+    asyncmock_writer.drain.assert_called_once()
+
+
+@pytest.mark.asyncio
+async def test_processed_received_hl7_messages_removes_replacement_character(
+    mocker,
+):
+    with open(
+        _hl7_messages_relative_dir + "/adt-a01-valid-unicode-characters.hl7",
+        "r",
+        encoding="UTF-8",
+    ) as file:
+        hl7_text = file.read()
+
+    assert "TE\ufffdST^José" in hl7_text
+
+    asyncmock_reader = AsyncMock()
+    asyncmock_reader.at_eof = Mock()
+    asyncmock_reader.at_eof.side_effect = [False, True]
+    hl7_message = main.hl7.parse(hl7_text)
+    mocker.patch.object(asyncmock_reader, "readmessage", return_value=hl7_message)
+
+    asyncmock_writer = AsyncMock()
+    mocker.patch.object(
+        asyncmock_writer, "get_extra_info", return_value="test_hl7_peername"
+    )
+    mocker.patch.object(asyncmock_writer, "writemessage")
+    mocker.patch.object(asyncmock_writer, "drain")
+
+    send_msg_mock = mocker.patch.object(main.messager, "send_msg", new=AsyncMock())
+
+    await main.process_received_hl7_messages(asyncmock_reader, asyncmock_writer)
+
+    sent_message = send_msg_mock.await_args.kwargs["msg"]
+    assert "TEST^José" in sent_message
+    assert "\ufffd" not in sent_message
+    asyncmock_writer.writemessage.assert_called_once()
+    asyncmock_writer.drain.assert_called_once()
 
 
 @pytest.mark.asyncio

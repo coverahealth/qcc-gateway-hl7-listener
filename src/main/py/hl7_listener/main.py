@@ -53,9 +53,10 @@ async def process_received_hl7_messages(hl7_reader, hl7_writer):
         hl7_message = None
         while not hl7_reader.at_eof():
             hl7_message = await hl7_reader.readmessage()
+            hl7_message_text = str(hl7_message).replace("\ufffd", "")
             # This may not be needed since the hl7_mllp sender should fail if the message
             # was not valid hl7 message.
-            _parsed = hl7.parse(str(hl7_message))
+            _parsed = hl7.parse(hl7_message_text)
             _type, _trigger = _parsed['MSH.F9.R1.1'], _parsed['MSH.F9.R1.2']
             
             logger.info(
@@ -63,7 +64,7 @@ async def process_received_hl7_messages(hl7_reader, hl7_writer):
                 logging_code="HL7LLOG003",
                 type=f"{_type}^{_trigger}")
 
-            await messager.send_msg(msg=str(hl7_message))
+            await messager.send_msg(msg=hl7_message_text)
 
             # Send ACK to acknowledge receipt of the message.
             hl7_writer.writemessage(hl7_message.create_ack())
