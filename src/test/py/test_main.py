@@ -26,6 +26,27 @@ config_file = os.path.join(package_directory + root_path, "config.ini")
 _hl7_messages_relative_dir = os.path.join(package_directory + root_path, "hl7_messages")
 
 
+async def _process_hl7_text(mocker, hl7_text: str):
+    asyncmock_reader = AsyncMock()
+    asyncmock_reader.at_eof = Mock()
+    asyncmock_reader.at_eof.side_effect = [False, True]
+    hl7_message = main.hl7.parse(hl7_text)
+    mocker.patch.object(asyncmock_reader, "readmessage", return_value=hl7_message)
+
+    asyncmock_writer = AsyncMock()
+    mocker.patch.object(
+        asyncmock_writer, "get_extra_info", return_value="test_hl7_peername"
+    )
+    mocker.patch.object(asyncmock_writer, "writemessage")
+    mocker.patch.object(asyncmock_writer, "drain")
+
+    send_msg_mock = mocker.patch.object(main.messager, "send_msg", new=AsyncMock())
+
+    await main.process_received_hl7_messages(asyncmock_reader, asyncmock_writer)
+
+    return send_msg_mock.await_args.kwargs["msg"], asyncmock_writer
+
+
 
 @pytest.fixture
 def mock_pilot_settings(mocker) -> Mock:
@@ -203,24 +224,7 @@ async def test_processed_received_hl7_messages_ignores_invalid_utf8(
     assert expected_patient_name in hl7_text
     assert "\ufffd" not in hl7_text
 
-    asyncmock_reader = AsyncMock()
-    asyncmock_reader.at_eof = Mock()
-    asyncmock_reader.at_eof.side_effect = [False, True]
-    hl7_message = main.hl7.parse(hl7_text)
-    mocker.patch.object(asyncmock_reader, "readmessage", return_value=hl7_message)
-
-    asyncmock_writer = AsyncMock()
-    mocker.patch.object(
-        asyncmock_writer, "get_extra_info", return_value="test_hl7_peername"
-    )
-    mocker.patch.object(asyncmock_writer, "writemessage")
-    mocker.patch.object(asyncmock_writer, "drain")
-
-    send_msg_mock = mocker.patch.object(main.messager, "send_msg", new=AsyncMock())
-
-    await main.process_received_hl7_messages(asyncmock_reader, asyncmock_writer)
-
-    sent_message = send_msg_mock.await_args.kwargs["msg"]
+    sent_message, asyncmock_writer = await _process_hl7_text(mocker, hl7_text)
     assert expected_patient_name in sent_message
     assert "\ufffd" not in sent_message
     asyncmock_writer.writemessage.assert_called_once()
@@ -231,38 +235,17 @@ async def test_processed_received_hl7_messages_ignores_invalid_utf8(
 async def test_processed_received_hl7_messages_removes_replacement_character(
     mocker,
 ):
-    with open(
-        _hl7_messages_relative_dir + "/adt-a01-valid-unicode-characters.hl7",
-        "r",
-        encoding="UTF-8",
-    ) as file:
+    file_path = _hl7_messages_relative_dir + "/adt-a01-valid-unicode-characters.hl7"
+    with open(file_path, "r", encoding="UTF-8") as file:
         hl7_text = file.read()
 
-    assert "TE\ufffdST^José" in hl7_text
+    assert "TE\ufffdST^Jos\u00e9" in hl7_text
 
-    asyncmock_reader = AsyncMock()
-    asyncmock_reader.at_eof = Mock()
-    asyncmock_reader.at_eof.side_effect = [False, True]
-    hl7_message = main.hl7.parse(hl7_text)
-    mocker.patch.object(asyncmock_reader, "readmessage", return_value=hl7_message)
-
-    asyncmock_writer = AsyncMock()
-    mocker.patch.object(
-        asyncmock_writer, "get_extra_info", return_value="test_hl7_peername"
-    )
-    mocker.patch.object(asyncmock_writer, "writemessage")
-    mocker.patch.object(asyncmock_writer, "drain")
-
-    send_msg_mock = mocker.patch.object(main.messager, "send_msg", new=AsyncMock())
-
-    await main.process_received_hl7_messages(asyncmock_reader, asyncmock_writer)
-
-    sent_message = send_msg_mock.await_args.kwargs["msg"]
-    assert "TEST^José" in sent_message
+    sent_message, asyncmock_writer = await _process_hl7_text(mocker, hl7_text)
+    assert "TEST^Jos\u00e9" in sent_message
     assert "\ufffd" not in sent_message
     asyncmock_writer.writemessage.assert_called_once()
     asyncmock_writer.drain.assert_called_once()
-
 
 @pytest.mark.asyncio
 async def test_hl7_receiver_exception(mocker):
