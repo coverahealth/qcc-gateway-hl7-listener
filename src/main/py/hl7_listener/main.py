@@ -28,6 +28,36 @@ from hl7_listener.settings import settings
 
 logger = configure_get_logger()
 
+def extract_modality(parsed_message) -> str | None:
+    """Extract the modality from an already parsed HL7 message."""
+    modality = None
+    try:
+        modality = str(parsed_message["OBR.F24"]).strip().upper()
+    except (IndexError, KeyError):
+        logger.warning(
+            "Failed to extract modality from HL7 message",
+            logging_code="HL7LLOG013",
+        )
+
+    logger.info(
+        "Extracted modality from HL7 message",
+        logging_code="HL7LLOG012",
+        modality=modality or "UNKNOWN",
+    )
+
+    return modality or None
+
+
+def is_modality_allowed(modality: str | None) -> bool:
+    """Check whether a modality is enabled by the listener configuration."""
+    allowed_modalities = {
+        value.strip().upper()
+        for value in settings.ALLOWED_MODALITIES.split(",")
+        if value.strip()
+    }
+
+    return "ALL" in allowed_modalities or modality in allowed_modalities
+
 
 def exception_formatter(exception_text: str):
     exception_text = re.sub(r'\"MSH\|.*\"', "<hl7message>", exception_text)
@@ -58,13 +88,23 @@ async def process_received_hl7_messages(hl7_reader, hl7_writer):
             # was not valid hl7 message.
             _parsed = hl7.parse(hl7_message_text)
             _type, _trigger = _parsed['MSH.F9.R1.1'], _parsed['MSH.F9.R1.2']
+            modality = extract_modality(_parsed)
             
             logger.info(
                 "HL7 Listener received a message",
                 logging_code="HL7LLOG003",
-                type=f"{_type}^{_trigger}")
+                type=f"{_type}^{_trigger}",
+                modality=modality or "UNKNOWN",
+            )
 
-            await messager.send_msg(msg=hl7_message_text)
+            if is_modality_allowed(modality):
+                await messager.send_msg(msg=hl7_message_text)
+            else:
+                logger.info(
+                    "HL7 message skipped because its modality is not allowed",
+                    logging_code="HL7LLOG013",
+                    modality=modality or "UNKNOWN",
+                )
 
             # Send ACK to acknowledge receipt of the message.
             hl7_writer.writemessage(hl7_message.create_ack())
