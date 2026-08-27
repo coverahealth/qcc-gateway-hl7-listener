@@ -42,21 +42,33 @@ def extract_modality(parsed_message) -> str | None:
     logger.info(
         "Extracted modality from HL7 message",
         logging_code="HL7LLOG012",
-        modality=modality or "UNKNOWN",
+        modality=modality,
     )
 
     return modality or None
 
 
-def is_modality_allowed(modality: str | None) -> bool:
+def is_modality_allowed(parsed_message: str) -> bool:
     """Check whether a modality is enabled by the listener configuration."""
+
     allowed_modalities = {
         value.strip().upper()
         for value in settings.ALLOWED_MODALITIES.split(",")
         if value.strip()
     }
 
-    return "ALL" in allowed_modalities or modality in allowed_modalities
+    if "ALL" in allowed_modalities:
+        logger.info('Allowed modalities env is configured to "ALL"')
+        return True
+
+    modality = extract_modality(parsed_message)
+
+    if modality in allowed_modalities:
+        return True
+    else: 
+        raise hl7.exceptions.ParseException(
+            f"Modality '{modality}' is not allowed. Allowed modalities: {allowed_modalities}"
+        )
 
 
 def exception_formatter(exception_text: str):
@@ -83,28 +95,28 @@ async def process_received_hl7_messages(hl7_reader, hl7_writer):
         hl7_message = None
         while not hl7_reader.at_eof():
             hl7_message = await hl7_reader.readmessage()
+
+            logger.debug(f"hl7_message:{hl7_message}")
+
             hl7_message_text = str(hl7_message).replace("\ufffd", "")
             # This may not be needed since the hl7_mllp sender should fail if the message
             # was not valid hl7 message.
             _parsed = hl7.parse(hl7_message_text)
+
+            logger.debug(f"hl7_message_parsed:{_parsed}")
             _type, _trigger = _parsed['MSH.F9.R1.1'], _parsed['MSH.F9.R1.2']
-            modality = extract_modality(_parsed)
-            
+
             logger.info(
                 "HL7 Listener received a message",
                 logging_code="HL7LLOG003",
-                type=f"{_type}^{_trigger}",
-                modality=modality or "UNKNOWN",
+                type=f"{_type}^{_trigger}"
             )
 
-            if is_modality_allowed(modality):
-                await messager.send_msg(msg=hl7_message_text)
-            else:
-                logger.info(
-                    "HL7 message skipped because its modality is not allowed",
-                    logging_code="HL7LLOG013",
-                    modality=modality or "UNKNOWN",
-                )
+            # if it is allowed modality, send the message to the messager (NATS or Cloud Messaging).
+            # else it raises a ParseException which will be caught and an Application Reject (AR) ack will be sent back to the sender.
+            is_modality_allowed(extract_modality(_parsed))
+
+            await messager.send_msg(msg=hl7_message_text)            
 
             # Send ACK to acknowledge receipt of the message.
             hl7_writer.writemessage(hl7_message.create_ack())
