@@ -114,8 +114,8 @@ async def process_received_hl7_messages(hl7_reader, hl7_writer):
             # else it raises a ParseException which will be caught and an Application Reject (AR) ack will be sent back to the sender.
             is_modality_allowed(extract_modality(_parsed))
 
-            await messager.send_msg(msg=hl7_message_text)            
-
+            await messager.send_msg(msg=hl7_message_text)
+            
             # Send ACK to acknowledge receipt of the message.
             hl7_writer.writemessage(hl7_message.create_ack())
             # The drain() will fail if the hl7 sender does not process the ACK.
@@ -231,4 +231,5 @@ async def main():
 
 
 if __name__ == "__main__":
+
     asyncio.run(main())
