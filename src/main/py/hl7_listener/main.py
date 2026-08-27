@@ -93,15 +93,10 @@ async def process_received_hl7_messages(hl7_reader, hl7_writer):
         hl7_message = None
         while not hl7_reader.at_eof():
             hl7_message = await hl7_reader.readmessage()
-
-            logger.debug(f"hl7_message:{hl7_message}")
-
             hl7_message_text = str(hl7_message).replace("\ufffd", "")
             # This may not be needed since the hl7_mllp sender should fail if the message
             # was not valid hl7 message.
             _parsed = hl7.parse(hl7_message_text)
-
-            logger.debug(f"hl7_message_parsed:{_parsed}")
             _type, _trigger = _parsed['MSH.F9.R1.1'], _parsed['MSH.F9.R1.2']
 
             logger.info(
