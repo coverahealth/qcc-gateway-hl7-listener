@@ -32,9 +32,9 @@ def extract_modality(parsed_message) -> str | None:
     """Extract the modality from an already parsed HL7 message."""
     modality = None
     try:
-        modality = str(parsed_message["OBR.F24"]).strip().upper()
+        modality = parsed_message['OBR.F24']
     except (IndexError, KeyError):
-        logger.warning(
+        logger.error(
             "Failed to extract modality from HL7 message",
             logging_code="HL7LLOG013",
         )
@@ -48,7 +48,7 @@ def extract_modality(parsed_message) -> str | None:
     return modality or None
 
 
-def is_modality_allowed(parsed_message: str) -> bool:
+def is_modality_allowed(modality: str) -> bool:
     """Check whether a modality is enabled by the listener configuration."""
 
     allowed_modalities = {
@@ -60,8 +60,6 @@ def is_modality_allowed(parsed_message: str) -> bool:
     if "ALL" in allowed_modalities:
         logger.info('Allowed modalities env is configured to "ALL"')
         return True
-
-    modality = extract_modality(parsed_message)
 
     if modality in allowed_modalities:
         return True
