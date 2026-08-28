@@ -62,7 +62,7 @@ async def process_received_hl7_messages(hl7_reader, hl7_writer):
             _type, _trigger = _parsed['MSH.F9.R1.1'], _parsed['MSH.F9.R1.2']
             _control_id = _parsed['MSH.F10']
 
-            structlog.contextvars.bind_contextvars(hl7_control_id=_control_id)
+            structlog.contextvars.bind_contextvars(hl7_message_id=_control_id)
 
             logger.info(
                 "HL7 Listener received a message",

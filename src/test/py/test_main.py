@@ -376,16 +376,16 @@ async def test_hl7_control_id_bound_to_logs(mocker):
 
     await main.process_received_hl7_messages(asyncmock_reader, asyncmock_writer)
 
-    # Extract logs and verify control_id is present
-    found_log_with_control_id = False
+    # Extract logs and verify message_id is present
+    found_log_with_message_id = False
     for log_call in clf.logger.calls:
         log_statement = json.loads(log_call.args[0])
         if log_statement.get("message") == "HL7 Listener received a message":
-            assert "hl7_control_id" in log_statement, "HL7 control ID should be in log context"
-            # The test HL7 message has control ID "MSG00001"
-            assert log_statement.get("hl7_control_id") == "MSG00001", \
-                f"Expected control ID 'MSG00001', got {log_statement.get('hl7_control_id')}"
-            found_log_with_control_id = True
+            assert "hl7_message_id" in log_statement, "HL7 message ID should be in log context"
+            # The test HL7 message has message ID "MSG00001"
+            assert log_statement.get("hl7_message_id") == "MSG00001", \
+                f"Expected message ID 'MSG00001', got {log_statement.get('hl7_message_id')}"
+            found_log_with_message_id = True
             break
 
-    assert found_log_with_control_id, "Should have found log statement with HL7 control ID"
+    assert found_log_with_message_id, "Should have found log statement with HL7 message ID"
