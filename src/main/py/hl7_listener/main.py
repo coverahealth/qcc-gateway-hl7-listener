@@ -52,6 +52,7 @@ async def process_received_hl7_messages(hl7_reader, hl7_writer):
         # then be True.
         hl7_message = None
         while not hl7_reader.at_eof():
+            logs_inject_correlation_id(logger)
             hl7_message = await hl7_reader.readmessage()
             hl7_message_text = str(hl7_message).replace("\ufffd", "")
             # This may not be needed since the hl7_mllp sender should fail if the message

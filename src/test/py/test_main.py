@@ -281,3 +281,59 @@ async def test_hl7_receiver_ignores_invalid_encoding_bytes(mocker):
         encoding="UTF-8",
         encoding_errors="ignore",
     )
+
+@pytest.mark.asyncio
+async def test_correlation_id_unique_per_message(mocker):
+    """Verify each HL7 message gets its own unique correlation_id."""
+    with open(_hl7_messages_relative_dir + "/adt-a01-sample01.hl7", "r") as file:
+        hl7_text = str(file.read())
+
+    # Configure structlog with CapturingLoggerFactory
+    clf = structlog.testing.CapturingLoggerFactory()
+    loglib.configure(
+        log_level="INFO",
+        logging_processors=loglib.get_qcc_processors(),
+        logger_factory=clf,
+    )
+
+    # Inject correlation_id once (as the app does at startup)
+    test_logger = loglib.get_logger()
+    loglib.logs_inject_correlation_id(test_logger)
+
+    # Patch the logger in main module so it uses our test logger with CapturingLoggerFactory
+    mocker.patch.object(main, "logger", test_logger)
+
+    # Mock reader to simulate two message receives
+    asyncmock_reader = AsyncMock()
+    asyncmock_reader.at_eof = Mock()
+    asyncmock_reader.at_eof.side_effect = [False, False, True]
+
+    mock_hl7_message = Mock()
+    mocker.patch.object(mock_hl7_message, "__str__", return_value=hl7_text)
+    mocker.patch.object(mock_hl7_message, "create_ack", return_value="ack")
+    mocker.patch.object(asyncmock_reader, "readmessage", return_value=mock_hl7_message)
+
+    asyncmock_writer = AsyncMock()
+    mocker.patch.object(asyncmock_writer, "get_extra_info", return_value="test_hl7_peername")
+    mocker.patch.object(asyncmock_writer, "writemessage")
+    mocker.patch.object(asyncmock_writer, "drain")
+    mocker.patch.object(NATSMessager, "send_msg", new=AsyncMock())
+
+    await main.process_received_hl7_messages(asyncmock_reader, asyncmock_writer)
+
+    # Extract correlation_ids from logs
+    correlation_ids = []
+    received_messages = []
+    for log_call in clf.logger.calls:
+        log_statement = json.loads(log_call.args[0])
+        if log_statement.get("message") == "HL7 Listener received a message":
+            received_messages.append(log_statement)
+            if "correlation_id" in log_statement:
+                correlation_ids.append(log_statement["correlation_id"])
+
+    assert len(received_messages) == 2, f"Should have received 2 messages, got {len(received_messages)}"
+    assert len(correlation_ids) == 2, f"Both messages should have correlation_ids, got {len(correlation_ids)}"
+
+    # Verify each message has a unique correlation_id
+    unique_ids = set(correlation_ids)
+    assert len(unique_ids) == 2, f"Each message should have a unique correlation_id, but got: {correlation_ids}"
