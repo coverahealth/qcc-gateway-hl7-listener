@@ -12,6 +12,7 @@ import asyncio
 import re
 
 import hl7
+import structlog
 
 from covera.tracelib import traced,configure_tracing
 from covera.loglib import (
@@ -59,7 +60,10 @@ async def process_received_hl7_messages(hl7_reader, hl7_writer):
             # was not valid hl7 message.
             _parsed = hl7.parse(hl7_message_text)
             _type, _trigger = _parsed['MSH.F9.R1.1'], _parsed['MSH.F9.R1.2']
-            
+            _control_id = _parsed['MSH.F10']
+
+            structlog.contextvars.bind_contextvars(hl7_control_id=_control_id)
+
             logger.info(
                 "HL7 Listener received a message",
                 logging_code="HL7LLOG003",

@@ -337,3 +337,55 @@ async def test_correlation_id_unique_per_message(mocker):
     # Verify each message has a unique correlation_id
     unique_ids = set(correlation_ids)
     assert len(unique_ids) == 2, f"Each message should have a unique correlation_id, but got: {correlation_ids}"
+
+
+@pytest.mark.asyncio
+async def test_hl7_control_id_bound_to_logs(mocker):
+    """Verify HL7 message control ID is bound to structlog context and appears in logs."""
+    with open(_hl7_messages_relative_dir + "/adt-a01-sample01.hl7", "r") as file:
+        hl7_text = str(file.read())
+
+    # Configure structlog with CapturingLoggerFactory
+    clf = structlog.testing.CapturingLoggerFactory()
+    loglib.configure(
+        log_level="INFO",
+        logging_processors=loglib.get_qcc_processors(),
+        logger_factory=clf,
+    )
+
+    # Mock reader/writer
+    asyncmock_reader = AsyncMock()
+    asyncmock_reader.at_eof = Mock()
+    asyncmock_reader.at_eof.side_effect = [False, True]
+    mock_hl7_message = Mock()
+    mocker.patch.object(mock_hl7_message, "__str__", return_value=hl7_text)
+    mocker.patch.object(mock_hl7_message, "create_ack", return_value="ack")
+    mocker.patch.object(asyncmock_reader, "readmessage", return_value=mock_hl7_message)
+
+    asyncmock_writer = AsyncMock()
+    mocker.patch.object(
+        asyncmock_writer, "get_extra_info", return_value="test_hl7_peername"
+    )
+    mocker.patch.object(asyncmock_writer, "writemessage")
+    mocker.patch.object(asyncmock_writer, "drain")
+    mocker.patch.object(NATSMessager, "send_msg", new=AsyncMock())
+
+    # Get test logger
+    test_logger = loglib.get_logger()
+    mocker.patch.object(main, "logger", test_logger)
+
+    await main.process_received_hl7_messages(asyncmock_reader, asyncmock_writer)
+
+    # Extract logs and verify control_id is present
+    found_log_with_control_id = False
+    for log_call in clf.logger.calls:
+        log_statement = json.loads(log_call.args[0])
+        if log_statement.get("message") == "HL7 Listener received a message":
+            assert "hl7_control_id" in log_statement, "HL7 control ID should be in log context"
+            # The test HL7 message has control ID "MSG00001"
+            assert log_statement.get("hl7_control_id") == "MSG00001", \
+                f"Expected control ID 'MSG00001', got {log_statement.get('hl7_control_id')}"
+            found_log_with_control_id = True
+            break
+
+    assert found_log_with_control_id, "Should have found log statement with HL7 control ID"
