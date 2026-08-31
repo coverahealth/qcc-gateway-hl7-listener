@@ -108,7 +108,7 @@
       "label": "hl7_receiver()",
       "file_type": "code",
       "source_file": "src/main/py/hl7_listener/main.py",
-      "source_location": "L130",
+      "source_location": "L132",
       "_origin": "ast",
       "id": "hl7_listener_main_hl7_receiver",
       "community": 6,
@@ -118,7 +118,7 @@
       "label": "main()",
       "file_type": "code",
       "source_file": "src/main/py/hl7_listener/main.py",
-      "source_location": "L160",
+      "source_location": "L163",
       "_origin": "ast",
       "id": "hl7_listener_main_main",
       "community": 6,
@@ -148,9 +148,9 @@
       "label": "Receive HL7 MLLP messages on the configured host and port.",
       "file_type": "rationale",
       "source_file": "src/main/py/hl7_listener/main.py",
-      "source_location": "L131",
+      "source_location": "L133",
       "_origin": "ast",
-      "id": "hl7_listener_main_rationale_131",
+      "id": "hl7_listener_main_rationale_133",
       "community": 6,
       "norm_label": "receive hl7 mllp messages on the configured host and port."
     },
@@ -485,10 +485,20 @@
       "norm_label": "test_main.py"
     },
     {
+      "label": "_process_hl7_text()",
+      "file_type": "code",
+      "source_file": "src/test/py/test_main.py",
+      "source_location": "L29",
+      "_origin": "ast",
+      "id": "py_test_main_process_hl7_text",
+      "community": 3,
+      "norm_label": "_process_hl7_text()"
+    },
+    {
       "label": "mock_pilot_settings()",
       "file_type": "code",
       "source_file": "src/test/py/test_main.py",
-      "source_location": "L30",
+      "source_location": "L52",
       "_origin": "ast",
       "id": "py_test_main_mock_pilot_settings",
       "community": 3,
@@ -498,7 +508,7 @@
       "label": "test_nc_connect()",
       "file_type": "code",
       "source_file": "src/test/py/test_main.py",
-      "source_location": "L39",
+      "source_location": "L61",
       "_origin": "ast",
       "id": "py_test_main_test_nc_connect",
       "community": 3,
@@ -508,7 +518,7 @@
       "label": "test_send_msg()",
       "file_type": "code",
       "source_file": "src/test/py/test_main.py",
-      "source_location": "L50",
+      "source_location": "L73",
       "_origin": "ast",
       "id": "py_test_main_test_send_msg",
       "community": 3,
@@ -518,7 +528,7 @@
       "label": "test_send_msg_cloud_messaging()",
       "file_type": "code",
       "source_file": "src/test/py/test_main.py",
-      "source_location": "L61",
+      "source_location": "L84",
       "_origin": "ast",
       "id": "py_test_main_test_send_msg_cloud_messaging",
       "community": 2,
@@ -528,7 +538,7 @@
       "label": "test_pilot()",
       "file_type": "code",
       "source_file": "src/test/py/test_main.py",
-      "source_location": "L79",
+      "source_location": "L102",
       "_origin": "ast",
       "id": "py_test_main_test_pilot",
       "community": 3,
@@ -538,21 +548,71 @@
       "label": "test_processed_received_hl7_messages()",
       "file_type": "code",
       "source_file": "src/test/py/test_main.py",
-      "source_location": "L96",
+      "source_location": "L119",
       "_origin": "ast",
       "id": "py_test_main_test_processed_received_hl7_messages",
       "community": 3,
       "norm_label": "test_processed_received_hl7_messages()"
     },
     {
+      "label": "test_processed_received_hl7_messages_ignores_invalid_utf8()",
+      "file_type": "code",
+      "source_file": "src/test/py/test_main.py",
+      "source_location": "L216",
+      "_origin": "ast",
+      "id": "py_test_main_test_processed_received_hl7_messages_ignores_invalid_utf8",
+      "community": 3,
+      "norm_label": "test_processed_received_hl7_messages_ignores_invalid_utf8()"
+    },
+    {
+      "label": "test_processed_received_hl7_messages_removes_replacement_character()",
+      "file_type": "code",
+      "source_file": "src/test/py/test_main.py",
+      "source_location": "L235",
+      "_origin": "ast",
+      "id": "py_test_main_test_processed_received_hl7_messages_removes_replacement_character",
+      "community": 3,
+      "norm_label": "test_processed_received_hl7_messages_removes_replacement_character()"
+    },
+    {
       "label": "test_hl7_receiver_exception()",
       "file_type": "code",
       "source_file": "src/test/py/test_main.py",
-      "source_location": "L187",
+      "source_location": "L251",
       "_origin": "ast",
       "id": "py_test_main_test_hl7_receiver_exception",
       "community": 3,
       "norm_label": "test_hl7_receiver_exception()"
+    },
+    {
+      "label": "test_hl7_receiver_ignores_invalid_encoding_bytes()",
+      "file_type": "code",
+      "source_file": "src/test/py/test_main.py",
+      "source_location": "L265",
+      "_origin": "ast",
+      "id": "py_test_main_test_hl7_receiver_ignores_invalid_encoding_bytes",
+      "community": 3,
+      "norm_label": "test_hl7_receiver_ignores_invalid_encoding_bytes()"
+    },
+    {
+      "label": "test_correlation_id_unique_per_message()",
+      "file_type": "code",
+      "source_file": "src/test/py/test_main.py",
+      "source_location": "L286",
+      "_origin": "ast",
+      "id": "py_test_main_test_correlation_id_unique_per_message",
+      "community": 3,
+      "norm_label": "test_correlation_id_unique_per_message()"
+    },
+    {
+      "label": "Verify each HL7 message gets its own unique correlation_id.",
+      "file_type": "rationale",
+      "source_file": "src/test/py/test_main.py",
+      "source_location": "L287",
+      "_origin": "ast",
+      "id": "py_test_main_rationale_287",
+      "community": 3,
+      "norm_label": "verify each hl7 message gets its own unique correlation_id."
     },
     {
       "label": "CLAUDE.md",
@@ -851,7 +911,7 @@
       "source_location": "L49",
       "_origin": "ast",
       "id": "readme_env_vars",
-      "community": 9,
+      "community": 1,
       "norm_label": "env vars"
     },
     {
@@ -861,7 +921,7 @@
       "source_location": "L69",
       "_origin": "ast",
       "id": "readme_adding_dependencies",
-      "community": 9,
+      "community": 1,
       "norm_label": "adding dependencies"
     },
     {
@@ -871,7 +931,7 @@
       "source_location": "L73",
       "_origin": "ast",
       "id": "readme_install_nats_jetstream_server_and_nats_cli",
-      "community": 9,
+      "community": 1,
       "norm_label": "install nats jetstream server and nats cli"
     },
     {
@@ -881,7 +941,7 @@
       "source_location": "L83",
       "_origin": "ast",
       "id": "readme_create_the_stream_and_consumer",
-      "community": 9,
+      "community": 1,
       "norm_label": "create the stream and consumer"
     },
     {
@@ -891,7 +951,7 @@
       "source_location": "L96",
       "_origin": "ast",
       "id": "readme_environment_variables",
-      "community": 9,
+      "community": 1,
       "norm_label": "environment variables"
     },
     {
@@ -901,7 +961,7 @@
       "source_location": "L114",
       "_origin": "ast",
       "id": "readme_creating_the_docker_image",
-      "community": 9,
+      "community": 1,
       "norm_label": "creating the docker image"
     },
     {
@@ -1396,11 +1456,11 @@
       "relation": "rationale_for",
       "confidence": "EXTRACTED",
       "source_file": "src/main/py/hl7_listener/main.py",
-      "source_location": "L131",
+      "source_location": "L133",
       "weight": 1.0,
-      "confidence_score": 1.0,
-      "source": "hl7_listener_main_rationale_131",
-      "target": "hl7_listener_main_hl7_receiver"
+      "source": "hl7_listener_main_rationale_133",
+      "target": "hl7_listener_main_hl7_receiver",
+      "confidence_score": 1.0
     },
     {
       "relation": "imports_from",
@@ -1806,11 +1866,41 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/test/py/test_main.py",
+      "source_location": "L29",
+      "weight": 1.0,
+      "source": "py_test_main",
+      "target": "py_test_main_process_hl7_text",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/test/py/test_main.py",
+      "source_location": "L286",
+      "weight": 1.0,
+      "source": "py_test_main",
+      "target": "py_test_main_test_correlation_id_unique_per_message",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/test/py/test_main.py",
       "source_location": "L187",
       "weight": 1.0,
       "confidence_score": 1.0,
       "source": "py_test_main",
       "target": "py_test_main_test_hl7_receiver_exception"
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/test/py/test_main.py",
+      "source_location": "L265",
+      "weight": 1.0,
+      "source": "py_test_main",
+      "target": "py_test_main_test_hl7_receiver_ignores_invalid_encoding_bytes",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -1846,6 +1936,26 @@
       "relation": "contains",
       "confidence": "EXTRACTED",
       "source_file": "src/test/py/test_main.py",
+      "source_location": "L216",
+      "weight": 1.0,
+      "source": "py_test_main",
+      "target": "py_test_main_test_processed_received_hl7_messages_ignores_invalid_utf8",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/test/py/test_main.py",
+      "source_location": "L235",
+      "weight": 1.0,
+      "source": "py_test_main",
+      "target": "py_test_main_test_processed_received_hl7_messages_removes_replacement_character",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "contains",
+      "confidence": "EXTRACTED",
+      "source_file": "src/test/py/test_main.py",
       "source_location": "L50",
       "weight": 1.0,
       "confidence_score": 1.0,
@@ -1861,6 +1971,38 @@
       "confidence_score": 1.0,
       "source": "py_test_main",
       "target": "py_test_main_test_send_msg_cloud_messaging"
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/test/py/test_main.py",
+      "source_location": "L227",
+      "weight": 1.0,
+      "source": "py_test_main_test_processed_received_hl7_messages_ignores_invalid_utf8",
+      "target": "py_test_main_process_hl7_text",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "calls",
+      "context": "call",
+      "confidence": "EXTRACTED",
+      "source_file": "src/test/py/test_main.py",
+      "source_location": "L244",
+      "weight": 1.0,
+      "source": "py_test_main_test_processed_received_hl7_messages_removes_replacement_character",
+      "target": "py_test_main_process_hl7_text",
+      "confidence_score": 1.0
+    },
+    {
+      "relation": "rationale_for",
+      "confidence": "EXTRACTED",
+      "source_file": "src/test/py/test_main.py",
+      "source_location": "L287",
+      "weight": 1.0,
+      "source": "py_test_main_rationale_287",
+      "target": "py_test_main_test_correlation_id_unique_per_message",
+      "confidence_score": 1.0
     },
     {
       "relation": "contains",
@@ -2564,5 +2706,5 @@
     }
   ],
   "hyperedges": [],
-  "built_at_commit": "4ec297514ede523d913eaccb31edc94f61fb9e49"
+  "built_at_commit": "51c5592fa0a3fb29489e365d711826b0bdbb33aa"
 }
