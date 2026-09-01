@@ -2,7 +2,10 @@ from typing import (
     Union,
 )
 
-from covera.loglib import configure_get_logger
+from covera.loglib import (
+    configure_get_logger,
+    extract_correlation_id_context,
+)
 from covera.tracelib import traced
 from nats.aio.client import Client as NATS
 from nats.aio.errors import ErrNoServers
@@ -52,14 +55,20 @@ class NATSMessager(MessagingInterface):
 
         logger.info("Sending message to the NATS JetStream server", logging_code="HL7LLOG007")
 
+        headers = {
+            "correlation_id": extract_correlation_id_context(),
+            "payload_type": "hl7",
+        }
+
+        if msgr_config.settings.PILOT_MODE:
+            headers.update(PILOT_HEADER)
+
         kwargs = {
             "subject": msgr_config.settings.NATS_OUTGOING_SUBJECT,
             "payload": to_send,
             "timeout": 10,
+            "headers": headers,
         }
-
-        if msgr_config.settings.PILOT_MODE:
-            kwargs["headers"] = PILOT_HEADER
 
         send_response = await self.conn.request(**kwargs)
         logger.info(

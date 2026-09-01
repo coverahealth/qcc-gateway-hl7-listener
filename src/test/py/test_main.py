@@ -106,11 +106,16 @@ async def test_pilot(mock_pilot_settings, mocker):
     my_asyncmock = AsyncMock()
     mocker.patch.object(mock_.conn, "request", new=my_asyncmock)
     await mock_.send_msg("test message")
+    expected_headers = {
+        "correlation_id": None,  # No correlation_id in test context
+        "payload_type": "hl7",
+        **PILOT_HEADER
+    }
     my_asyncmock.assert_called_once_with(
         subject=mock_pilot_settings.NATS_OUTGOING_SUBJECT,
         payload="test message".encode(),
         timeout=10,
-        headers=PILOT_HEADER
+        headers=expected_headers
     )
     my_asyncmock.assert_awaited()
 
