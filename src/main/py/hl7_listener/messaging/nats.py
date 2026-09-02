@@ -59,11 +59,6 @@ class NATSMessager(MessagingInterface):
             "payload_type": "hl7",
         }
 
-        # extract_correlation_id_context() returns None when called outside an
-        # installed correlation context. nats-py's header serialization calls
-        # .strip()/.encode() on every header value, so a None value would raise
-        # an AttributeError and abort the send entirely rather than just losing
-        # the correlation_id.
         correlation_id = extract_correlation_id_context()
         if correlation_id:
             headers["correlation_id"] = correlation_id

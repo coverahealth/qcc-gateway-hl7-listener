@@ -167,11 +167,6 @@ async def test_send_msg_omits_correlation_id_when_absent(mocker):
     assert "correlation_id" not in headers
     assert headers["payload_type"] == "hl7"
 
-    # Feed the actual headers send_msg produced through nats-py's real,
-    # unmocked wire serialization (no live server needed: on a fresh,
-    # unconnected client this only builds the HPUB frame bytes) to prove they
-    # serialize cleanly. Before the fix, a None correlation_id here raised
-    # AttributeError from `v.strip()` in nats.aio.client.Client._send_publish.
     real_client = NATS_Client()
     await real_client._send_publish(
         subject="test.subject",
