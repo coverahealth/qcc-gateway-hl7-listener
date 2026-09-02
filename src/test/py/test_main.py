@@ -100,19 +100,81 @@ async def test_send_msg_cloud_messaging(mocker):
 
 @pytest.mark.asyncio
 async def test_pilot(mock_pilot_settings, mocker):
+    structlog.contextvars.clear_contextvars()
+    structlog.contextvars.bind_contextvars(correlation_id="sentinel-correlation-id")
+
     mocker.patch.object(NATS_Client, "connect")
     mock_ = NATSMessager()
     await mock_.connect()
     my_asyncmock = AsyncMock()
     mocker.patch.object(mock_.conn, "request", new=my_asyncmock)
     await mock_.send_msg("test message")
+    expected_headers = {
+        "correlation_id": "sentinel-correlation-id",
+        "payload_type": "hl7",
+        **PILOT_HEADER
+    }
     my_asyncmock.assert_called_once_with(
         subject=mock_pilot_settings.NATS_OUTGOING_SUBJECT,
         payload="test message".encode(),
         timeout=10,
-        headers=PILOT_HEADER
+        headers=expected_headers
     )
     my_asyncmock.assert_awaited()
+
+
+@pytest.mark.asyncio
+async def test_send_msg_includes_correlation_id(mocker):
+    """Non-pilot case: the per-message correlation_id must reach the NATS headers."""
+    structlog.contextvars.clear_contextvars()
+    structlog.contextvars.bind_contextvars(correlation_id="sentinel-correlation-id")
+
+    mocker.patch.object(NATS_Client, "connect")
+    mock_ = NATSMessager()
+    await mock_.connect()
+    my_asyncmock = AsyncMock()
+    mocker.patch.object(mock_.conn, "request", new=my_asyncmock)
+    await mock_.send_msg("test message")
+
+    my_asyncmock.assert_awaited_once()
+    headers = my_asyncmock.call_args.kwargs["headers"]
+    assert headers == {
+        "correlation_id": "sentinel-correlation-id",
+        "payload_type": "hl7",
+    }
+
+
+@pytest.mark.asyncio
+async def test_send_msg_omits_correlation_id_when_absent(mocker):
+    """When no correlation context is installed, the header must be omitted (not
+    None) so the real NATS wire serialization does not raise.
+
+    extract_correlation_id_context() returns None outside an installed
+    correlation context. nats-py's header serialization calls .strip() and
+    .encode() on every header value, so this exercises the real (unmocked)
+    serialization path to prove a None value would have raised there.
+    """
+    structlog.contextvars.clear_contextvars()
+
+    mocker.patch.object(NATS_Client, "connect")
+    mock_ = NATSMessager()
+    await mock_.connect()
+    my_asyncmock = AsyncMock()
+    mocker.patch.object(mock_.conn, "request", new=my_asyncmock)
+    await mock_.send_msg("test message")
+
+    headers = my_asyncmock.call_args.kwargs["headers"]
+    assert "correlation_id" not in headers
+    assert headers["payload_type"] == "hl7"
+
+    real_client = NATS_Client()
+    await real_client._send_publish(
+        subject="test.subject",
+        reply="",
+        payload=b"test message",
+        payload_size=len(b"test message"),
+        headers=headers,
+    )
 
 
 @pytest.mark.asyncio
