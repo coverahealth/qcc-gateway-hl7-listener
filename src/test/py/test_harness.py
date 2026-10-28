@@ -4,7 +4,7 @@ Opens ONE connection and sends messages one after the other, waiting for each AC
 --adts ADT messages, with --orus ORU messages spread evenly among them. Prints the time taken.
 
 Usage:
-    python src/test/scripts/mllp_load_test.py --adts 300000 --orus 300
+    python src/test/py/test_harness.py --adts 300000 --orus 300
 """
 import argparse
 import asyncio
