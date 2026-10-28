@@ -69,9 +69,12 @@ async def process_received_hl7_messages(hl7_reader, hl7_writer):
                 logging_code="HL7LLOG003",
                 type=f"{_type}^{_trigger}")
 
-            await messager.send_msg(msg=hl7_message_text)
+            # ADTs are dropped on receipt, before any downstream processing.
+            drop_message = settings.HL7_DROP_ADT_ENABLED and _type == "ADT"
+            if not drop_message:
+                await messager.send_msg(msg=hl7_message_text)
 
-            # Send ACK to acknowledge receipt of the message.
+            # Send ACK (AA) to acknowledge receipt, including for dropped ADTs.
             hl7_writer.writemessage(hl7_message.create_ack())
             # The drain() will fail if the hl7 sender does not process the ACK.
             await hl7_writer.drain()

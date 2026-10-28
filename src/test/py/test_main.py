@@ -3,6 +3,7 @@
 import asyncio
 import json
 import os
+import time
 from pathlib import Path
 from unittest.mock import (
     AsyncMock,
@@ -24,6 +25,22 @@ package_directory = os.path.dirname(os.path.abspath(__file__))
 root_path = "/../resources"
 config_file = os.path.join(package_directory + root_path, "config.ini")
 _hl7_messages_relative_dir = os.path.join(package_directory + root_path, "hl7_messages")
+
+@pytest.fixture
+def adt_text() -> str:
+    with open(_hl7_messages_relative_dir + "/adt-a01-sample01.hl7", "r") as file:
+        return str(file.read())
+
+
+@pytest.fixture
+def oru_text() -> str:
+    with open(_hl7_messages_relative_dir + "/oru-r01-sample01.hl7", "r") as file:
+        return str(file.read())
+
+
+@pytest.fixture
+def drop_adt_enabled(mocker):
+    mocker.patch.object(settings, "HL7_DROP_ADT_ENABLED", True)
 
 
 async def _process_hl7_text(mocker, hl7_text: str):
@@ -57,7 +74,7 @@ def mock_pilot_settings(mocker) -> Mock:
     return pilot_mode_mock
 
 
-@pytest.mark.asyncio
+
 async def test_nc_connect(monkeypatch):
     monkeypatch.setattr(NATS_Client, "connect", AsyncMock())
     result = await NATSMessager().connect()
@@ -69,7 +86,7 @@ async def test_nc_connect(monkeypatch):
         await mock_.connect()
 
 
-@pytest.mark.asyncio
+
 async def test_send_msg(mocker):
     mocker.patch.object(NATS_Client, "connect")
     mock_ = NATSMessager()
@@ -80,7 +97,7 @@ async def test_send_msg(mocker):
     my_asyncmock.assert_awaited()
 
 
-@pytest.mark.asyncio
+
 async def test_send_msg_cloud_messaging(mocker):
     
     from hl7_listener.messaging.cloud_messaging import CloudMessager
@@ -98,7 +115,7 @@ async def test_send_msg_cloud_messaging(mocker):
     
 
 
-@pytest.mark.asyncio
+
 async def test_pilot(mock_pilot_settings, mocker):
     structlog.contextvars.clear_contextvars()
     structlog.contextvars.bind_contextvars(correlation_id="sentinel-correlation-id")
@@ -123,7 +140,7 @@ async def test_pilot(mock_pilot_settings, mocker):
     my_asyncmock.assert_awaited()
 
 
-@pytest.mark.asyncio
+
 async def test_send_msg_includes_correlation_id(mocker):
     """Non-pilot case: the per-message correlation_id must reach the NATS headers."""
     structlog.contextvars.clear_contextvars()
@@ -144,7 +161,7 @@ async def test_send_msg_includes_correlation_id(mocker):
     }
 
 
-@pytest.mark.asyncio
+
 async def test_send_msg_omits_correlation_id_when_absent(mocker):
     """When no correlation context is installed, the header must be omitted (not
     None) so the real NATS wire serialization does not raise.
@@ -177,7 +194,7 @@ async def test_send_msg_omits_correlation_id_when_absent(mocker):
     )
 
 
-@pytest.mark.asyncio
+
 async def test_processed_received_hl7_messages(mocker, caplog):
     with open(_hl7_messages_relative_dir + "/adt-a01-sample01.hl7", "r") as file:
         hl7_text = str(file.read())
@@ -274,7 +291,7 @@ async def test_processed_received_hl7_messages(mocker, caplog):
         ("adt-a01-truncated-utf8.hl7", "EVERYMAN"),
     ],
 )
-@pytest.mark.asyncio
+
 async def test_processed_received_hl7_messages_ignores_invalid_utf8(
     file_name,
     expected_patient_name,
@@ -293,7 +310,7 @@ async def test_processed_received_hl7_messages_ignores_invalid_utf8(
     asyncmock_writer.drain.assert_called_once()
 
 
-@pytest.mark.asyncio
+
 async def test_processed_received_hl7_messages_removes_replacement_character(
     mocker,
 ):
@@ -309,7 +326,7 @@ async def test_processed_received_hl7_messages_removes_replacement_character(
     asyncmock_writer.writemessage.assert_called_once()
     asyncmock_writer.drain.assert_called_once()
 
-@pytest.mark.asyncio
+
 async def test_hl7_receiver_exception(mocker):
     # Session config parameters should result in a connection error that
     # raises an Exception.
@@ -323,7 +340,7 @@ async def test_hl7_receiver_exception(mocker):
         await main.hl7_receiver()
 
 
-@pytest.mark.asyncio
+
 async def test_hl7_receiver_ignores_invalid_encoding_bytes(mocker):
     mock_hl7_server = AsyncMock()
     mock_hl7_server.serve_forever.side_effect = asyncio.CancelledError()
@@ -344,7 +361,7 @@ async def test_hl7_receiver_ignores_invalid_encoding_bytes(mocker):
         encoding_errors="ignore",
     )
 
-@pytest.mark.asyncio
+
 async def test_correlation_id_unique_per_message(mocker):
     """Verify each HL7 message gets its own unique correlation_id."""
     with open(_hl7_messages_relative_dir + "/adt-a01-sample01.hl7", "r") as file:
@@ -401,7 +418,7 @@ async def test_correlation_id_unique_per_message(mocker):
     assert len(unique_ids) == 2, f"Each message should have a unique correlation_id, but got: {correlation_ids}"
 
 
-@pytest.mark.asyncio
+
 async def test_hl7_control_id_bound_to_logs(mocker):
     """Verify HL7 message control ID is bound to structlog context and appears in logs."""
     with open(_hl7_messages_relative_dir + "/adt-a01-sample01.hl7", "r") as file:
@@ -451,3 +468,98 @@ async def test_hl7_control_id_bound_to_logs(mocker):
             break
 
     assert found_log_with_message_id, "Should have found log statement with HL7 message ID"
+
+
+async def _process_hl7_texts(mocker, hl7_texts: list):
+    """Feed the messages, in order, through a single connection (as in production)."""
+    asyncmock_reader = AsyncMock()
+    asyncmock_reader.at_eof = Mock()
+    asyncmock_reader.at_eof.side_effect = [False] * len(hl7_texts) + [True]
+    # Parse each distinct message once; the same parsed object can be read repeatedly.
+    parsed = {text: main.hl7.parse(text) for text in set(hl7_texts)}
+    mocker.patch.object(
+        asyncmock_reader, "readmessage", side_effect=[parsed[text] for text in hl7_texts]
+    )
+
+    asyncmock_writer = AsyncMock()
+    mocker.patch.object(
+        asyncmock_writer, "get_extra_info", return_value="test_hl7_peername"
+    )
+    mocker.patch.object(asyncmock_writer, "writemessage")
+    mocker.patch.object(asyncmock_writer, "drain")
+
+    send_msg_mock = mocker.patch.object(main.messager, "send_msg", new=AsyncMock())
+
+    await main.process_received_hl7_messages(asyncmock_reader, asyncmock_writer)
+
+    return send_msg_mock, asyncmock_writer
+
+
+
+async def test_adt_dropped_and_acked_when_enabled(mocker, adt_text, drop_adt_enabled):
+    send_msg_mock, writer = await _process_hl7_texts(mocker, [adt_text])
+
+    send_msg_mock.assert_not_awaited()
+    assert writer.writemessage.call_count == 1
+
+
+async def test_adt_forwarded_when_drop_disabled(mocker, adt_text):
+    mocker.patch.object(settings, "HL7_DROP_ADT_ENABLED", False)
+
+    send_msg_mock, writer = await _process_hl7_texts(mocker, [adt_text])
+
+    send_msg_mock.assert_awaited_once()
+    assert writer.writemessage.call_count == 1
+
+
+async def test_oru_forwarded_when_drop_enabled(mocker, oru_text, drop_adt_enabled):
+    send_msg_mock, writer = await _process_hl7_texts(mocker, [oru_text])
+
+    send_msg_mock.assert_awaited_once()
+    assert writer.writemessage.call_count == 1
+
+
+
+async def test_mixed_adt_oru_stream_only_forwards_oru(
+    mocker, adt_text, oru_text, drop_adt_enabled
+):
+    send_msg_mock, writer = await _process_hl7_texts(mocker, [adt_text, oru_text, adt_text])
+
+    send_msg_mock.assert_awaited_once()
+    assert writer.writemessage.call_count == 3
+
+
+
+async def test_adt_burst_does_not_disturb_oru_processing(
+    mocker, adt_text, oru_text, drop_adt_enabled
+):
+    """One connection receives an ADT burst with ORUs sprinkled in; ORUs must still flow."""
+    adt_count = 5000
+    oru_every = 100  # one ORU after every 100 ADTs
+    oru_count = adt_count // oru_every
+    time_limit_seconds = 30
+
+    hl7_texts = []
+    for i in range(1, adt_count + 1):
+        hl7_texts.append(adt_text)
+        if i % oru_every == 0:
+            hl7_texts.append(oru_text)
+
+    start_seconds = time.perf_counter()
+    send_msg_mock, writer = await _process_hl7_texts(mocker, hl7_texts)
+    elapsed_seconds = time.perf_counter() - start_seconds
+    ms_per_message = elapsed_seconds * 1000 / len(hl7_texts)
+    print(
+        f"{len(hl7_texts)} messages in {elapsed_seconds:.2f} s "
+        f"({ms_per_message:.2f} ms/message, {len(hl7_texts) / elapsed_seconds:.0f} messages/s)"
+    )
+
+    # No ADT was published, every ORU was, and every message (ADT and ORU) was ACKed.
+    assert send_msg_mock.await_count == oru_count
+    assert all("ORU^R01" in call.kwargs["msg"] for call in send_msg_mock.await_args_list)
+    assert writer.writemessage.call_count == adt_count + oru_count
+
+    # Generous bound to avoid flakiness on slow CI.
+    assert elapsed_seconds < time_limit_seconds, (
+        f"{len(hl7_texts)} messages took {elapsed_seconds:.2f} s (limit {time_limit_seconds} s)"
+    )
