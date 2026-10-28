@@ -88,22 +88,22 @@ tests/
 ## Configuration
 
 ### Environment Variables
-**MLLP Server:**
-- `MLLP_HOST`: Bind address (0.0.0.0)
-- `MLLP_PORT`: Listen port (2575)
-- `MLLP_TIMEOUT`: Connection timeout (seconds)
+Names below match `settings.py` and `messaging/settings.py`.
 
-**HTTP Endpoints:**
-- `HTTP_PORT`: HTTP API port (8000)
+**MLLP Server:**
+- `HL7_MLLP_HOST`: Bind address (required)
+- `HL7_MLLP_PORT`: Listen port (required)
 
 **Message Processing:**
-- `MESSAGE_ROUTING_RULES`: JSON file mapping message types to targets
-- `VALIDATION_STRICT`: Strict/lenient HL7 validation (true/false)
-- `MAX_MESSAGE_SIZE_MB`: Maximum HL7 message size
+- `HL7_DROP_ADT_ENABLED`: Drop ADT messages on receipt, before any publish (default `false`). Dropped ADTs are still ACKed (AA). See `docs/listener-capacity.md`.
+- `LOG_LEVEL`: Log level (default `INFO`)
 
 **Queue:**
-- `NATS_SERVERS`: NATS server addresses
-- `NATS_OUTGOING_SUBJECT`: Routing topic (e.g., `hl7.processed`)
+- `OUTBOUND_QUEUE_TYPE`: `NATS` (default) or `CLOUD` (Azure Service Bus)
+- `NATS_SERVER_URL`: NATS server address
+- `NATS_OUTGOING_SUBJECT`: Routing subject (default `HL7.MESSAGES`)
+- `PILOT_MODE`: Pilot-mode flag for NATS messages (default `false`)
+- `OUTBOUND_QUEUE_NAME`, `MSG_NAMESPACE`: Service Bus queue and namespace (when `CLOUD`)
 
 **Datadog:**
 - `DD_TRACE_ENABLED`: Enable APM

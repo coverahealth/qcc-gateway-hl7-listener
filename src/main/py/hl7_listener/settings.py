@@ -12,6 +12,7 @@ class Settings(BaseSettings):
     HL7_MLLP_PORT: int
     OUTBOUND_QUEUE_TYPE: QueueType = QueueType.NATS
     LOG_LEVEL: str = "INFO"
+    HL7_DROP_ADT_ENABLED: bool = False
 
 
     _instance: ClassVar["Settings"] = None

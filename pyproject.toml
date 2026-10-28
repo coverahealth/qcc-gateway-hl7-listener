@@ -43,6 +43,7 @@ black = "^23.9.1"
 testpaths = [
     "src/test",
 ]
+asyncio_mode = "auto"
 
 [tool.docformatter]
 recursive = true
